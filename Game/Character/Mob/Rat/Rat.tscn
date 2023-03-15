@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7hvy1upd6otf"]
+
+[ext_resource type="Script" path="res://Character/Mob/Rat/Rat.gd" id="1_iey3h"]
+[ext_resource type="PackedScene" uid="uid://dxxcom0moro5i" path="res://Character/Mob/Rat/RatAnimator.tscn" id="2_ucey1"]
+
+[node name="Rat" type="Node2D"]
+script = ExtResource( "1_iey3h" )
+
+[node name="Animator" parent="." instance=ExtResource( "2_ucey1" )]

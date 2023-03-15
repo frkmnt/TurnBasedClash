@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpajlror2lui3"]
+
+[ext_resource type="Script" path="res://Encounter/UI/EncounterUiManager.gd" id="1_emeqw"]
+[ext_resource type="PackedScene" uid="uid://cb7dky3vt0yt6" path="res://Encounter/UI/Button/EncounterButton.tscn" id="2_l52gn"]
+[ext_resource type="PackedScene" uid="uid://pqe1j0jsisie" path="res://Encounter/UI/Announcement/AnnouncementManager.tscn" id="3_5x0xc"]
+[ext_resource type="PackedScene" uid="uid://b8i63bigv2uat" path="res://Encounter/UI/Label/SpeedLabel.tscn" id="5_w1fmn"]
+
+[node name="UiManager" type="CanvasLayer"]
+script = ExtResource( "1_emeqw" )
+
+[node name="ButtonPanel" type="Control" parent="."]
+anchor_top = 0.829
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1591.68
+grow_vertical = 0
+
+[node name="MoveButton" parent="ButtonPanel" instance=ExtResource( "2_l52gn" )]
+offset_left = 75.0
+offset_top = -300.0
+offset_right = 325.0
+offset_bottom = -175.0
+text = "Move"
+_id = "move"
+
+[node name="AttackButton" parent="ButtonPanel" instance=ExtResource( "2_l52gn" )]
+offset_left = 415.0
+offset_top = -300.0
+offset_right = 665.0
+offset_bottom = -175.0
+text = "Attack
+"
+_id = "attack"
+
+[node name="SkillButton" parent="ButtonPanel" instance=ExtResource( "2_l52gn" )]
+offset_left = 755.0
+offset_top = -300.0
+offset_right = 1005.0
+offset_bottom = -175.0
+text = "Skill"
+_id = "skill"
+
+[node name="BagButton" parent="ButtonPanel" instance=ExtResource( "2_l52gn" )]
+offset_left = 75.0
+offset_top = -150.0
+offset_right = 325.0
+offset_bottom = -25.0
+text = "Bag"
+_id = "bag"
+
+[node name="PassButton" parent="ButtonPanel" instance=ExtResource( "2_l52gn" )]
+offset_left = 415.0
+offset_top = -150.0
+offset_right = 665.0
+offset_bottom = -25.0
+text = "Pass"
+_id = "pass"
+
+[node name="InspectButton" parent="ButtonPanel" instance=ExtResource( "2_l52gn" )]
+offset_left = 755.0
+offset_top = -150.0
+offset_right = 1005.0
+offset_bottom = -25.0
+text = "Inspect"
+_id = "inspect"
+
+[node name="AnnouncementManager" parent="." instance=ExtResource( "3_5x0xc" )]
+
+[node name="SpeedLabel" parent="." instance=ExtResource( "5_w1fmn" )]

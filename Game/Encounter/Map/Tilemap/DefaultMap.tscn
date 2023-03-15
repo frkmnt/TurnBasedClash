@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3nduo4f7x2sl"]
+
+[ext_resource type="PackedScene" uid="uid://dr7mvhmgl8x0g" path="res://Encounter/Map/Tilemap/GridHighlighter.tscn" id="1_1pxtq"]
+[ext_resource type="Script" path="res://Encounter/Map/Tilemap/Tilemap.gd" id="1_x2rnj"]
+[ext_resource type="PackedScene" uid="uid://dc4ty03d6o4lu" path="res://Encounter/Map/Tilemap/TileHighlighter.tscn" id="3_y01mj"]
+[ext_resource type="PackedScene" uid="uid://bhsjwhokgep56" path="res://Encounter/Map/Tilemap/TileNavigator.tscn" id="4_nrlnq"]
+
+[node name="Map" type="TileMap"]
+texture_filter = 1
+cell_quadrant_size = 64
+format = 2
+script = ExtResource( "1_x2rnj" )
+
+[node name="GridHighlighter" parent="." instance=ExtResource( "1_1pxtq" )]
+z_index = 1
+
+[node name="TileHighlighter" parent="." instance=ExtResource( "3_y01mj" )]
+
+[node name="TileNavigator" parent="." instance=ExtResource( "4_nrlnq" )]

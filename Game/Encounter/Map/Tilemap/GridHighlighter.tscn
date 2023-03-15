@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr7mvhmgl8x0g"]
+
+[ext_resource type="Script" path="res://Encounter/Map/Tilemap/GridHighlighter.gd" id="1_ny8rp"]
+
+[node name="GridHighlighter" type="Node2D"]
+script = ExtResource( "1_ny8rp" )

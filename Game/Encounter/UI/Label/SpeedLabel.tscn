@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8i63bigv2uat"]
+
+[ext_resource type="Script" path="res://Encounter/UI/Label/SpeedLabel.gd" id="1_j7tml"]
+[ext_resource type="Texture2D" uid="uid://bgqtgyxa06jiq" path="res://Asset/UI/SpeedIcon.png" id="1_y531y"]
+[ext_resource type="Font" uid="uid://dgw7wje42t240" path="res://Asset/Fonts/Encounter/Announcement/AnnouncementFont.tres" id="2_s7aos"]
+
+[node name="SpeedLabel" type="TextureRect"]
+minimum_size = Vector2(125, 125)
+offset_right = 40.0
+offset_bottom = 23.0
+texture = ExtResource( "1_y531y" )
+script = ExtResource( "1_j7tml" )
+
+[node name="Label" type="Label" parent="."]
+minimum_size = Vector2(125, 110)
+offset_top = -10.0
+offset_right = 125.0
+offset_bottom = 103.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.368627, 0.639216, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource( "2_s7aos" )
+theme_override_font_sizes/font_size = 150
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://766gemanyyrf"]
+
+[ext_resource type="Script" path="res://Encounter/Map/Tiles/TileHighlight.gd" id="1_5lthg"]
+[ext_resource type="Texture2D" uid="uid://8v42asq7ujpm" path="res://Asset/Encounter/tile_highlight.png" id="1_6tgxd"]
+
+[node name="TileHighlight" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource( "1_6tgxd" )
+script = ExtResource( "1_5lthg" )

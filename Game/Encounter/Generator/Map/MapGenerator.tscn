@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsoga7cvexvvc"]
+
+[ext_resource type="Script" path="res://Encounter/Generator/Map/MapGenerator.gd" id="1_m05tf"]
+[ext_resource type="PackedScene" uid="uid://d3nduo4f7x2sl" path="res://Encounter/Map/Tilemap/DefaultMap.tscn" id="2_84xug"]
+
+[node name="MapGenerator" type="Node2D"]
+z_as_relative = false
+script = ExtResource( "1_m05tf" )
+
+[node name="Map" parent="." instance=ExtResource( "2_84xug" )]

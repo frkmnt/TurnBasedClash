@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhsjwhokgep56"]
+
+[ext_resource type="Script" path="res://Encounter/Map/Tilemap/TileNavigator.gd" id="1_hawv8"]
+
+[node name="TileNavigator" type="Node2D"]
+script = ExtResource( "1_hawv8" )

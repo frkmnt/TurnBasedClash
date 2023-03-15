@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0t7gt4gno01d"]
+
+[ext_resource type="Texture2D" uid="uid://b8gpfjmrltw0m" path="res://Asset/UI/OptionsIcon.png" id="1_qfclh"]
+[ext_resource type="Script" path="res://Encounter/UI/Button/EncounterButton.gd" id="2_f6suw"]
+
+[node name="OptionsButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 31.0
+focus_mode = 0
+theme_override_colors/icon_pressed_color = Color(0.415686, 0.415686, 0.415686, 0.286275)
+shortcut_in_tooltip = false
+icon = ExtResource( "1_qfclh" )
+flat = true
+icon_alignment = 1
+script = ExtResource( "2_f6suw" )
+_id = "Options"
+
+[connection signal="toggled" from="." to="." method="on_toggled"]

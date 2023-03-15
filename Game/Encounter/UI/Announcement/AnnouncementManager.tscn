@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://pqe1j0jsisie"]
+
+[ext_resource type="Script" path="res://Encounter/UI/Announcement/AnnouncementManager.gd" id="1_5kfaw"]
+[ext_resource type="PackedScene" uid="uid://bfwux2cymfwsi" path="res://Encounter/UI/Announcement/Announcement.tscn" id="2_l4kfl"]
+
+[sub_resource type="Animation" id="Animation_88ngb"]
+resource_name = "NewRound"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnnouncementManager/Announcement:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.8, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 0.112656),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnnouncementManager/Announcement:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"points": PackedFloat32Array(-200, -1, -0.5, 0.25, 0, 0, 300, -0.25, 0, 0.25, 0, 1, 450, -0.25, 0, 0.25, 0, 0, 1250, -0.25, 0, 0.25, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1.7, 2.8)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnnouncementManager")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_round_announcement_finished"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_letho"]
+resource_name = "GameStart"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnnouncementManager/Announcement:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.8, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 0.112656),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnnouncementManager/Announcement:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"points": PackedFloat32Array(-200, -1, -0.5, 0.25, 0, 0, 300, -0.25, 0, 0.25, 0, 1, 450, -0.25, 0, 0.25, 0, 0, 1250, -0.25, 0, 0.25, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1.7, 2.8)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnnouncementManager")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_game_start_announcement_finished"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_isabs"]
+_data = {
+"GameStart": SubResource( "Animation_letho" ),
+"NewRound": SubResource( "Animation_88ngb" )
+}
+
+[node name="AnnouncementManager" type="AnimationPlayer"]
+libraries = {
+"": SubResource( "AnimationLibrary_isabs" )
+}
+script = ExtResource( "1_5kfaw" )
+
+[node name="Announcement" parent="." instance=ExtResource( "2_l4kfl" )]
+self_modulate = Color(1, 1, 1, 0)
+offset_top = 290.0
+offset_bottom = 440.001
+metadata/_edit_layout_mode = 1

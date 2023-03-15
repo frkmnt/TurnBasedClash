@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1flmv787j6ux"]
+
+[ext_resource type="Script" path="res://Encounter/Camera/EncounterCamera.gd" id="1_py3mn"]
+
+[node name="EncounterCamera" type="Camera2D"]
+current = true
+zoom = Vector2(0.75, 0.75)
+smoothing_enabled = true
+script = ExtResource( "1_py3mn" )

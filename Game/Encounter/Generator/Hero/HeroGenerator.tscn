@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Encounter/Generator/Hero/HeroGenerator.gd" id="1_ux1sp"]
+
+[node name="HeroGenerator" type="Node2D"]
+script = ExtResource( "1_ux1sp" )

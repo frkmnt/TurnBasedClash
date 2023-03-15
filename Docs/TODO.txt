@@ -1,0 +1,24 @@
+#=== Enemies ===#
+	* Implement pathfinding AI
+
+
+
+#=== UI ===#
+	* Clicking in move mode, outside of moveable tiles, should result in a camera pan/zoom.
+	* Only toggle one button at a time.
+	* Implement turn queue
+	* Add line path preview when navigating
+	* Hold button to pass turn
+	* Add round : turn preview to turn label
+
+
+
+
+#=== Gameplay ===#
+	* Improve turn_start speed randomness, to prevent rerolling unfairly on turn reset.
+
+
+
+
+#=== Visual ===#
+	* turn sprite around if changing directions when moving
