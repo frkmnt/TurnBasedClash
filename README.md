@@ -416,7 +416,7 @@ The more radical the change, the more expensive the item/gold cost.
 In ascending order of cost: Skills -> Class -> Attribute Tree.
 Upgrades allow the more expensive changes to be undertaken.
 
-***Bank:***
+* ***Bank:***
 Gain gold interest over time.
 
 ***
