@@ -7,7 +7,6 @@ A turn-based RPG based around town-building and dungeon exploration. Manage char
 
 ***
 
-***
 
 
 
@@ -20,7 +19,6 @@ A turn-based RPG based around town-building and dungeon exploration. Manage char
 
 ***
 
-***
 
 
 
@@ -40,13 +38,12 @@ These points can the be used individually with each Hero to level up or unlock/u
 
 ***
 
-***
 
 
 ### Attributes
 The game features 3 main Attributes that influence the character's remaining Stats:
-* Dexterity (Dex):Influences the character's Actions Per Turn (APT)
-* Intelligence (Int):Influences the character's Critical Hit Chance (Crit)
+* Dexterity (Dex): Influences the character's Actions Per Turn (APT)
+* Intelligence (Int): Influences the character's Critical Hit Chance (Crit)
 * Strength (Str): Influences the character's Hit Points (HP)
 
 Each time a Character kevels up, they gain 2 Attributes points that can be freely allocated.
@@ -54,7 +51,6 @@ Attribute points influence skill's performance and certain items may have a minu
 
 ***
 
-***
 
 
 ### Classes
@@ -64,7 +60,8 @@ There is a class tree system, that allows Characters to branch off into new clas
 
 ***
 
-***
+
+
 
 
 #### Dexterity Tree
@@ -72,80 +69,114 @@ There is a class tree system, that allows Characters to branch off into new clas
 ###### Thief
 Tier 1. Previous Class: None. Main Stats: Dex. <br>
 Outlaws that learned to survive through any means necessary. <br>
+* Invisibility: Gain the effects of Invisibility. 
 
-###### Rogue
-Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
-This class <br>
 
 ###### Mercenary
 Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
-This class <br>
+Experienced outlaws often find shady employers that seek their peculiar talents. <br>
+
+
+###### Rogue
+Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
+Rogues embrace their freedom, often turning a blind eye to the law. <br>
+* Focus: Boosts evasion until the start of your next turn.
+
 
 ###### Duelist
-Tier 3. Previous Class: Rogue. Main Stats: Str. <br>
-This class <br>
+Tier 3. Previous Class: Mercenary. Main Stats: Str. <br>
+Duelists focus their might on challenging enemies. <br>
+* Challenge: Force an enemy to attempt to target you if possible.
+* Parry: Until the start of your next turn, if you are attacked halve the damage and immediatly counter attack. Ends your turn.
+
 
 ###### Ranger
-Tier 3. Previous Class: Rogue. Main Stats: Dex. <br>
-This class <br>
+Tier 3. Previous Class: Mercenary. Main Stats: Dex. <br>
+Rangers are fearsome hunters that specialize in ranged weaponry. <br>
+
 
 ###### Bard
-Tier 3. Previous Class: Mercenary. Main Stats: Int. <br>
-This class <br>
+Tier 3. Previous Class: Rogue. Main Stats: Int. <br>
+Control over performative arts gives Bards an edge on the battlefield. <br>
+* Perform: Until the start of your next turn, buff allies in a 3x3 radius around you.
+
 
 ###### Cutthroat
-Tier 3. Previous Class: Mercenary. Main Stats: Dex. <br>
-This class <br>
+Tier 3. Previous Class: Rogue. Main Stats: Dex. <br>
+Cutthroats prefer to fight from the shadows and confuse the enemy. <br>
+
 
 ###### Bounty Hunter
 Tier 4. Previous Class: Duelist. Main Stats: Str. <br>
-This class <br>
+Bounty hunters double down on locking down enemies with powerful moves. <br>
+* Peekaboo: Until your next turn, if you are attacked, gain the effects of Invisibility. Ends your turn.
+
 
 ###### Vigilante
 Tier 4. Previous Class: Duelist. Main Stats: Dex. <br>
-This class <br>
+Vigilantes turn an enemy's overwhelming numbers against them. <br>
+* Underwhelming Odds (Passive): When a target is Challanged, they lose armor for each adjacent enemy.
+
 
 ###### Sharpshooter
 Tier 4. Previous Class: Ranger. Main Stats: Int. <br>
-This class <br>
+Sharpshooters prefer to focus on a single target from afar. <br>
+
 
 ###### Gunner
 Tier 4. Previous Class: Ranger. Main Stats: Dex. <br>
-This class <br>
+Gunners are great at crowd control and area denial. <br>
+
 
 ###### Trickster
 Tier 4. Previous Class: Bard. Main Stats: Dex. <br>
-This class <br>
+Tricksters use visual magic to disrupt the enemy line. <br>
+* Decoy: Gain 1x Invisibility. Create a decoy that lasts one turn and deals damage if attacked.
+
 
 ###### Virtuoso
 Tier 4. Previous Class: Bard. Main Stats: Int. <br>
-This class <br>
+Virtuosos use auditory magic to disable enemy forces. <br>
+* Charm: Target enemy focuses other enemies during their next turn.
+
 
 ###### Slasher
 Tier 4. Previous Class: Cutthroat. Main Stats: Str. <br>
-This class <br>
+Slashers are great at positioning themselves among the enemy, unnoticed. <br>
+* Shadow Step: Gain double your movement speed when invisible.
+
 
 ###### Assassin
 Tier 4. Previous Class: Cutthroat. Main Stats: Dex. <br>
-This class <br>
+Assassins use patience to slowly but steadily deal massive damage. <br>
+* Patience (Passive): The longer you under the effects of Invisibility, the stronger your next attack will be.
+
 
 ###### Veteran
 Tier 5. Previous Class: Vigilante/Bounty Hunter. Main Stats: Dex/Str. <br>
-This class <br>
+Earning the title of Veteran is no easy feat, they are among the most experienced professionals available.  <br>
+
 
 ###### Sniper
 Tier 5. Previous Class: Sharpshooter/Gunner. Main Stats: Dex/Int. <br>
-This class <br>
+Snipers are masters of ranged warfare at whatever range is necessary. <br>
+
 
 ###### Grand Performer
 Tier 5. Previous Class: Trickster/Virtuoso. Main Stats: Dex/Int. <br>
-This class <br>
+Grand Performers can dazzle entire audiences with their brilliant performances. <br>
+
 
 ###### Ninja
 Tier 5. Previous Class: Slasher/Assassin. Main Stats: Dex/Str. <br>
-This class <br>
+Mysterious experts of stealth and subterfuge. <br>
+
+
 
 ***
+
+
+
 
 
 #### Intelligence Tree
@@ -153,75 +184,94 @@ This class <br>
 ###### Mage
 Tier 1. Previous Class: None. Main Stats: Int. <br>
 Mage is the commonly used term for those with magical powers. <br>
-* Blast:
+* Magic Missile: Shoot 3 magic bolts at a target.
+
 
 ###### Wizard
 Tier 2. Previous Class: Mage. Main Stats: Int. <br>
-Mages that specialize in manipulating the magic around them are considered Wizards. <br>
+Wizards specialize in manipulating the magic around them. <br>
+
 
 ###### Sorcerer
 Tier 2. Previous Class: Mage. Main Stats: Int. <br>
 Those that focus on their innate magic power are called Sorcerers. <br>
 
+
 ###### Cleric
 Tier 3. Previous Class: Wizard. Main Stats: Str. <br>
-This class <br>
+Communion with higher forces grants Clerics divine powers. <br>
+* Holy Missile: Same properties as Magic Missile, but deals extra damage to unholy creatures.
+
 
 ###### Seer
 Tier 3. Previous Class: Wizard. Main Stats: Int. <br>
-This class <br>
+Seers are wise mages that often act as counselors for nobility. <br>
+
 
 ###### Enhancer
 Tier 3. Previous Class: Sorcerer. Main Stats: Dex. <br>
-This class <br>
+Enhancers focus their magic on improving their bodies' properties. <br>
+
 
 ###### Psychic
 Tier 3. Previous Class: Sorcerer. Main Stats: Int. <br>
-This class <br>
+Psychics use magic to tap into the powers of the mind. <br>
+
 
 ###### Inquisitor
 Tier 4. Previous Class: Cleric. Main Stats: Str. <br>
-This class <br>
+Inquisitors relentlessly chase evil that needs to be rooted out. <br>
+
 
 ###### Priest
 Tier 4. Previous Class: Cleric. Main Stats: Int. <br>
-This class <br>
+Priests are well-versed in esoteric knowledge and rituals. <br>
+
 
 ###### Elementalist
 Tier 4. Previous Class: Seer. Main Stats: Dex. <br>
-This class <br>
+Elementalists are masters of nature's elements. <br>
+
 
 ###### Summoner
 Tier 4. Previous Class: Seer. Main Stats: Int. <br>
-This class <br>
+Summoners call upon aid <br>
+
 
 ###### Battlemage
 Tier 4. Previous Class: Enhancer. Main Stats: Dex. <br>
 This class <br>
 
+
 ###### Blaster
 Tier 4. Previous Class: Enhancer. Main Stats: Int. <br>
 This class <br>
+
 
 ###### Telekineticist
 Tier 4. Previous Class: Psychic. Main Stats: Str. <br>
 This class <br>
 
+
 ###### Mesmerizer
 Tier 4. Previous Class: Psychic. Main Stats: Int. <br>
 This class <br>
+
 
 ###### Paragon
 Tier 5. Previous Class: Inquisitor/Priest. Main Stats: Int/Str. <br>
 This class <br>
 
+
 ###### Arch Wizard
 Tier 5. Previous Class: Elementalist/Summoner. Main Stats: Int/Dex. <br>
 This class <br>
 
+
 ###### War Caster
 Tier 5. Previous Class: Battlemage/Blaster. Main Stats: Int/Dex. <br>
 This class <br>
+
 
 ###### Mind Breaker
 Tier 5. Previous Class: Telekineticist/Mesmerizer. Main Stats: Int/Str. <br>
@@ -230,79 +280,101 @@ This class <br>
 ***
 
 
+
+
+
 #### Strength Tree
 
 ###### Fighter
 Tier 1. Previous Class: None. Main Stats: Str. <br>
 Durable melee fighters. <br>
+* Brace: Gain defense until the start of your next turn. Ends your turn.
+
 
 ###### Warrior
 Tier 2. Previous Class: Fighter. Main Stats: Str. <br>
 This class <br>
 
+
 ###### Barbarian
 Tier 2. Previous Class: Fighter. Main Stats: Str. <br>
 This class <br>
+
 
 ###### Monk
 Tier 3. Previous Class: Warrior. Main Stats: Dex. <br>
 This class <br>
 
+
 ###### Knight
 Tier 3. Previous Class: Warrior. Main Stats: Str. <br>
 This class <br>
+
 
 ###### Berserker
 Tier 3. Previous Class: Barbarian. Main Stats: Str. <br>
 This class <br>
 
+
 ###### Bloodrager
 Tier 3. Previous Class: Barbarian. Main Stats: Int. <br>
 This class <br>
+
 
 ###### Way of Water
 Tier 4. Previous Class: Monk. Main Stats: Dex. <br>
 This class <br>
 
+
 ###### Way of Rock
 Tier 4. Previous Class: Monk. Main Stats: Str. <br>
 This class <br>
+
 
 ###### Mystic Knight
 Tier 4. Previous Class: Knight. Main Stats: Int. <br>
 This class <br>
 
+
 ###### Vanguard
 Tier 4. Previous Class: Knight. Main Stats: Str. <br>
 This class <br>
+
 
 ###### Executioner
 Tier 4. Previous Class: Berserker. Main Stats: Str. <br>
 This class <br>
 
+
 ###### Battle Dancer
 Tier 4. Previous Class: Berserker. Main Stats: Dex. <br>
 This class <br>
+
 
 ###### Brute
 Tier 4. Previous Class: Bloodrager. Main Stats: Str. <br>
 This class <br>
 
+
 ###### Hemomancer
 Tier 4. Previous Class: Bloodrager. Main Stats: Int. <br>
 This class <br>
+
 
 ###### Grandmaster
 Tier 5. Previous Class: Way of Water/Way of Rock. Main Stats: Str/Dex. <br>
 This class <br>
 
+
 ###### Paladin
 Tier 5. Previous Class: Mystic Knight/Vanguard. Main Stats: Str/Int. <br>
 This class <br>
 
+
 ###### Scourge
 Tier 5. Previous Class: Executioner/Battle Dancer. Main Stats: Str/Dex. <br>
 This class <br>
+
 
 ###### Reaver
 Tier 5. Previous Class: Brute/Hemomancer. Main Stats: Str/Int. <br>
@@ -312,7 +384,14 @@ This class
 
 ***
 
-***
+
+
+#### Modifiers
+
+Modifiers are all kinds of buffs/debuffs. 
+
+* Invisibility: Become untargetable until the start of your next turn.
+
 
 
 
@@ -341,7 +420,6 @@ After the first Raid, players may construct Defensive structures in the Hub.
 
 ***
 
-***
 
 ### Structures
 
@@ -423,7 +501,6 @@ Gain gold interest over time.
 
 ***
 
-***
 
 
 
@@ -437,7 +514,6 @@ Stair Guy
 
 ***
 
-***
 
 
 #### Dungeon Levels
@@ -446,7 +522,6 @@ Stair Guy
 
 ***
 
-***
 
 
 
@@ -462,7 +537,6 @@ Stair Guy
 
 ***
 
-***
 
 
 
@@ -480,7 +554,6 @@ Stair Guy
 
 ***
 
-***
 
 
 
@@ -504,7 +577,9 @@ Relevant concepts:
 * Stat
 * XP: Experience Points
 
+***
 
+***
 
 
 
