@@ -15,6 +15,15 @@ A turn-based RPG based around town-building and dungeon exploration. Manage char
 
 ## Story:
 
+# Endings:
+
+* Ending A: Defeat the evil king and become the Evil King.
+
+* Ending B: Defeat the evil king and break the cycle.
+
+* Ending C: The dank ending. ***Use a specific item during the fight to trigger this event***.
+
+
 ***
 
 ***
@@ -32,9 +41,11 @@ Parties are composed of up to 4 Characters, ***with no class or level restrictio
 Mixing and matching different classes and skills is the key to conquering the dungeons.
 ***Average levels may cause problems, ex. if you have characters in levels 1-2 and characters in level 9-10, the average would be 6 and heroes may be unusable.***
 
-Each Character's Level ranges from 1-20. Every 4 levels are considered a Tier (ex. level 11 is tier 3).
+Each Character's Level ranges from 1-20. Every 4 levels are considered a Tier (ex. level 11 is tier 3)
 Each time Experience Points (XP) are earned, they are stored in a pool. 
 These points can the be used individually with each Hero to level up or unlock/upgrade skills.
+
+Heroes only recover ***25%*** of their HP for each dungeon raid they are not part of. (ex. a character at 25% HP needs to rest during 3 dungeon raids to reach 100% HP)
 
 ***
 
@@ -235,22 +246,23 @@ Elementalists are masters of nature's elements. <br>
 
 ###### Summoner
 Tier 4. Previous Class: Seer. Main Stats: Int. <br>
-Summoners call upon aid <br>
+Summoners invoke various creatures to reinforce their ally's numbers. <br>
+* Scratching Pole: 
 
 
 ###### Battlemage
 Tier 4. Previous Class: Enhancer. Main Stats: Dex. <br>
-This class <br>
+Battlemages use magic to amplify their martial skills in combat. <br>
 
 
 ###### Blaster
 Tier 4. Previous Class: Enhancer. Main Stats: Int. <br>
-This class <br>
+Adept at using ranged spells, they are masters at dealing damage. <br>
 
 
 ###### Telekineticist
 Tier 4. Previous Class: Psychic. Main Stats: Str. <br>
-This class <br>
+Telekineticists manipulate the world around them using their mind. <br>
 
 
 ###### Mesmerizer
@@ -260,7 +272,7 @@ This class <br>
 
 ###### Paragon
 Tier 5. Previous Class: Inquisitor/Priest. Main Stats: Int/Str. <br>
-This class <br>
+Parago br>
 
 
 ###### Arch Wizard
@@ -486,6 +498,7 @@ Upgrades allow better siege structures to be built.
 
 * Hospital:
 Remove certain debuffs from Heroes.
+Heal Heroes to full health in exchange for gold. 
 Upgrades reduce treatment costs and allow deadlier conditions to be treated.
 
 * Church: 
@@ -497,7 +510,8 @@ Upgrades allow the more expensive changes to be undertaken.
 * ***Bank:***
 Gain gold interest over time.
 
-***
+*** ***Fence:***
+Sometimes, you can find their Henchmen that help you throughout the dungeon.
 
 ***
 
@@ -540,7 +554,9 @@ Stair Guy
 
 
 
+## Items:
 
+* Return Stone: Lets you forfeit a dungeon and return to the Hub.
 
 
 
@@ -553,8 +569,6 @@ Stair Guy
 ***
 
 ***
-
-
 
 
 
