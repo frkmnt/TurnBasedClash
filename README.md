@@ -9,10 +9,6 @@ A turn-based RPG based around town-building and dungeon exploration. Manage char
 
 
 
-
-
-
-
 ## Story:
 
 # Endings:
@@ -418,9 +414,8 @@ Before venturing into the dungeon, Characters rest at the Hub, where utilities a
 ***Is is walled off by decaying ruins, with 3 entrances: A large one South, and two smaller ones East and West.***
 
 Throughout the game, Materials and Gold can be collected in order to upgrade the Hub.
-The Hub is composed of a 11x11 grid, where structures can be placed and built. 
-***Structures may be 4x4, so the 11x11 may have to be scaled.***
-Most structures are limited to 1, except Houses and Caches.
+The Hub is composed of a 7x7 grid, where structures can be placed and built. 
+Most structures are limited to 1, except Houses.
 Heroes living in the Hub can be placed in the grid. This is their position during Sieges.
 
 Occasionally, the Hub may be raided by outsiders, trying to pillage the valueable loot you are discovering.
@@ -472,17 +467,14 @@ Must be upgraded for each Level Tier.
 
 * House:
 Housing for Heroes. 
-Each house allows ***2*** heroes to move into the Hub.
-By default, up to 6 heroes can live in the Hub without any Houses.
-***What to do a house is destroyed during a siege and there are not enough for the current amount of heroes? Should enemies attack houses?***
-Cannot be upgraded, but multiple can be built.
-
-* Cache:
-Item storage. 
-Each cache allows 10 items to be stored.
-By default, up to 10 items can be stored with any Caches.
-When attacked during a raid, progressively drops random items from the storage.
-Cannot be upgraded, but multiple can be built.
+Each house allows 4 heroes to move into the Hub. They must be allocated to a specific House.
+By default, up to 4 heroes can live in the Hub without any Houses.
+Heroes allocated to a House and not in a dungeon recover 25% of their HP.
+Each House allows 10 items to be stored.
+By default, up to 10 items can be stored with a House.
+When attacked during a raid, progressively drops random items from the storage. If it is destroyed, it must be repaired before storing further items.
+Up to 4 Houses can be built.
+Upgrades increase the HP heroes restore and the max item storage.
 
 * Tavern: 
 Provides different Buffs to Heroes going into the Dungeon.
@@ -499,6 +491,7 @@ Upgrades allow better siege structures to be built.
 * Hospital:
 Remove certain debuffs from Heroes.
 Heal Heroes to full health in exchange for gold. 
+Add a passive HP heal to all heroes not in a dungeon.
 Upgrades reduce treatment costs and allow deadlier conditions to be treated.
 
 * Church: 
