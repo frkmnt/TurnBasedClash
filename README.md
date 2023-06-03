@@ -69,25 +69,44 @@ There is a class tree system, that allows Characters to branch off into new clas
 
 
 
+### Skills
+Characters unlock different skills depending on their class.
+Skills cost XP to be aquired, and may cost additional XP to be leveled up.
+Skills can be of the following types:
+* Area of Effect (AoE): Targets an area of tiles around the target.
+* Single Target (ST): Choose a single Enemy.
+* Empty Tile (ET): Choose a vacant tile.
+* Neutral (N): Simply activate the skill.
+* Passive (P): This skill's effects are always active.
+* Multi Target (MT): Choose multiple targets.
+
+***
+
+
+
 
 
 #### Dexterity Tree
 
 ###### Thief
 Tier 1. Previous Class: None. Main Stats: Dex. <br>
-Outlaws that learned to survive through any means necessary. <br>
-* Invisibility: Gain the effects of Invisibility. 
+Thieves are outlaws that learned to survive through any means necessary. <br>
+* Invisibility (N): Gain the effects of Invisibility. 
+* Throwing Knife (ST): A ranged attack with a high critical hit chance.
 
 
 ###### Mercenary
 Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
-Experienced outlaws often find shady employers that seek their peculiar talents. <br>
+Mercenaries are experienced outlaws often find shady employers that seek their peculiar talents. <br>
+* Focus (N): Boosts evasion until the start of your next turn. Ends your turn, but costs 0.
+* Sucker Punch: While invisible, stun an enemy while dealing massive damage.
 
 
 ###### Rogue
 Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
 Rogues embrace their freedom, often turning a blind eye to the law. <br>
-* Focus: Boosts evasion until the start of your next turn.
+* Smokescreen (N): Blinds all Characters in adjacent tiles.
+* Poison Weapon (N): Your attacks apply the poison debuff. Lasts for 2 turns.
 
 
 ###### Duelist
@@ -100,17 +119,21 @@ Duelists focus their might on challenging enemies. <br>
 ###### Ranger
 Tier 3. Previous Class: Mercenary. Main Stats: Dex. <br>
 Rangers are fearsome hunters that specialize in ranged weaponry. <br>
+* Great Aim: Doubles the range of ranged attacks.
+* Twin Shot: Attack two targets at once.
+* Track: Decrease the target's defenses. It cannot become invisible.
 
 
 ###### Bard
 Tier 3. Previous Class: Rogue. Main Stats: Int. <br>
 Control over performative arts gives Bards an edge on the battlefield. <br>
-* Perform: Until the start of your next turn, buff allies in a 3x3 radius around you.
+* Perform: Until the start of your next turn, buff allies/debuff enemies in a 3x3 radius around you.
 
 
 ###### Cutthroat
 Tier 3. Previous Class: Rogue. Main Stats: Dex. <br>
 Cutthroats prefer to fight from the shadows and confuse the enemy. <br>
+
 
 
 ###### Bounty Hunter
@@ -128,11 +151,13 @@ Vigilantes turn an enemy's overwhelming numbers against them. <br>
 ###### Sharpshooter
 Tier 4. Previous Class: Ranger. Main Stats: Int. <br>
 Sharpshooters prefer to focus on a single target from afar. <br>
+* Cracking Shot (P): Attacking the same enemy repeatedly increases damage.
 
 
 ###### Gunner
 Tier 4. Previous Class: Ranger. Main Stats: Dex. <br>
 Gunners are great at crowd control and area denial. <br>
+* Volley Shot (AoE): Deal damage to enemies in an area. Lasts for 2 Rounds.
 
 
 ###### Trickster
@@ -150,13 +175,15 @@ Virtuosos use auditory magic to disable enemy forces. <br>
 ###### Slasher
 Tier 4. Previous Class: Cutthroat. Main Stats: Str. <br>
 Slashers are great at positioning themselves among the enemy, unnoticed. <br>
-* Shadow Step: Gain double your movement speed when invisible.
+* Shadow Step (P): Gain double your movement speed when invisible.
+* Death Dash (ET): While invisible, dash forward and attack all adjacent enemies in your path. The dash is 2 tiles long, but stops if anything is in the way. This doesn't cancel invisibility.
 
 
 ###### Assassin
 Tier 4. Previous Class: Cutthroat. Main Stats: Dex. <br>
 Assassins use patience to slowly but steadily deal massive damage. <br>
 * Patience (Passive): The longer you under the effects of Invisibility, the stronger your next attack will be.
+* Opportunistic Strike (Passive) Deal more damage based on the unique debuffs any target enemy may have.
 
 
 ###### Veteran
@@ -166,7 +193,8 @@ Earning the title of Veteran is no easy feat, they are among the most experience
 
 ###### Sniper
 Tier 5. Previous Class: Sharpshooter/Gunner. Main Stats: Dex/Int. <br>
-Snipers are masters of ranged warfare at whatever range is necessary. <br>
+Snipers are masters of ranged warfare under any circumstances. <br>
+* Hunter: While invisible, ranged skills don't cancel invisibility.
 
 
 ###### Grand Performer
@@ -177,6 +205,7 @@ Grand Performers can dazzle entire audiences with their brilliant performances. 
 ###### Ninja
 Tier 5. Previous Class: Slasher/Assassin. Main Stats: Dex/Str. <br>
 Mysterious experts of stealth and subterfuge. <br>
+Deadly Shade: While invisible, walking into a tile adjacent to an enemy automatically triggers an attack. This doesn't cancel invisibility.
 
 
 
@@ -191,7 +220,8 @@ Mysterious experts of stealth and subterfuge. <br>
 ###### Mage
 Tier 1. Previous Class: None. Main Stats: Int. <br>
 Mage is the commonly used term for those with magical powers. <br>
-* Magic Missile: Shoot 3 magic bolts at a target.
+* Magic Missile (ST): Shoot 3 magic bolts at a target.
+* Teleport (ET): Instantly move a few tiles away.
 
 
 ###### Wizard
