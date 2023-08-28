@@ -283,7 +283,7 @@ Battlemages use magic to amplify their martial skills in combat. <br>
 
 ###### Blaster
 Tier 4. Previous Class: Enhancer. Main Stats: Int. <br>
-Adept at using ranged spells, they are masters at dealing damage. <br>
+Blasters are adept at using ranged spells and dealing damage. <br>
 
 
 ###### Telekineticist
@@ -293,27 +293,27 @@ Telekineticists manipulate the world around them using their mind. <br>
 
 ###### Mesmerizer
 Tier 4. Previous Class: Psychic. Main Stats: Int. <br>
-This class <br>
+Mesmerizers tap into the unconsciousness of living things, molding them to their advantage. <br>
 
 
 ###### Paragon
 Tier 5. Previous Class: Inquisitor/Priest. Main Stats: Int/Str. <br>
-Parago br>
+Paragons are beacons of hope, their presence greatly inspires their allies in the battlefield. br>
 
 
 ###### Arch Wizard
 Tier 5. Previous Class: Elementalist/Summoner. Main Stats: Int/Dex. <br>
-This class <br>
+Arch Wizards are wise and versatile, their knowledge allowing them to adapt to any situation. <br>
 
 
 ###### War Caster
 Tier 5. Previous Class: Battlemage/Blaster. Main Stats: Int/Dex. <br>
-This class <br>
+War Casters combine their mastery over magic with incredible martial prowess. <br>
 
 
 ###### Mind Breaker
 Tier 5. Previous Class: Telekineticist/Mesmerizer. Main Stats: Int/Str. <br>
-This class <br>
+Mind Breakers are adept at both instilling fear and bolstering morale. <br>
 
 ***
 
@@ -325,98 +325,98 @@ This class <br>
 
 ###### Fighter
 Tier 1. Previous Class: None. Main Stats: Str. <br>
-Durable melee fighters. <br>
+Fighters are durable melee combatants. <br>
 * Brace: Gain defense until the start of your next turn. Ends your turn.
 
 
 ###### Warrior
 Tier 2. Previous Class: Fighter. Main Stats: Str. <br>
-This class <br>
+Warriors are fighter with experience and refined techniques. <br>
 
 
 ###### Barbarian
 Tier 2. Previous Class: Fighter. Main Stats: Str. <br>
-This class <br>
+Barbarians are relentless fighters with great might. <br>
 
 
 ###### Monk
 Tier 3. Previous Class: Warrior. Main Stats: Dex. <br>
-This class <br>
+Monks abandon traditional weapons and armor in favor of a purer approach to combat. <br>
 
 
 ###### Knight
 Tier 3. Previous Class: Warrior. Main Stats: Str. <br>
-This class <br>
+Knights employ expert use of equipment while in conflict. <br>
 
 
 ###### Berserker
 Tier 3. Previous Class: Barbarian. Main Stats: Str. <br>
-This class <br>
+Berserkers are fueled by pure, unadultered rage. <br>
 
 
 ###### Bloodrager
 Tier 3. Previous Class: Barbarian. Main Stats: Int. <br>
-This class <br>
+Bloodragers use blood magic to enhance their physical prowess. <br>
 
 
 ###### Way of Water
 Tier 4. Previous Class: Monk. Main Stats: Dex. <br>
-This class <br>
+Way of Water monks focus on dodging and flowing between enemies. <br>
 
 
 ###### Way of Rock
 Tier 4. Previous Class: Monk. Main Stats: Str. <br>
-This class <br>
+Way of Rock monks focus on withstanding hits and reverting them back. <br>
 
 
 ###### Mystic Knight
 Tier 4. Previous Class: Knight. Main Stats: Int. <br>
-This class <br>
+Mystic Knights use defensive magic to enhance their combat abilities. <br>
 
 
 ###### Vanguard
 Tier 4. Previous Class: Knight. Main Stats: Str. <br>
-This class <br>
+Vanguards focus on locking down and controlling an area. <br>
 
 
 ###### Executioner
 Tier 4. Previous Class: Berserker. Main Stats: Str. <br>
-This class <br>
+Executioners specialize in taking down large threats. <br>
 
 
 ###### Battle Dancer
 Tier 4. Previous Class: Berserker. Main Stats: Dex. <br>
-This class <br>
+Battle Dancers weave through the battlefield while attacking enemies. <br>
 
 
 ###### Brute
 Tier 4. Previous Class: Bloodrager. Main Stats: Str. <br>
-This class <br>
+Brutes unleash rage more efficiently, turning them into formidable foes. <br>
 
 
 ###### Hemomancer
 Tier 4. Previous Class: Bloodrager. Main Stats: Int. <br>
-This class <br>
+Hemomancers use advanced blood magic, using weakened enemies to their advantage. <br>
 
 
 ###### Grandmaster
 Tier 5. Previous Class: Way of Water/Way of Rock. Main Stats: Str/Dex. <br>
-This class <br>
+Grandmasters are experts at turning the enemies' strength against them. <br>
 
 
 ###### Paladin
 Tier 5. Previous Class: Mystic Knight/Vanguard. Main Stats: Str/Int. <br>
-This class <br>
+Paladins are holy knights that gained the favour of the god of war. <br>
 
 
 ###### Scourge
 Tier 5. Previous Class: Executioner/Battle Dancer. Main Stats: Str/Dex. <br>
-This class <br>
+Scourges are brutal fighters that can deal and withstand massive amounts of damage. <br>
 
 
 ###### Reaver
 Tier 5. Previous Class: Brute/Hemomancer. Main Stats: Str/Int. <br>
-This class
+Reavers are frightening warriores that become stronger the longer the battle rages on.
 
 ***
 
