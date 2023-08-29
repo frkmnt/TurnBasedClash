@@ -64,6 +64,7 @@ Attribute points influence skill's performance and certain items may have a minu
 Characters in this game start out as either Rogues (Dex), Mages (Int) or Warriors (Str). 
 Each class has its unique skills and nudges the character towards its specific attribute.
 There is a class tree system, that allows Characters to branch off into new classes upon leveling up their tier.
+Classes have a set of weapons they are trained in using. Weapons outside this set cannot be used by the character.
 
 ***
 
@@ -73,8 +74,8 @@ There is a class tree system, that allows Characters to branch off into new clas
 Characters unlock different skills depending on their class.
 Skills cost XP to be aquired, and may cost additional XP to be leveled up.
 Skills can be of the following types:
-* Area of Effect (AoE): Targets an area of tiles around the target.
-* Single Target (ST): Choose a single Enemy.
+* Area of Effect (AoE): Targets an area of tiles around the target tile.
+* Single Target (ST): Choose only one target.
 * Empty Tile (ET): Choose a vacant tile.
 * Neutral (N): Simply activate the skill.
 * Passive (P): This skill's effects are always active.
@@ -91,43 +92,43 @@ Skills can be of the following types:
 ###### Thief
 Tier 1. Previous Class: None. Main Stats: Dex. <br>
 Thieves are outlaws that learned to survive through any means necessary. <br>
-* Invisibility (N): Gain the effects of Invisibility. 
-* Throwing Knife (ST): A ranged attack with a high critical hit chance.
+* Invisibility: Gain the effects of Invisibility. (Type: N; Range: 0; Cost: 3; CD: 1; Prev. Skill: -)
+* Throwing Knife: A ranged attack with a high critical hit chance. (Type: ST; Range: 2; Cost: 2; CD: 1; Prev. Skill: -)
 
 
 ###### Mercenary
 Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
 Mercenaries are experienced outlaws often find shady employers that seek their peculiar talents. <br>
-* Focus (N): Boosts evasion until the start of your next turn. Ends your turn, but costs 0.
-* Sucker Punch: While invisible, stun an enemy while dealing massive damage.
+* Focus: Boosts evasion until the start of your next turn. Ends your turn, but costs 0. (Type: N; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Sucker Punch: While invisible, stun an enemy while dealing massive damage. (Type: ST; Range: 1; Cost: 1; CD: 1; Prev. Skill: -)
 
 
 ###### Rogue
 Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
 Rogues embrace their freedom, often turning a blind eye to the law. <br>
-* Smokescreen (N): Blinds all Characters in adjacent tiles.
-* Poison Weapon (N): Your attacks apply the poison debuff. Lasts for 2 turns.
+* Smokescreen: Blinds all Characters in adjacent tiles. (Type: N; Range: 1; Cost: 2; CD: 2; Prev. Skill: -)
+* Poison Weapon: Your attacks apply the poison debuff. Lasts for 2 turns. (Type: N; Range: 0; Cost: 1; CD: 3; Prev. Skill: -)
 
 
 ###### Duelist
 Tier 3. Previous Class: Mercenary. Main Stats: Str. <br>
 Duelists focus their might on challenging enemies. <br>
-* Challenge: Force an enemy to attempt to target you if possible.
-* Parry: Until the start of your next turn, if you are attacked halve the damage and immediatly counter attack. Ends your turn.
+* Challenge: Force an enemy to attempt to target you if possible. (Type: ST; Range: 3; Cost: 2; CD: 2; Prev. Skill: -)
+* Parry: Until the start of your next turn, if you are attacked halve the damage and immediatly counter attack. Ends your turn. (Type: N; Range: 0; Cost: 1; CD: 1; Prev. Skill: -)
 
 
 ###### Ranger
 Tier 3. Previous Class: Mercenary. Main Stats: Dex. <br>
 Rangers are fearsome hunters that specialize in ranged weaponry. <br>
-* Great Aim: Doubles the range of ranged attacks.
-* Twin Shot: Attack two targets at once.
-* Track: Decrease the target's defenses. It cannot become invisible.
+* Great Aim: Doubles the range of ranged attacks. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Twin Shot: Attack two targets at once. (Type: MT; Range: 3; Cost: 1; CD: 1; Prev. Skill: -)
+* Track: Decrease the target's defenses. It cannot become invisible. (Type: ST; Range: 2; Cost: 1; CD: 1; Prev. Skill: -)
 
 
 ###### Bard
 Tier 3. Previous Class: Rogue. Main Stats: Int. <br>
 Control over performative arts gives Bards an edge on the battlefield. <br>
-* Perform: Until the start of your next turn, buff allies/debuff enemies in a 3x3 radius around you.
+* Perform: Until the start of your next turn, buff allies/debuff enemies in a 3x3 radius around you. (Range: N; Cost: 3; CD: 3; Prev. Skill: -)
 
 
 ###### Cutthroat
@@ -139,51 +140,51 @@ Cutthroats prefer to fight from the shadows and confuse the enemy. <br>
 ###### Bounty Hunter
 Tier 4. Previous Class: Duelist. Main Stats: Str. <br>
 Bounty hunters double down on locking down enemies with powerful moves. <br>
-* Peekaboo: Until your next turn, if you are attacked, gain the effects of Invisibility. Ends your turn.
+* Peekaboo: Until your next turn, if you are attacked, gain the effects of Invisibility. (Type: N; Range: 0; Cost: 1; CD: 0; Prev. Skill: -)
 
 
 ###### Vigilante
 Tier 4. Previous Class: Duelist. Main Stats: Dex. <br>
 Vigilantes turn an enemy's overwhelming numbers against them. <br>
-* Underwhelming Odds (Passive): When a target is Challanged, they lose armor for each adjacent enemy.
+* Underwhelming Odds: When a target is Challanged, they lose armor for each adjacent enemy. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 ###### Sharpshooter
 Tier 4. Previous Class: Ranger. Main Stats: Int. <br>
 Sharpshooters prefer to focus on a single target from afar. <br>
-* Cracking Shot (P): Attacking the same enemy repeatedly increases damage.
+* Cracking Shot: Attacking the same enemy repeatedly increases damage. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 ###### Gunner
 Tier 4. Previous Class: Ranger. Main Stats: Dex. <br>
 Gunners are great at crowd control and area denial. <br>
-* Volley Shot (AoE): Deal damage to enemies in an area. Lasts for 2 Rounds.
+* Volley Shot: Deal sustained damage to enemies in an area. Lasts for 2 Rounds. (Type: AOE; Range: 3; Cost: 2; CD: 0; Prev. Skill: -)
 
 
 ###### Trickster
 Tier 4. Previous Class: Bard. Main Stats: Dex. <br>
 Tricksters use visual magic to disrupt the enemy line. <br>
-* Decoy: Gain 1x Invisibility. Create a decoy that lasts one turn and deals damage if attacked.
+* Decoy: Gain 1x Invisibility. Create a decoy that lasts one turn and deals damage if attacked. (Type: ET; Range: 2; Cost: 2; CD: 2; Prev. Skill: -)
 
 
 ###### Virtuoso
 Tier 4. Previous Class: Bard. Main Stats: Int. <br>
 Virtuosos use auditory magic to disable enemy forces. <br>
-* Charm: Target enemy focuses other enemies during their next turn.
+* Charm: Target enemy focuses other enemies during their next turn. (Type: ST; Range: 4; Cost: 1; CD: 1; Prev. Skill: -)
 
 
 ###### Slasher
 Tier 4. Previous Class: Cutthroat. Main Stats: Str. <br>
 Slashers are great at positioning themselves among the enemy, unnoticed. <br>
-* Shadow Step (P): Gain double your movement speed when invisible.
-* Death Dash (ET): While invisible, dash forward and attack all adjacent enemies in your path. The dash is 2 tiles long, but stops if anything is in the way. This doesn't cancel invisibility.
+* Shadow Step: Gain double your movement speed when invisible. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Death Dash: Dash forward, becoming invisible and attacking all adjacent enemies in your path. The dash is 2 tiles long, but stops and reveals you if anything is in the way. (Type: ET; Range: 2; Cost: 3; CD: 3; Prev. Skill: -)
 
 
 ###### Assassin
 Tier 4. Previous Class: Cutthroat. Main Stats: Dex. <br>
 Assassins use patience to slowly but steadily deal massive damage. <br>
-* Patience (Passive): The longer you under the effects of Invisibility, the stronger your next attack will be.
-* Opportunistic Strike (Passive) Deal more damage based on the unique debuffs any target enemy may have.
+* Patience: The longer you under the effects of Invisibility, the stronger your next attack will be. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Opportunistic Strike: Deal more damage based on the unique debuffs any target enemy may have. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 ###### Veteran
@@ -194,7 +195,7 @@ Earning the title of Veteran is no easy feat, they are among the most experience
 ###### Sniper
 Tier 5. Previous Class: Sharpshooter/Gunner. Main Stats: Dex/Int. <br>
 Snipers are masters of ranged warfare under any circumstances. <br>
-* Hunter: While invisible, ranged skills don't cancel invisibility.
+* Hunter: While invisible, ranged skills don't cancel invisibility. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 ###### Grand Performer
@@ -205,7 +206,7 @@ Grand Performers can dazzle entire audiences with their brilliant performances. 
 ###### Ninja
 Tier 5. Previous Class: Slasher/Assassin. Main Stats: Dex/Str. <br>
 Mysterious experts of stealth and subterfuge. <br>
-Deadly Shade: While invisible, walking into a tile adjacent to an enemy automatically triggers an attack. This doesn't cancel invisibility.
+Deadly Shade: While invisible, walking into a tile adjacent to an enemy automatically triggers an attack. This doesn't cancel invisibility. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 
@@ -220,13 +221,14 @@ Deadly Shade: While invisible, walking into a tile adjacent to an enemy automati
 ###### Mage
 Tier 1. Previous Class: None. Main Stats: Int. <br>
 Mage is the commonly used term for those with magical powers. <br>
-* Magic Missile (ST): Shoot 3 magic bolts at a target.
-* Teleport (ET): Instantly move a few tiles away.
+* Magic Shot (ST): Shoot a magic bolt at a target.
+* Teleport (ET): Instantly move a few tiles away. (Type: ST; Range: 3; Cost: 2; CD: 1; Prev. Skill: -)
 
 
 ###### Wizard
 Tier 2. Previous Class: Mage. Main Stats: Int. <br>
 Wizards specialize in manipulating the magic around them. <br>
+* Magic Missiles (ST): Shoot 3 magic bolts at a target. (Type: ST; Range: 4; Cost: 2; CD: 1; Prev. Skill: Magic Shot)
 
 
 ###### Sorcerer
@@ -237,7 +239,7 @@ Those that focus on their innate magic power are called Sorcerers. <br>
 ###### Cleric
 Tier 3. Previous Class: Wizard. Main Stats: Str. <br>
 Communion with higher forces grants Clerics divine powers. <br>
-* Holy Missile: Same properties as Magic Missile, but deals extra damage to unholy creatures.
+* Holy Missiles: **Shoot 3 magic bolts at a target, deals extra damage to unholy creatures. (Type: ST; Range: 4; Cost: 2; CD: 1; Prev. Skill: Magic Missiles)
 
 
 ###### Seer
@@ -326,7 +328,7 @@ Mind Breakers are adept at both instilling fear and bolstering morale. <br>
 ###### Fighter
 Tier 1. Previous Class: None. Main Stats: Str. <br>
 Fighters are durable melee combatants. <br>
-* Brace: Gain defense until the start of your next turn. Ends your turn.
+* Brace: Gain defense until the start of your next turn. Ends your turn. (Type: N; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 ###### Warrior
@@ -407,6 +409,7 @@ Grandmasters are experts at turning the enemies' strength against them. <br>
 ###### Paladin
 Tier 5. Previous Class: Mystic Knight/Vanguard. Main Stats: Str/Int. <br>
 Paladins are holy knights that gained the favour of the god of war. <br>
+* Lay On Hands: Restore a character's HP and remove all their debuffs. (Type: ST; Range: 1; Cost: 2; CD: 2; Prev. Skill: -)
 
 
 ###### Scourge
@@ -426,13 +429,44 @@ Reavers are frightening warriores that become stronger the longer the battle rag
 
 #### Modifiers
 
-Modifiers are all kinds of buffs/debuffs. 
+Modifiers are all kinds of buffs/debuffs. They work around stacks: each stack represent either one use of/one turn with the modifier.
+Resistance to debuffs is represented through the amount of stacks a character loses on turn start (Ex: a character with 3x stun will need 4x stun to be stunned for 1x turn).
+Stacking a stronger modifier will result in the replacement of the weaker one. If a weaker modifier is added, **DECIDE WHAT TO DO**.
 
-* Invisibility: Become untargetable until the start of your next turn.
+* Invisibility: You are untargetable, but can still be damaged by environmental hazards.
+* On Fire: Receive damage at the end of your turn.
+* Poison: Receive small instances of damage at the start of your turn.
+* Toxic: Receive damage at the start of your turn.
+* Shielded: The next damage instance will deal no damage and apply no effect.
+* Stunned: Skip the next turn.
+* Slowed: Movement Speed reduced by X.
+* Charmed: Will attack a random ally during the next turn.
 
 
 
+### Weapons
+Characters depend on their class to determine what kind of weapons they can use.
+Each weapon has a different tile pattern in which they can attack. This is unique for each weapon.
+In the diagrams below, "O" represents your character, "X" represents attackable tiles, and "_" represents non-attackable tiles.
 
+* Sword: <br>
+_ X _ <br>
+X O X <br>
+_ X _ <br>
+
+* Axe: <br>
+
+* Spear: <br>
+
+* Hammer: <br>
+
+* Whip: <br>
+
+* Bow: <br>
+
+* Longbow: <br>
+
+* Dagger: <br>
 
 
 
@@ -539,7 +573,11 @@ Sometimes, you can find their Henchmen that help you throughout the dungeon.
 ***
 
 
+### NPCs
 
+NPCs are characters that you will meet throughout the game. 
+
+* Stair Guy: A mysterious figure that appears at inconvenient moments when traversing between locations. Will often offer help, but in a roundabout way. Fighting him is often hopeless, most likely resulting in one or more party member's deaths. The best way to approach him is by using dialogue and paying attention to the nuances of his conversation. 
 
 
 
@@ -547,7 +585,8 @@ Sometimes, you can find their Henchmen that help you throughout the dungeon.
 
 
 ## Dungeon Crawling:
-Stair Guy
+
+
 
 ***
 
@@ -580,6 +619,7 @@ Stair Guy
 ## Items:
 
 * Return Stone: Lets you forfeit a dungeon and return to the Hub.
+* Potions: Potions provide different types of effects. They have an expiration date based on total turns taken without consuming them.
 
 
 
@@ -588,6 +628,8 @@ Stair Guy
 
 * Certain challenges or achievements are presented to the player, which may unlock new content.
 * Different endings.
+* Potions have expiration dates.
+* Karma system.
 
 ***
 
