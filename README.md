@@ -429,18 +429,63 @@ Reavers are frightening warriores that become stronger the longer the battle rag
 
 #### Modifiers
 
-Modifiers are all kinds of buffs/debuffs. They work around stacks: each stack represent either one use of/one turn with the modifier.
-Resistance to debuffs is represented through the amount of stacks a character loses on turn start (Ex: a character with 3x stun will need 4x stun to be stunned for 1x turn).
-Stacking a stronger modifier will result in the replacement of the weaker one. If a weaker modifier is added, **DECIDE WHAT TO DO**.
+Modifiers are all kinds of buffs/debuffs. They work around a system of stacks: each stack represents either one use of/one turn with the modifier.
+Resistance to debuffs is represented through the amount of stacks a character loses on turn start (Ex: a character with 3x stun resistance will need 4x stun to be stunned for 1x turn).
+If the same modifiers are stackable, the highest stack value will apply (ex. 2x fire vs 3x fire = 3x fire).
+If opposite modifiers are stackable, the modifiers difference is calculated and applied (ex. 3x speedy > 2x slowed = 1x speedy).
+If the same modifiers are not stackable, the one with the highest total stacks will be applied, instead of added. 
+If opposite modifiers are not stackable, the last modifier is applied.
+Depending on the amount of stacks, the effects of the modifiers may change.
 
-* Invisibility: You are untargetable, but can still be damaged by environmental hazards.
+
+##### Buffs
+
+* Invisibility (0-2 stacks): You are untargetable, but can still be damaged by certain attacks. At 3 stacks, you will be invulnerable to all damage.
+* Invisibility (3-4 Max stacks): You are untargetable, and are invulnerable to all damage.
+
+* Shielded (0-2 stacks): The next damage instance received will consume a stack and deal no damage.
+* Shielded (3-4 Max stacks): The next damage instance received will consume a stack and deal no damage, or 3 stacks and apply no negative modifiers.
+
+* Parry (1 stack): The next time a damage instance received will consume a stack and automatically use a weapon attack against the attacker, if adjacent.
+* Parry (2-3 Max stacks): The next time a damage instance received will consume a stack and automatically use a weapon attack against the attacker, if adjacent. You will be dealt no damage.
+
+* Speedy (0-2 stacks): Movement Speed increased by Total Stacks.
+* Speedy (3-4 Max stacks): Movement Speed increased by Total Stacks. You can move to 1 tile for free.
+
+
+##### Debuffs
+
 * On Fire: Receive damage at the end of your turn.
+
+* Bleed (0-2 stacks): Take 6% of your HP as damage at the end of your turn, rounded up.
+* Bleed (3-5 Max stacks): Take 10% of your HP as damage at the end of your turn, rounded up.
+
 * Poison: Receive small instances of damage at the start of your turn.
+
 * Toxic: Receive damage at the start of your turn.
-* Shielded: The next damage instance will deal no damage and apply no effect.
-* Stunned: Skip the next turn.
-* Slowed: Movement Speed reduced by X.
+
+* Stunned (Max 2 stacks): Skip the next turn.
+
+* Slowed (0-2 stacks): Movement Speed reduced by Total Stacks.
+* Slowed (3-4 Max stacks): Movement Speed reduced by Total Stacks. The first action each turn costs 1 action point more.
+
 * Charmed: Will attack a random ally during the next turn.
+
+* Stupefied: Accuracy reduced by 10% * Total Stacks.
+
+* Vulnerable: Damage taken is amplified by 10% * Total Stacks.
+
+* Rooted: Cannot move.
+
+* Electrified (0-2 stacks): Take damage for each tile moved.
+* Electrified (3+ stacks): Take damage for each tile moved. If you enter a body of water, you take 2 * damage, and anyone also in the body of water will take 1 * damage.
+
+* Feeble (Max 5 stacks): -1 * Total Stacks STR.
+
+* Sluggish (Max 5 stacks): -1 * Total Stacks DEX.
+
+* Lethargic (Max 5 stacks): -1 * Total Stacks INT.
+
 
 
 
