@@ -4,7 +4,6 @@
 [ext_resource type="Font" uid="uid://dgw7wje42t240" path="res://Asset/Fonts/Encounter/Announcement/AnnouncementFont.tres" id="1_y06ou"]
 
 [node name="EncounterButton" type="Button"]
-minimum_size = Vector2(250, 125)
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -125.0

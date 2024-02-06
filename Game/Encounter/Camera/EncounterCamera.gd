@@ -12,7 +12,7 @@ signal input_pressed
 #=== Constants ===#
 const _ZOOM_TWEEN_DURATION = 0.1
 const _ZOOM_INCREMENT = 0.25
-const _MIN_ZOOM = 0.75
+const _MIN_ZOOM = 1
 const _MAX_ZOOM = 3
 
 

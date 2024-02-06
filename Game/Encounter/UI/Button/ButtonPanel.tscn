@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckbvto3udn430"]
+
+[ext_resource type="PackedScene" uid="uid://cb7dky3vt0yt6" path="res://Encounter/UI/Button/EncounterButton.tscn" id="1_4jo3n"]
+
+[node name="ButtonPanel" type="Control"]
+clip_contents = true
+minimum_size = Vector2(850, 275)
+offset_right = 850.0
+offset_bottom = 275.0
+metadata/_edit_use_custom_anchors = true
+
+[node name="MoveButton" parent="." instance=ExtResource( "1_4jo3n" )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_top = 0.0
+offset_bottom = 125.0
+grow_vertical = 1
+text = "Move"
+_id = "move"
+metadata/_edit_layout_mode = 1
+
+[node name="AttackButton" parent="." instance=ExtResource( "1_4jo3n" )]
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -125.0
+offset_top = 0.0
+offset_right = 125.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 1
+text = "Attack
+"
+_id = "attack"
+metadata/_edit_layout_mode = 1
+
+[node name="SkillButton" parent="." instance=ExtResource( "1_4jo3n" )]
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -250.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 125.0
+grow_horizontal = 0
+grow_vertical = 1
+text = "Skill"
+icon_alignment = 1
+_id = "skill"
+metadata/_edit_layout_mode = 1
+
+[node name="BagButton" parent="." instance=ExtResource( "1_4jo3n" )]
+text = "Bag"
+_id = "bag"
+
+[node name="InspectButton" parent="." instance=ExtResource( "1_4jo3n" )]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_right = 125.0
+grow_horizontal = 2
+text = "Inspect"
+_id = "inspect"
+
+[node name="PassButton" parent="." instance=ExtResource( "1_4jo3n" )]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_right = 0.0
+grow_horizontal = 0
+text = "Pass"
+_id = "pass"

@@ -33,6 +33,7 @@ func _ready():
 	initialize_signals()
 	initialize_game()
 	_ui_manager.play_game_start_announcement()
+	#TODO DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 
 
 func initialize_generator():

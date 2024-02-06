@@ -7,8 +7,8 @@ extends Node2D
 
 
 #=== Constants ===#
-const _color = Color(255, 69, 0, 0.3)
-const _line_width = 1
+const _color = Color(255, 69, 0, 0.4)
+const _line_width = 2
 
 
 #=== Variables ===#

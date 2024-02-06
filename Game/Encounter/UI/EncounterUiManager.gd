@@ -27,15 +27,18 @@ var _announcement_manager
 
 func _ready():
 	_encounter_manager = get_parent()
-	_attack_button = $ButtonPanel/AttackButton
-	_skill_button = $ButtonPanel/SkillButton
-	_move_button = $ButtonPanel/MoveButton
-	_bag_button = $ButtonPanel/BagButton
-	_pass_button = $ButtonPanel/PassButton
-	_inspect_button = $ButtonPanel/InspectButton
+	_attack_button = $UiContainer/ButtonPanel/AttackButton
+	_skill_button = $UiContainer/ButtonPanel/SkillButton
+	_move_button = $UiContainer/ButtonPanel/MoveButton
+	_bag_button = $UiContainer/ButtonPanel/BagButton
+	_pass_button = $UiContainer/ButtonPanel/PassButton
+	_inspect_button = $UiContainer/ButtonPanel/InspectButton
+	
 #	_options_button = $ButtonPanel/OptionsButton
-	_speed_label = $SpeedLabel
-	_announcement_manager = $AnnouncementManager
+	_speed_label = $UiContainer/SpeedLabel
+	_announcement_manager = $UiContainer/AnnouncementManager
+	
+	
 
 func initialize_announcement_manager():
 	pass

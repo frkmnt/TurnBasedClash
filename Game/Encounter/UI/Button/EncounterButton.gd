@@ -16,7 +16,8 @@ var _parent
 #=== Bootstrap ===#
 
 func _ready():
-	_parent = get_parent().get_parent()
+	#TODO improve
+	_parent = get_parent().get_parent().get_parent()
 
 
 
