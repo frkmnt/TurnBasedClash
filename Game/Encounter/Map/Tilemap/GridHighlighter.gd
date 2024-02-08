@@ -28,7 +28,7 @@ func initialize():
 #=== Update ===#
 
 func _process(_delta):
-	update()
+	queue_redraw()
 
 
 func _draw():

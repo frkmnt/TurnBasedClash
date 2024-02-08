@@ -39,7 +39,7 @@ func startup_components():
 #=== Coordinates ===#
 
 func is_pos_valid_tile(pos):
-	var coords = world_to_map(pos)
+	var coords = local_to_map(pos)
 	return is_coords_valid_tile(coords)
 
 func is_coords_valid_tile(coords):
@@ -51,10 +51,10 @@ func is_coords_valid_tile(coords):
 
 
 func pos_to_coords(pos):
-	return world_to_map(pos)
+	return local_to_map(pos)
 
 func coords_to_pos(coords):
-	return map_to_world(coords)
+	return map_to_local(coords)
 
 
 func is_tile_moveable(coords): # assumes coordinates are valid
@@ -115,12 +115,12 @@ func get_tile_enter_action(coords):
 
 func place_character_at_coords(character, coords): # place the character physically at coords
 #	print("place ", coords)
-	var pos = map_to_world(coords)
+	var pos = map_to_local(coords)
 	character.position = pos
 
 func remove_character_from_coords(character, coords): # place the character physically at coords
 	print("remove ", coords)
-	var pos = map_to_world(coords)
+	var pos = map_to_local(coords)
 	character.position = pos
 
 

@@ -4,6 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bw7r14cdwjbwn" path="res://Character/Hero/Animations/HeroAnimator.tscn" id="2_babag"]
 
 [node name="Hero" type="Node2D"]
-script = ExtResource( "1_45hb7" )
+script = ExtResource("1_45hb7")
 
-[node name="HeroAnimator" parent="." instance=ExtResource( "2_babag" )]
+[node name="HeroAnimator" parent="." instance=ExtResource("2_babag")]

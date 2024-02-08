@@ -157,7 +157,6 @@ func  on_round_announcement_finished():
 
 func _on_character_moved(data):
 	_character_manager.move_character_along_path(data[0], data[1])
-	var wtf = _character_manager.get_current_character_current_speed()
 	var cur_speed = _character_manager.decrease_character_current_speed(data[0], data[2])
 	_ui_manager.set_speed_label(cur_speed)
 

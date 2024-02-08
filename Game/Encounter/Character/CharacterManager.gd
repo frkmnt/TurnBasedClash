@@ -134,13 +134,22 @@ func move_character_along_path(char_id, path):
 	character.on_move(path)
 
 
+func move_current_enemy_along_path(coords, cur_speed):
+	var character_id = get_current_character_id()
+	_map_manager.move_character_along_path(coords, character_id, cur_speed)
 
-#=== Enemy Management ===#
+
+
+#=== Enemy Utils ===#
 
 func find_nearest_heroes():
 	var cur_char_id = _turn_queue[0]
 	var cur_char_coords = _map_manager._character_coords.get(cur_char_id)
 	return _map_manager.calculate_nearest_heroes(cur_char_coords, _ally_ids) # TODO add random if this list's size >1
+
+
+
+
 
 
 

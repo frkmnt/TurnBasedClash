@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/ForestTiles.png-eacecd9adc0c5401973d39df2e1b6
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

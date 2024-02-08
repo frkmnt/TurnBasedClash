@@ -36,8 +36,7 @@ func create_biome_data():
 
 func load_tileset():
 	var directory_path = "res://Asset/Encounter/Biome/" + _map_data.biome_id
-	var dir = Directory.new()
-	dir.open(directory_path)
+	var dir = DirAccess.open(directory_path)
 	var tileset = load(dir.get_current_dir() + "/Tileset.tres")
 	return tileset
 

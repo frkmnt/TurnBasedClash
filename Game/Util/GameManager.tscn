@@ -4,6 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://cm3hi6issjxed" path="res://Encounter/EncounterManager.tscn" id="2_f2ln6"]
 
 [node name="GameManager" type="Node2D"]
-script = ExtResource( "1_f6gxn" )
+script = ExtResource("1_f6gxn")
 
-[node name="EncounterManager" parent="." instance=ExtResource( "2_f2ln6" )]
+[node name="EncounterManager" parent="." instance=ExtResource("2_f2ln6")]

@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cb7dky3vt0yt6"]
 
 [ext_resource type="Script" path="res://Encounter/UI/Button/EncounterButton.gd" id="1_570l0"]
-[ext_resource type="Font" uid="uid://dgw7wje42t240" path="res://Asset/Fonts/Encounter/Announcement/AnnouncementFont.tres" id="1_y06ou"]
+[ext_resource type="FontFile" uid="uid://0b0bvmlwkhtc" path="res://Asset/Fonts/Encounter/Announcement/Announcement.ttf" id="1_ftghw"]
 
 [node name="EncounterButton" type="Button"]
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -125.0
@@ -12,10 +13,10 @@ grow_vertical = 0
 focus_mode = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource( "1_y06ou" )
+theme_override_fonts/font = ExtResource("1_ftghw")
 theme_override_font_sizes/font_size = 75
 toggle_mode = true
 text = "Action"
-script = ExtResource( "1_570l0" )
+script = ExtResource("1_570l0")
 
 [connection signal="toggled" from="." to="." method="on_toggled"]
