@@ -92,7 +92,7 @@ Skills can be of the following types:
 ###### Thief
 Tier 1. Previous Class: None. Main Stats: Dex. <br>
 Thieves are outlaws that learned to survive through any means necessary. <br>
-* Invisibility: Gain the effects of Invisibility. (Type: N; Range: 0; Cost: 3; CD: 1; Prev. Skill: -)
+* Invisibility: Gain 1x stack of Invisibility. (Type: N; Range: 0; Cost: 3; CD: 1; Prev. Skill: -)
 * Throwing Knife: A ranged attack with a high critical hit chance. (Type: ST; Range: 2; Cost: 2; CD: 1; Prev. Skill: -)
 
 
@@ -100,7 +100,7 @@ Thieves are outlaws that learned to survive through any means necessary. <br>
 Tier 2. Previous Class: Thief. Main Stats: Dex. <br>
 Mercenaries are experienced outlaws often find shady employers that seek their peculiar talents. <br>
 * Focus: Boosts evasion until the start of your next turn. Ends your turn, but costs 0. (Type: N; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
-* Sucker Punch: While invisible, stun an enemy while dealing massive damage. (Type: ST; Range: 1; Cost: 1; CD: 1; Prev. Skill: -)
+* Sucker Punch: If invisible, stun an enemy and deal 3x damage. (Type: ST; Range: 1; Cost: 1; CD: 1; Prev. Skill: -)
 
 
 ###### Rogue
@@ -113,16 +113,17 @@ Rogues embrace their freedom, often turning a blind eye to the law. <br>
 ###### Duelist
 Tier 3. Previous Class: Mercenary. Main Stats: Str. <br>
 Duelists focus their might on challenging enemies. <br>
-* Challenge: Force an enemy to attempt to target you if possible. (Type: ST; Range: 3; Cost: 2; CD: 2; Prev. Skill: -)
-* Parry: Until the start of your next turn, if you are attacked halve the damage and immediatly counter attack. Ends your turn. (Type: N; Range: 0; Cost: 1; CD: 1; Prev. Skill: -)
+* Challenge: Force an enemy to attempt to target you, if possible. (Type: ST; Range: 3; Cost: 3; CD: 2; Prev. Skill: -)
+* Parry: Gain 1x stacks of Parry. (Type: N; Range: 0; Cost: 2; CD: 0; Prev. Skill: -)
 
 
 ###### Ranger
 Tier 3. Previous Class: Mercenary. Main Stats: Dex. <br>
 Rangers are fearsome hunters that specialize in ranged weaponry. <br>
-* Great Aim: Doubles the range of ranged attacks. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Great Aim: Increase the range of all attacks. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 * Twin Shot: Attack two targets at once. (Type: MT; Range: 3; Cost: 1; CD: 1; Prev. Skill: -)
 * Track: Decrease the target's defenses. It cannot become invisible. (Type: ST; Range: 2; Cost: 1; CD: 1; Prev. Skill: -)
+* Bear Trap: Drops a bear trap that gives 1x stack of Rooted to any character that enters its tile.
 
 
 ###### Bard
@@ -134,31 +135,36 @@ Control over performative arts gives Bards an edge on the battlefield. <br>
 ###### Cutthroat
 Tier 3. Previous Class: Rogue. Main Stats: Dex. <br>
 Cutthroats prefer to fight from the shadows and confuse the enemy. <br>
-
+* Fire in the Hole: Throw a bomb that explodes in a 3x3 radius. If thrown at an enemy, explodes immediatly. If thrown at an empty tile, explodes at the start of your next round. (Type: ET/ST; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 ###### Bounty Hunter
 Tier 4. Previous Class: Duelist. Main Stats: Str. <br>
 Bounty hunters double down on locking down enemies with powerful moves. <br>
-* Peekaboo: Until your next turn, if you are attacked, gain the effects of Invisibility. (Type: N; Range: 0; Cost: 1; CD: 0; Prev. Skill: -)
+* Peekaboo: Gain 1x stacks of Parry. Until your next turn, if you are attacked, gain the 1x stacks of Invisibility. (Type: N; Range: 0; Cost: 1; CD: 0; Prev. Skill: -)
+* Cash In: Defeating an enemy targetted with Challange restores 10% HP.
+* Landmine: Drops a land mine that explodes in a 2x2 radius when any character enters its tile.
 
 
 ###### Vigilante
 Tier 4. Previous Class: Duelist. Main Stats: Dex. <br>
 Vigilantes turn an enemy's overwhelming numbers against them. <br>
 * Underwhelming Odds: When a target is Challanged, they lose armor for each adjacent enemy. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Challenge II: Can challenge up to 2 enemies. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: Challenge)
 
 
 ###### Sharpshooter
 Tier 4. Previous Class: Ranger. Main Stats: Int. <br>
 Sharpshooters prefer to focus on a single target from afar. <br>
 * Cracking Shot: Attacking the same enemy repeatedly increases damage. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Opressive Fire: Each consecutive attack on the same enemy deals 10% increased damage, up to a max of 50%. 
 
 
 ###### Gunner
 Tier 4. Previous Class: Ranger. Main Stats: Dex. <br>
 Gunners are great at crowd control and area denial. <br>
 * Volley Shot: Deal sustained damage to enemies in an area. Lasts for 2 Rounds. (Type: AOE; Range: 3; Cost: 2; CD: 0; Prev. Skill: -)
+* Point Blank Blast: Push an enemy 5 tiles back in a straight line. If it collides with something, it received 2x stacks of stunned. If it collides with a character, that character receives 1x stack of stunned. (Type: ST; Range: 1; Cost: 3; CD: 0; Prev. Skill: -)
 
 
 ###### Trickster
@@ -184,23 +190,26 @@ Slashers are great at positioning themselves among the enemy, unnoticed. <br>
 Tier 4. Previous Class: Cutthroat. Main Stats: Dex. <br>
 Assassins use patience to slowly but steadily deal massive damage. <br>
 * Patience: The longer you under the effects of Invisibility, the stronger your next attack will be. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
-* Opportunistic Strike: Deal more damage based on the unique debuffs any target enemy may have. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Opportunistic Strike: Deal more damage based on total modifier stacks the target has. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
 
 
 ###### Veteran
 Tier 5. Previous Class: Vigilante/Bounty Hunter. Main Stats: Dex/Str. <br>
 Earning the title of Veteran is no easy feat, they are among the most experienced professionals available.  <br>
+* Shiver: When an enemy is targetted by Challenge, it receives 2x stacks of Stupefied and 2x stacks of Vulnerable.
 
 
 ###### Sniper
 Tier 5. Previous Class: Sharpshooter/Gunner. Main Stats: Dex/Int. <br>
 Snipers are masters of ranged warfare under any circumstances. <br>
-* Hunter: While invisible, ranged skills don't cancel invisibility. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* One with the Hunt: While invisible, ranged skills don't cancel invisibility. (Type: P; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)
+* Sweet Spot: Each attack applies 1x Vulnerable to the target.
 
 
 ###### Grand Performer
 Tier 5. Previous Class: Trickster/Virtuoso. Main Stats: Dex/Int. <br>
 Grand Performers can dazzle entire audiences with their brilliant performances. <br>
+* Grand Delusion: All enemies under the effects of Perform will receive 3x Vulnerable and 1x Stunned.
 
 
 ###### Ninja
@@ -229,11 +238,13 @@ Mage is the commonly used term for those with magical powers. <br>
 Tier 2. Previous Class: Mage. Main Stats: Int. <br>
 Wizards specialize in manipulating the magic around them. <br>
 * Magic Missiles (ST): Shoot 3 magic bolts at a target. (Type: ST; Range: 4; Cost: 2; CD: 1; Prev. Skill: Magic Shot)
+* Slicing Disc: Summon a disc at locatin that deals damage to all adjacent characters.
 
 
 ###### Sorcerer
 Tier 2. Previous Class: Mage. Main Stats: Int. <br>
 Those that focus on their innate magic power are called Sorcerers. <br>
+* Amplify Magic: The next spell cast doesn't cost speed.
 
 
 ###### Cleric
@@ -245,16 +256,20 @@ Communion with higher forces grants Clerics divine powers. <br>
 ###### Seer
 Tier 3. Previous Class: Wizard. Main Stats: Int. <br>
 Seers are wise mages that often act as counselors for nobility. <br>
+* Demoralizing Field: Apply vulnerable to all characters in a 2x2 radius.
 
 
 ###### Enhancer
 Tier 3. Previous Class: Sorcerer. Main Stats: Dex. <br>
 Enhancers focus their magic on improving their bodies' properties. <br>
+* Amplify Magic II: The next spell cast doesn't cost speed and deals 2x damage.
 
 
 ###### Psychic
 Tier 3. Previous Class: Sorcerer. Main Stats: Int. <br>
 Psychics use magic to tap into the powers of the mind. <br>
+* Mind Muscle: Push an enemy 3x tiles in any direction. If it collides with something, it receives 1x stacks of stunned. If it collides with another character, that character receives 1x stack of stunned.
+* Force Field: Receive 2x stacks of Shield.
 
 
 ###### Inquisitor
@@ -275,17 +290,19 @@ Elementalists are masters of nature's elements. <br>
 ###### Summoner
 Tier 4. Previous Class: Seer. Main Stats: Int. <br>
 Summoners invoke various creatures to reinforce their ally's numbers. <br>
-* Scratching Pole: 
+* Scratching Pole: Summons a target that will taunt enemies into attacking. It detonates upon receiving damage.
 
 
 ###### Battlemage
 Tier 4. Previous Class: Enhancer. Main Stats: Dex. <br>
 Battlemages use magic to amplify their martial skills in combat. <br>
+* Scorching Mana: Deals extra damage to nearby enemies.
 
 
 ###### Blaster
 Tier 4. Previous Class: Enhancer. Main Stats: Int. <br>
 Blasters are adept at using ranged spells and dealing damage. <br>
+* Wild Efect: 30% chance to inflict either 1x stack of Vulnerable, 1x stack of Stunned or 1x stack of Slowed to any target.
 
 
 ###### Telekineticist
@@ -343,12 +360,13 @@ Barbarians are relentless fighters with great might. <br>
 
 ###### Monk
 Tier 3. Previous Class: Warrior. Main Stats: Dex. <br>
-Monks abandon traditional weapons and armor in favor of a purer approach to combat. <br>
+Monks abandon traditional weapons and armor in favor of a purer approach to combat. They develop intricate combos and can weave between skills. <br>
 
 
 ###### Knight
 Tier 3. Previous Class: Warrior. Main Stats: Str. <br>
 Knights employ expert use of equipment while in conflict. <br>
+* Shield Bash: Inflict 1x stacks of stun.
 
 
 ###### Berserker
@@ -364,6 +382,7 @@ Bloodragers use blood magic to enhance their physical prowess. <br>
 ###### Way of Water
 Tier 4. Previous Class: Monk. Main Stats: Dex. <br>
 Way of Water monks focus on dodging and flowing between enemies. <br>
+* Freezing Palm: Inflicts 2x stacks of Frozen. Then, if the target has 3 or more stacks of Frozen, refund 1x Speed.
 
 
 ###### Way of Rock
@@ -429,10 +448,11 @@ Reavers are frightening warriores that become stronger the longer the battle rag
 
 #### Modifiers
 
-Modifiers are all kinds of buffs/debuffs. They work around a system of stacks: each stack represents either one use of/one turn with the modifier.
+Modifiers are all kinds of buffs/debuffs. They work around a system of stacks: each stack generally represents one use of the modifier.
+Modifiers do not stack beyond their max value. A modifier's effects can increase depending on the amount of stacks.
 Resistance to debuffs is represented through the amount of stacks a character loses on turn start (Ex: a character with 3x stun resistance will need 4x stun to be stunned for 1x turn).
+At the start of each character's turn, a character loses stacks equal to their resistence to that specific modifier.  
 If the same modifiers are stackable, the highest stack value will apply (ex. 2x fire vs 3x fire = 3x fire).
-If opposite modifiers are stackable, the modifiers difference is calculated and applied (ex. 3x speedy > 2x slowed = 1x speedy).
 If the same modifiers are not stackable, the one with the highest total stacks will be applied, instead of added. 
 If opposite modifiers are not stackable, the last modifier is applied.
 Depending on the amount of stacks, the effects of the modifiers may change.
@@ -440,25 +460,37 @@ Depending on the amount of stacks, the effects of the modifiers may change.
 
 ##### Buffs
 
-* Invisibility (0-2 stacks): You are untargetable, but can still be damaged by certain attacks. At 3 stacks, you will be invulnerable to all damage.
-* Invisibility (3-4 Max stacks): You are untargetable, and are invulnerable to all damage.
+* Invisibility:
+  * 0-2 stacks: You are untargetable, but can still be damaged by certain attacks.
+  * 3-4: You are untargetable, and are invulnerable to all damage.
 
-* Shielded (0-2 stacks): The next damage instance received will consume a stack and deal no damage.
-* Shielded (3-4 Max stacks): The next damage instance received will consume a stack and deal no damage, or 3 stacks and apply no negative modifiers.
+* Shielded:
+  * 0-2 stacks: The next damage instance received will consume a stack and deal no damage.
+  * 3-4 stacks: The next damage instance received will consume a stack and deal no damage, or 3 stacks and apply no negative modifiers.
 
-* Parry (1 stack): The next time a damage instance received will consume a stack and automatically use a weapon attack against the attacker, if adjacent.
-* Parry (2-3 Max stacks): The next time a damage instance received will consume a stack and automatically use a weapon attack against the attacker, if adjacent. You will be dealt no damage.
+* Parry:
+  * 1 stack: The next time a damage instance received will consume a stack and automatically use a weapon attack against the attacker, if adjacent.
+  * 2-3 stacks: The next time a damage instance received will consume a stack and automatically use a weapon attack against the attacker, if adjacent. You will be dealt no damage.
 
-* Speedy (0-2 stacks): Movement Speed increased by Total Stacks.
-* Speedy (3-4 Max stacks): Movement Speed increased by Total Stacks. You can move to 1 tile for free.
+* Speedy:
+  * 0-2 stacks: Movement Speed increased by Total Stacks.
+  * 3-4 stacks: Movement Speed increased by Total Stacks. You can move to 1 tile for free.
+
+* Inspired:
+  * 0-2: The next attack will deal Total Stacks *10 % more damage.
+
+
 
 
 ##### Debuffs
 
-* On Fire: Receive damage at the end of your turn.
+* On Fire:
+  * 0-2 stacks: Receive damage at the end of your turn.
+  * 3-4 stacks: Receive damage at the end of your turn. Adjacent characters have a chance to catch on fire. 
 
-* Bleed (0-2 stacks): Take 6% of your HP as damage at the end of your turn, rounded up.
-* Bleed (3-5 Max stacks): Take 10% of your HP as damage at the end of your turn, rounded up.
+* Bleed:
+  * 0-2 stacks: Take 6% of your HP as damage at the end of your turn, rounded up.
+  * 3-5 stacks: Take 10% of your HP as damage at the end of your turn, rounded up.
 
 * Poison: Receive small instances of damage at the start of your turn.
 
@@ -466,8 +498,9 @@ Depending on the amount of stacks, the effects of the modifiers may change.
 
 * Stunned (Max 2 stacks): Skip the next turn.
 
-* Slowed (0-2 stacks): Movement Speed reduced by Total Stacks.
-* Slowed (3-4 Max stacks): Movement Speed reduced by Total Stacks. The first action each turn costs 1 action point more.
+* Slowed:
+  * 0-2 stacks: Movement Speed reduced by Total Stacks.
+  * 3-4 stacks: Movement Speed reduced by Total Stacks. The first action each turn costs 1 action point more.
 
 * Charmed: Will attack a random ally during the next turn.
 
@@ -477,14 +510,28 @@ Depending on the amount of stacks, the effects of the modifiers may change.
 
 * Rooted: Cannot move.
 
-* Electrified (0-2 stacks): Take damage for each tile moved.
-* Electrified (3+ stacks): Take damage for each tile moved. If you enter a body of water, you take 2 * damage, and anyone also in the body of water will take 1 * damage.
+* Electrified:
+  * 0-2 stacks: Take damage for each tile moved.
+  * 3-4 stacks: Take damage for each tile moved. If you enter a body of water, you take 2 * damage, and anyone also in the body of water will take 1 * damage.
 
-* Feeble (Max 5 stacks): -1 * Total Stacks STR.
+* Feeble (Max 5 stacks): Lose 1 * Total Stacks STR.
 
-* Sluggish (Max 5 stacks): -1 * Total Stacks DEX.
+* Sluggish (Max 5 stacks): Lose 1 * Total Stacks DEX.
 
-* Lethargic (Max 5 stacks): -1 * Total Stacks INT.
+* Lethargic (Max 5 stacks): Lose 1 * Total Stacks INT.
+
+* Explosive (Max 3 stacks): Explodes in a radius equal to Total Stacks. All stacks disappear after exploding.
+
+* Frozen:
+  * 0-2 stacks: Cannot attack or cast spells.
+  * 3 stacks: Skip your next turn.
+  * 4 stacks: Skip your next turn. The next attack you receive deals 2x damage.
+
+ * Forgetful:
+   * 1-2 stacks: Cannot use items.
+
+* Slippery:
+  * 1-2 stacks: Chance to move to a random tile instead of the targeted one.
 
 
 
