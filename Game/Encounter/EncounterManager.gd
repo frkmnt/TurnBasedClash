@@ -42,27 +42,31 @@ func initialize_generator():
 	return encounter_data
 
 
-
 func initialize_map_manager(tilemap):
 	_map_manager = $MapManager
 	_map_manager.initialize(tilemap)
+
 
 func initialize_character_manager(party, enemies):
 	_character_manager = $CharacterManager
 	_character_manager.initialize(party, enemies)
 
+
 func initialize_input_parser():
 	_input_parser = $InputParser
 	_input_parser.initialize()
+
 
 func initialize_camera():
 	_camera = $EncounterCamera
 	var tilemap_center = _map_manager._tilemap.calculate_center_position()
 	_camera.position = tilemap_center
 
+
 func initialize_ui_manager():
 	_ui_manager = $UiManager
 #	_ui_manager.initialize_animation_player()
+
 
 func initialize_signals():
 	SignalManager._on_game_start_announcement_finished.connect(on_game_start_announcement_finished)
@@ -88,8 +92,7 @@ func initialize_game():
 #=== Turn Management ===#
 
 func turn_start():
-	_character_manager.turn_start()
-	var cur_char_id = _character_manager.get_current_character_id()
+	var cur_char_id = _character_manager.turn_start()
 	var cur_char_coords = _map_manager.get_character_coords(cur_char_id)
 	var cur_speed = _character_manager.get_current_character_current_speed()
 	_ui_manager.set_speed_label(cur_speed)
@@ -155,8 +158,10 @@ func  on_round_announcement_finished():
 
 #=== Character ===#
 
+# Triggered by the MapManager when a character has moved.
+#TODO improve coupling
 func _on_character_moved(data):
-	_character_manager.move_character_along_path(data[0], data[1])
+	_character_manager.on_character_moved(data[0], data[1])
 	var cur_speed = _character_manager.decrease_character_current_speed(data[0], data[2])
 	_ui_manager.set_speed_label(cur_speed)
 

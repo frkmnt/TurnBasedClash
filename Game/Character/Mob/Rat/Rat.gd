@@ -46,16 +46,17 @@ func on_turn_start():
 	turn_start_behaviour()
 
 func turn_start_behaviour():
-	var nearest_heroes = _character_manager.find_nearest_heroes()
+	var nearest_heroes = _character_manager.find_nearest_heroes_to_current_character()
 	var target = nearest_heroes[0]
 	var target_coords = _map_manager._character_coords.get(_character_manager._cur_character_idx)
-	print("targ ", target, ", at coords ", target_coords)
+#	print("targ ", target, ", at coords ", target_coords)
 	_character_manager.move_current_enemy_along_path(target_coords, _stats._speed)
 
 
 
-func on_move(path):
-	pass
+func on_move(path, speed_cost):
+	_stats._speed -= speed_cost
+	_animator.play_data_anim("move", path)
 
 
 

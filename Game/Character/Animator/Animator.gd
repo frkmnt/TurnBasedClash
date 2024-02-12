@@ -47,16 +47,22 @@ func process_move_to_pos(delta): # _cur_anim_data is an array of positions
 
 
 
-
 #=== Animation Interface ===#
 
-func play_data_anim(anim_id, anim_data): # animations that require data and/or process updates
+# Used for animations that require data and/or process updates
+func play_data_anim(anim_id, anim_data):
 	bind_anim_data(anim_id, anim_data)
 	_player.play(anim_id)
 
 
+# Animations that don't require external processing
 func play_simple_anim(anim_id):
 	_player.play(anim_id)
+
+
+# Testing function for enemies without animations.
+func play_data_anim_no_anim(anim_id, anim_data):
+	bind_anim_data(anim_id, anim_data)
 
 
 

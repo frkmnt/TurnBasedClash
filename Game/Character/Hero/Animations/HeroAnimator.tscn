@@ -11,6 +11,34 @@
 [ext_resource type="Texture2D" uid="uid://ckovkgpeernwp" path="res://Asset/Character/Heroes/Wizard/idle_3.png" id="9_tkgjg"]
 [ext_resource type="Texture2D" uid="uid://de3ickearelmy" path="res://Asset/Character/Heroes/Wizard/hurt_0.png" id="10_5tmpm"]
 
+[sub_resource type="Animation" id="Animation_q8k4a"]
+resource_name = "hurt"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_kakhx"), ExtResource("10_5tmpm"), ExtResource("6_kakhx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5, 0), Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_qytt6"]
 resource_name = "idle"
 length = 0.8
@@ -26,35 +54,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource( "6_kakhx" ), ExtResource( "7_6yi8w" ), ExtResource( "8_16jje" ), ExtResource( "9_tkgjg" )]
-}
-
-[sub_resource type="Animation" id="Animation_q8k4a"]
-resource_name = "hurt"
-length = 0.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource( "6_kakhx" ), ExtResource( "10_5tmpm" ), ExtResource( "6_kakhx" )]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(-5, 0), Vector2(0, 0)]
+"values": [ExtResource("6_kakhx"), ExtResource("7_6yi8w"), ExtResource("8_16jje"), ExtResource("9_tkgjg")]
 }
 
 [sub_resource type="Animation" id="Animation_aoal1"]
@@ -72,25 +72,25 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource( "2_mx07l" ), ExtResource( "3_4kvhu" ), ExtResource( "4_m3v4g" ), ExtResource( "5_sq8b0" )]
+"values": [ExtResource("2_mx07l"), ExtResource("3_4kvhu"), ExtResource("4_m3v4g"), ExtResource("5_sq8b0")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yro6s"]
 _data = {
-"hurt": SubResource( "Animation_q8k4a" ),
-"idle": SubResource( "Animation_qytt6" ),
-"move": SubResource( "Animation_aoal1" )
+"hurt": SubResource("Animation_q8k4a"),
+"idle": SubResource("Animation_qytt6"),
+"move": SubResource("Animation_aoal1")
 }
 
 [node name="HeroAnimator" type="Node2D"]
-script = ExtResource( "1_qayr8" )
+script = ExtResource("1_qayr8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource( "AnimationLibrary_yro6s" )
+"": SubResource("AnimationLibrary_yro6s")
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource( "6_kakhx" )
+texture = ExtResource("2_mx07l")

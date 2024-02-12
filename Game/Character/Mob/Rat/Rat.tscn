@@ -4,6 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dxxcom0moro5i" path="res://Character/Mob/Rat/RatAnimator.tscn" id="2_ucey1"]
 
 [node name="Rat" type="Node2D"]
-script = ExtResource( "1_iey3h" )
+script = ExtResource("1_iey3h")
 
-[node name="Animator" parent="." instance=ExtResource( "2_ucey1" )]
+[node name="Animator" parent="." instance=ExtResource("2_ucey1")]

@@ -58,18 +58,53 @@ var _astar_path = [] # contains items of type {path:[tiles], cost:int, estimate:
 var _dest_coords
 var _speed
 
-func get_astar_path_info(coords, dest_coords, speed): # return shortest path or closest point if insufficient speed
+
+# Standard Astar pathfinding for character > tile.
+# Makes the origin tile temporarily moveable to allow navigation.
+# Returns the shortest path or closest point in the case of insufficient speed.
+func get_astar_path_info(coords, dest_coords, speed):
 	var was_unmoveable = _parent._tiles.get(coords).erase("unmoveable")
 	_speed = speed
 	_dest_coords = Vector2(dest_coords.x, dest_coords.y)
+	# calculate the path
 	var cur_path = {"path":[coords], "cost":0, "estimate":get_distance_estimate(coords, dest_coords)}
 	_astar_path.append(cur_path)
 	var path = astar_path_recursive()
+	# reverse unmoveable setting for origin tile
 	if was_unmoveable:
 		_parent._tiles.get(coords)["unmoveable"] = true
 	_astar_path.clear()
 	path.erase("estimate")
+	# tidy up the path
 	var tile_path = path.get("path")
+	tile_path.reverse()
+	path["path"] = tile_path
+	return path
+
+
+# Astar pathfinding for character > character.
+# It is used to allow enemies to pathfind to other characters, since
+# both the origin and destination tiles need to be set to moveable to allow navigation.
+# Returns the shortest path to an adjacent tile or closest point in the case of insufficient speed.
+func get_astar_enemy_info(coords, dest_coords, speed): 
+	var was_unmoveable_origin = _parent._tiles.get(coords).erase("unmoveable")
+	var was_unmoveable_destination = _parent._tiles.get(coords).erase("unmoveable")
+	_speed = speed
+	_dest_coords = Vector2(dest_coords.x, dest_coords.y)
+	# calculate the path
+	var cur_path = {"path":[coords], "cost":0, "estimate":get_distance_estimate(coords, dest_coords)}
+	_astar_path.append(cur_path)
+	var path = astar_path_recursive()
+	# reverse unmoveable setting for origin tile
+	if was_unmoveable_origin:
+		_parent._tiles.get(coords)["unmoveable"] = true
+	if was_unmoveable_destination:
+		_parent._tiles.get(coords)["unmoveable"] = true
+	_astar_path.clear()
+	path.erase("estimate")
+	# tidy up the path, erase the tail if == destination, since there is a character there
+	var tile_path = path.get("path")
+	tile_path.pop_front()
 	tile_path.reverse()
 	path["path"] = tile_path
 	return path
@@ -90,6 +125,7 @@ func astar_path_recursive():
 		propagation_path = cur_path["path"].duplicate(true)
 		propagation_path.push_front(prop_coords)
 		propagation_cost = cur_cost + _parent.get_tile_move_cost(prop_coords)
+		#TODO improve estimate cost
 		propagation_estimate = get_distance_estimate(prop_coords, _dest_coords)
 		_astar_path.append({"path":propagation_path, "cost":propagation_cost, "estimate": propagation_estimate})
 	_astar_path = _astar_path.slice(1)
@@ -97,6 +133,10 @@ func astar_path_recursive():
 	cur_path = astar_path_recursive()
 	return cur_path
 
+
+# Retuns the tiles to which you can navigate to from the current coordinates.
+# Ignores tiles that cannot be navigated to, but they can be temporarily overwritten
+# by the root Astar function.
 func get_propagatable_tiles(coords):
 	var propagatable_tiles = []
 	var propagation_coords
@@ -109,15 +149,20 @@ func get_propagatable_tiles(coords):
 			propagatable_tiles.append(propagation_coords)
 	return propagatable_tiles
 
+
+# Returns the distance estimate from a point to the destination.
 func get_distance_estimate(coords, dest_coords):
 	var x_dist = abs(coords.x - dest_coords.x)
 	var y_dist = abs(coords.y - dest_coords.y)
 	return x_dist + y_dist
 
+
+#
 func sort_astar_paths(path_a, path_b):
 	var cost_a = path_a["cost"] + path_a["estimate"]
 	var cost_b = path_b["cost"] + path_b["estimate"]
 	return cost_a < cost_b
+
 
 
 

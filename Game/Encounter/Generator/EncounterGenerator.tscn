@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" path="res://Encounter/Generator/Hero/HeroGenerator.tscn" id="4_5c8mt"]
 
 [node name="EncounterGenerator" type="Node2D"]
-script = ExtResource( "1_5d3gb" )
+script = ExtResource("1_5d3gb")
 
-[node name="MapGenerator" parent="." instance=ExtResource( "2_v08c1" )]
+[node name="MapGenerator" parent="." instance=ExtResource("2_v08c1")]
 
-[node name="MobGenerator" parent="." instance=ExtResource( "3_bc2q0" )]
+[node name="MobGenerator" parent="." instance=ExtResource("3_bc2q0")]
 
-[node name="HeroGenerator" parent="." instance=ExtResource( "4_5c8mt" )]
+[node name="HeroGenerator" parent="." instance=ExtResource("4_5c8mt")]

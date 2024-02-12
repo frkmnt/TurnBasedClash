@@ -59,7 +59,7 @@ func create_rat_stats():
 		"physical_defense": 5,
 		"max_equipment_weight": 0,
 		
-		"speed": 3,
+		"speed": 4,
 		"evasion": 5,
 		"crit_damage": 5,
 		
