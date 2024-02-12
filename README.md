@@ -446,6 +446,172 @@ Reavers are frightening warriores that become stronger the longer the battle rag
 
 
 
+
+
+
+#### Enemies
+
+
+* Caves:
+ * Rat - Runs at the closest player and attacks.
+ * Spiderling - Fast, runs at the closest player and inflicts poison.
+ * Spider - Shoots webs that inflict Root.
+ * Bat - Fast, has high evasion.
+ * Worm
+ * Glow Worm
+ * Ant
+ * Slime
+ * Mushroom - Shoots spores around it that inflict poison.
+ * Undead Miner
+ * Giant Mole
+ 
+
+
+
+* Forest:
+ * Bear
+ * Unicorn
+ * Owl
+ * Bees
+ * Boar
+ * Harpy
+ * Rock Golem
+ * Roc
+ * Bigfoot
+ * Chimera
+ * Gorgon
+ * Griffin
+ * Fae
+ * Werewolf
+ * Ent
+ * Honeybadger
+ * Giant Mantis
+   
+
+
+
+* Desert:
+ * Scorpion
+ * Acid scorpion
+ * Wheel Spider
+ * Cobra
+ * Cactus Monster
+ * Bandits/ Sandbenders
+ * Mummy
+ * Sand Digger -
+ * Coyote
+ * Sand Spirit
+ * Tarantula Hawk
+ * Sandspitter
+ * Djinn
+ * Sphynx
+ * Tomb Mimic
+ * Lizard
+ * Sand Shark
+
+
+
+* Volcanic:
+ * Volcanic Snail
+ * Lava Monster
+ * Imps
+ * Exploder
+ * Magma Spitter
+ * Fire Hound
+ * Volcano Slime
+ * Lava Crab
+ * Wandering Volcano
+ * Effigy
+ * Ash Zombie
+ * Dragon
+ * Oni
+ * Lava Strider - Spider than can run across lava pools.
+
+
+
+* Snow:
+ * Yeti
+ * Sea Leopard
+ * Walrus
+ * Polar Bear
+ * Snowman
+ * Yuki-onna
+ * Reindeer
+ * Ice Elemental
+ * Snow Harpy
+ * Ice Spider
+ * Ice Devil
+ * Frost Walker - Walks slowly, but randomly sprints to the nearest playeand freezes them.
+ * Snow Jellyfish
+ * Crab
+
+
+
+* Swamp/Poison:
+ * Poison Toad
+ * Vine Monster
+ * Wasp
+ * Mosquito
+ * Mud Monster
+ * Witch
+ * Leech
+ * Rotten Slime
+ * Giant slug
+ * Will o'Wisp
+ * Corrupted Ent
+ * Cultists
+
+
+
+* Ghost
+ * Lich
+ * Skeleton Spider
+ * Ghost
+ * Zombie
+ * Skeleton
+ * Bone Snake
+ * Giant Rat
+ * Dungeon Slime - Large and fills enclosed spaces, moves slowly.
+
+
+
+* Jungle:
+ * Tarantula
+ * Anaconda
+ * Viper
+ * Piranha
+ * Wasp
+ * Moss Monster
+ * Panther
+ * Tiger
+ * Clay Golem
+ * Carnivorous Plant
+ * Giant Tortoise
+ * Tiki Head
+ * Monkey - Steals items
+ * Gorilla
+ * Poisonous Plant
+ * Giant Centipede
+
+
+
+* Royal/Sky:
+ * Cherub
+ * Hollow Armor
+ * Wyvern
+ * Holy Wisp
+ * Flying Fish
+ * Pegasus
+
+
+
+
+
+***
+
+***
+
+
 #### Modifiers
 
 Modifiers are all kinds of buffs/debuffs. They work around a system of stacks: each stack generally represents one use of the modifier.
