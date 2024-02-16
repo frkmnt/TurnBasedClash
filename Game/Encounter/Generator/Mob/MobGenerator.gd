@@ -1,19 +1,28 @@
 extends Node
 
 #=== About ===#
-# Generates mobs based on a series of parameters. The generated data is then applied to the specific mob class to create a new custom mob.
+# Generates mobs based on a series of parameters. The generated data is then applied to 
+# the specific mob class to create a new custom mob. This only generates parameters that are not exclusive
+# to specific characters, such as their Stats, Attribute and the Modifier Manager.
 
 
 
 #=== Prefabs ===#
-const _attributes_template = preload("res://Character/Modifiers/Attributes.gd")
-const _stats_template = preload("res://Character/Modifiers/Stats.gd")
+const _attributes_template = preload("res://Character/Data/Attributes.gd")
+const _stats_template = preload("res://Character/Data/Stats.gd")
+const _modifiers_template = preload("res://Character/Data/Modifiers.gd")
+const _skills_template = preload("res://Character/Data/Skills.gd")
 const _basic_attack_template = preload("res://Character/BasicAttack/BasicAttack.gd")
 
 const _rat_prefab = preload("res://Character/Mob/Rat/Rat.tscn")
 
+
 #=== Variables ===#
-var _mob_data # originally just the mob_id and level, but other info is then appended
+
+# Local access variable that contains the data of the mob currently being generated. 
+# Once done, it is reset for the next mob generation. The data parameters are 
+# Attributes, Stats and the Modifier Manager.
+var _mob_data
 
 
 
@@ -34,10 +43,14 @@ func generate_mob(mob_data):
 
 #=== Rat ===#
 
+const rat_bite = preload("res://Character/Skills/MobSkillList/RatBite/RatBite.gd")
+
 func generate_new_rat():
+	var rat_instance = _rat_prefab.instantiate()
 	create_rat_attributes()
 	create_rat_stats()
-	var rat_instance = _rat_prefab.instantiate()
+	create_modifier_manager(rat_instance)
+	create_rat_skills_template()
 	rat_instance.initialize(_mob_data)
 	return rat_instance
 
@@ -59,7 +72,7 @@ func create_rat_stats():
 		"physical_defense": 5,
 		"max_equipment_weight": 0,
 		
-		"speed": 4,
+		"speed": 5,
 		"evasion": 5,
 		"crit_damage": 5,
 		
@@ -81,6 +94,12 @@ func create_random_rat_stats(level):
 		attributes.add_dexterity(randi_range(attribute_ranges[1][0], attribute_ranges[1][1]))
 		attributes.add_intelligence(randi_range(attribute_ranges[2][0], attribute_ranges[2][1]))
 	return attributes
+
+
+func create_rat_skills_template():
+	var skills = create_skills_template()
+	var skill_list = [rat_bite.new()]
+	skills.initialize(skill_list)
 
 
 
@@ -107,4 +126,13 @@ func create_stats_from_attributes(stats, attributes):
 	stats.add_stats_based_on_attributes(attributes)
 
 
+func create_modifier_manager(mob):
+	var modifiers = _modifiers_template.new()
+	modifiers.initialize(mob)
+	_mob_data["modifiers"] = modifiers
 
+
+func create_skills_template():
+	var skills = _skills_template.new()
+	_mob_data["skills"] = skills
+	return skills

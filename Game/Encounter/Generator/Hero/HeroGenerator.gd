@@ -6,8 +6,10 @@ extends Node
 
 #=== Prefabs ===#
 const _hero_template = preload("res://Character/Hero/Hero.tscn")
-const _attributes_template = preload("res://Character/Modifiers/Attributes.gd")
-const _stats_template = preload("res://Character/Modifiers/Stats.gd")
+const _attributes_template = preload("res://Character/Data/Attributes.gd")
+const _modifiers_template = preload("res://Character/Data/Modifiers.gd")
+const _skills_template = preload("res://Character/Data/Skills.gd")
+const _stats_template = preload("res://Character/Data/Stats.gd")
 
 
 #=== Variables ===#
@@ -30,13 +32,16 @@ func generate_hero(hero_data):
 
 #=== Wizard ===#
 
+# Generate a new wizard character.
 func generate_new_wizard(wizard):
 	_hero_data.name = "Tim"
 	create_wizard_attributes()
 	create_wizard_stats()
-	
+	create_modifiers(wizard)
+	create_skills_template()
 	wizard.initialize(_hero_data)
 	return wizard
+
 
 func create_wizard_attributes():
 	var base_attributes = {
@@ -48,25 +53,23 @@ func create_wizard_attributes():
 	var attribute_increments = [2, 2, 8]
 	add_level_up_attributes(_hero_data.attributes, _hero_data.level, attribute_increments)
 
+
 func create_wizard_stats():
 	var base_stats = {
-		"health": 300,
-		"physical_defense": 20,
+		"health": 10,
+		"physical_defense": 2,
 		"max_equipment_weight": 20,
 		
 		"speed": 2,
 		"evasion": 3,
 		"crit_damage": 5,
-		
-		"mana": 300,
+
 		"crit_chance": 2,
-		"magical_defense": 60,
+		"magical_defense": 6,
 	}
 	
 	_hero_data.stats = create_base_stats(base_stats)
-	create_stats_from_attributes(_hero_data.stats)
-
-
+	_hero_data.stats.add_stats_based_on_attributes(_hero_data.attributes)
 
 
 func create_random_wizard_gear():
@@ -94,10 +97,16 @@ func create_base_stats(base_stats_map):
 	stats.initialize(base_stats_map)
 	return stats
 
-func create_stats_from_attributes(stats):
-	stats.add_stats_based_on_attributes(_hero_data.attributes)
 
 
-func create_traits():
-	pass
 
+
+func create_modifiers(hero):
+	var modifiers = _modifiers_template.new()
+	modifiers.initialize(hero)
+	_hero_data["modifiers"] = modifiers
+
+
+func create_skills_template():
+	var skills = _skills_template.new()
+	_hero_data["skills"] = skills

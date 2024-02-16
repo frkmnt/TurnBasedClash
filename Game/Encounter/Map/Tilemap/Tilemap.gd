@@ -20,28 +20,31 @@ var _tiles = {}  # matches coordinates to a tile's id. Also contains a tile's un
 
 #=== Bootstrap ===#
 
+# Called upon bootstrap.
 func initialize(tileset, map_data):
 	tile_set = tileset
 	_size = map_data.map_size
 
+# Called when the Map Generator has finished generating the map. Binds variables to the Node components.
 func startup_components():
 	_grid_highlighter = $GridHighlighter
 	_grid_highlighter.initialize()
 	_tile_highlighter = $TileHighlighter
 	_tile_navigator = $TileNavigator
 	_tile_navigator.initialize()
-	
-
 
 
 
 
 #=== Coordinates ===#
 
+# True if a click at a position is within bounds of the tilemap.
 func is_pos_valid_tile(pos):
 	var coords = local_to_map(pos)
 	return is_coords_valid_tile(coords)
 
+
+# True if coordinates are within bounds of the tilemap.
 func is_coords_valid_tile(coords):
 	var is_valid = true
 	if coords.x < 0 or coords.x > _size.x \
@@ -50,14 +53,19 @@ func is_coords_valid_tile(coords):
 	return is_valid
 
 
+# Converts a world position into tilemap coordinates.
 func pos_to_coords(pos):
 	return local_to_map(pos)
 
+
+# Converts tilemap coordinates into a world position.
 func coords_to_pos(coords):
 	return map_to_local(coords)
 
 
-func is_tile_moveable(coords): # assumes coordinates are valid
+# True if a tile is moveable, assuming the coordinates are valid.
+# Takes temporary obstacles into consideration.
+func is_tile_moveable(coords): 
 	var is_moveable = true
 	var tile = _tiles.get(coords)
 	if not _tile_data.get(tile["id"])._moveable \
@@ -65,7 +73,10 @@ func is_tile_moveable(coords): # assumes coordinates are valid
 		is_moveable = false
 	return is_moveable
 
-func is_base_tile_moveable(coords): # assumes coordinates are valid
+
+# True if a tile is moveable, assuming the coordinates are valid.
+# Does not take temporary obstacles into consideration.
+func is_base_tile_moveable(coords):
 	var is_moveable = true
 	var tile = _tiles.get(coords)
 	if not _tile_data.get(tile.id)._moveable:
@@ -73,11 +84,14 @@ func is_base_tile_moveable(coords): # assumes coordinates are valid
 	return is_moveable
 
 
-func get_tile_character(coords): # get an character ie. player, mob, object, etc.
+# Return the "character" on a tile if any is present, assuming the coordinates are valid.
+# The "character" can be a player character, enemy character, object, etc.
+func get_tile_character(coords):
 	var tile = _tiles.get(coords)
 	return tile["character"]
 
 
+# Set the tile at the target coordinates with new data, assuming the coordinates are valid.
 func set_tile_at_coords(coords, tile_id_coords, tile_data):
 	set_cell(0, coords, 0, tile_id_coords, 0)
 	var tile = _tiles.get(coords)
@@ -90,11 +104,13 @@ func set_tile_at_coords(coords, tile_id_coords, tile_data):
 		_tile_data[tile_id_coords] = tile_data
 
 
+# Get the tile's common data, assuming the coordinates are valid.
 func get_tile_common_data(coords):
 	var tile_common_id = _tiles.get(coords).get("id")
 	return _tile_data.get(tile_common_id)
 
 
+# Get the tile's move cost, assuming the coordinates are valid.
 func get_tile_move_cost(coords):
 	var tile = _tiles.get(coords)
 	var move_cost = _tile_data.get(tile.get("id"))._move_cost
@@ -104,6 +120,7 @@ func get_tile_move_cost(coords):
 	return move_cost
 
 
+# Get the tile's enter action, assuming the coordinates are valid.
 func get_tile_enter_action(coords):
 	var tile = _tiles.get(coords)
 	return tile.get("enter_action")
@@ -113,23 +130,29 @@ func get_tile_enter_action(coords):
 
 #=== Characters ===#
 
-func place_character_at_coords(character, coords): # place the character physically at coords
+# Place the character physically at the tilemap's world coordinates.
+func place_character_at_coords(character, coords):
 #	print("place ", coords)
 	var pos = map_to_local(coords)
 	character.position = pos
 
-func remove_character_from_coords(character, coords): # place the character physically at coords
+
+# Remove a character physically from the tilemap's world coordinates.
+func remove_character_from_coords(character, coords):
 	print("remove ", coords)
 	var pos = map_to_local(coords)
 	character.position = pos
 
 
-func bind_character_to_coords(character_id, coords): # bind the character's data to coords
+# Bind the character's data to the tilemap's coordinates.
+func bind_character_to_coords(character_id, coords): 
 #	print("bind ", coords)
 	var tile = _tiles.get(coords)
 	tile["character"] = character_id
 	tile["unmoveable"] = true
 
+
+# Unbind the character's data to the tilemap's coordinates.
 func unbind_character_from_coords(coords):
 #	print("unbind ", coords)
 	var tile = _tiles.get(coords)
@@ -139,10 +162,13 @@ func unbind_character_from_coords(coords):
 	return character_id
 
 
+# Set a specific metadata type and value at the tilemap's coordinates.
 func set_tile_metadata(coords, metadata_id, value):
 	var tile = _tiles.get(coords)
 	tile[metadata_id] = value
 
+
+# Remove a specific metadata type and value from the tilemap's coordinates.
 func remove_tile_metadata(coords, metadata_id):
 	var tile = _tiles.get(coords)
 	tile.erase(metadata_id)
@@ -152,6 +178,7 @@ func remove_tile_metadata(coords, metadata_id):
 
 #=== Position ===#
 
+# Return the coordinates at the center of the tilemap.
 func calculate_center_coords(): # return the center coordinates in a [from, to] format
 	var width_div = _size.x / 2
 	var width_mod = int(_size.x) % 2
@@ -170,10 +197,13 @@ func calculate_center_coords(): # return the center coordinates in a [from, to] 
 			center_coords = [Vector2(width_div, height_div), Vector2(width_div+1, height_div+1)]
 	return center_coords
 
+
+# Return the position at the center of the tilemap.
 func calculate_center_position():
 	return (_size * Vector2(64, 64)) / Vector2(2, 2)
 
 
+# Calculates the starting coordinates for each member of both teams.
 func calculate_team_positions():
 	var center_x = ceil(_size.x / 2)
 	var first_pos = Vector2(center_x -1, 1) 
@@ -182,6 +212,8 @@ func calculate_team_positions():
 	var bottom_team_pos = get_team_pos_based_on_first_pos(first_pos)
 	return {"top": top_team_pos, "bottom": bottom_team_pos}
 
+
+# Calculate the positions of the remaining team members via the position of the first.
 func get_team_pos_based_on_first_pos(first_pos):
 	var team_positions = [first_pos]
 	team_positions.append(first_pos + Vector2(2, 0))
@@ -194,6 +226,7 @@ func get_team_pos_based_on_first_pos(first_pos):
 
 #=== Range ===#
 
+# Return the tiles in range at the center coordinates.
 func get_tiles_in_range(coords, radius_range):
 	var tiles = []
 	for x in range(coords.x-radius_range, coords.x+radius_range):
@@ -201,6 +234,8 @@ func get_tiles_in_range(coords, radius_range):
 			tiles.append(_tiles.get(coords))
 	return tiles
 
+
+# Return the characters in range at the center coordinates.
 func get_characters_in_range(coords, radius_range):
 	var characters = []
 	var character
@@ -215,6 +250,7 @@ func get_characters_in_range(coords, radius_range):
 
 #=== Utils ===#
 
+# Print a tiles information, used in debugging.
 func print_tile_info(coords):
 	var tile = _tiles.get(coords)
 	var data = _tile_data.get(tile.id)

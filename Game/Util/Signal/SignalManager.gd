@@ -17,6 +17,7 @@ signal _on_mouse_motion
 
 signal _on_game_start_announcement_finished
 signal _on_round_announcement_finished
+signal _on_pass_turn
 
 
 #=== Player Management ===#

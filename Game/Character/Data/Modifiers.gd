@@ -1,9 +1,10 @@
 extends Node
 
 
+var _parent_hero
+
 # dictionary of identifier : modifiers[]
 # identifiers: turn_start, turn_end, attack, skill, receive_attack, move
-var parent_hero
 var _modifier_map = {}
 
 
@@ -15,10 +16,10 @@ var _modifier_map = {}
 
 
 
-
+#=== Bootstrap ===#
 
 func initialize(parent_class):
-	parent_hero = parent_class
+	_parent_hero = parent_class
 	initialize_modifier_map()
 
 
@@ -32,7 +33,7 @@ func initialize_modifier_map():
 	_modifier_map["move"] = []
 
 func add_modifier(modifier):
-	modifier.initialize(parent_hero)
+	modifier.initialize(_parent_hero)
 	
 	for modifier_type in modifier._types:
 		match modifier_type:
@@ -59,7 +60,7 @@ func add_modifier(modifier):
 
 
 
-# Event Management
+#=== Event Management ===#
 
 func on_turn_start():
 	var modifiers_to_remove = []
@@ -122,7 +123,7 @@ func on_move():
 
 
 
-# Utility
+#=== Utility ===#
 
 func remove_modifiers(modifier_list):
 	var type_list

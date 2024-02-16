@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpxg4ade06npt"]
+
+[ext_resource type="Script" path="res://Encounter/Modifier/ModifierGenerator.gd" id="1_c8b8b"]
+
+[node name="ModifierGenerator" type="Node2D"]
+script = ExtResource("1_c8b8b")

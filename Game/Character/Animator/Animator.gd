@@ -4,8 +4,9 @@ extends Node2D
 # This class acts as an agnostic handler for character animations.
 
 #=== Components ===#
-var _player
+var _anim_player 
 var _sprite
+var _character
 
 #=== Cosntants ===#
 const _move_speed = 250
@@ -16,10 +17,12 @@ var _cur_anim_data
 
 #=== Bootstrap ===#
 
+# Referenced when the Animator is generated.
 func _ready():
-	_player = $AnimationPlayer
+	_anim_player = $AnimationPlayer
 	_sprite = $Sprite2D
 	set_process(false)
+	_character = get_parent()
 
 
 
@@ -36,7 +39,7 @@ func _process(delta):
 func process_move_to_pos(delta): # _cur_anim_data is an array of positions
 	if _cur_anim_data.size() <= 0:
 		set_process(false)
-		SignalManager.emit_signal("_on_character_finished_moving")
+		_character.on_finished_moving()
 		return 
 	var dest_pos = _cur_anim_data[0]
 	if global_position - Vector2(dest_pos) != Vector2(0, 0): # TODO remove Vector2 casting
@@ -52,12 +55,12 @@ func process_move_to_pos(delta): # _cur_anim_data is an array of positions
 # Used for animations that require data and/or process updates
 func play_data_anim(anim_id, anim_data):
 	bind_anim_data(anim_id, anim_data)
-	_player.play(anim_id)
+	_anim_player.play(anim_id)
 
 
 # Animations that don't require external processing
 func play_simple_anim(anim_id):
-	_player.play(anim_id)
+	_anim_player.play(anim_id)
 
 
 # Testing function for enemies without animations.

@@ -73,7 +73,7 @@ func sort_turn_queue():
 
 # Util that compares between 2 speeds and returns the fastest one.
 # In case of a tie, returns a random result. Called by sort_turn_queue().
-# TODO fix commented lines
+# TODO fix commented lines, change (speed_a > speed_b) to (speed_a > speed_b)
 func sort_by_speed(data_a, data_b):
 	var speed_a = data_a[1]
 	var speed_b = data_b[1]
@@ -94,9 +94,13 @@ func turn_start():
 	if _cur_character_idx >= _turn_queue.size(): # increment rounds
 		_cur_character_idx = 0
 		sort_turn_queue()
+	return get_current_character_id()
+
+
+func apply_turn_start_to_current_character():
 	var character = get_current_character()
 	character.on_turn_start()
-	return _cur_character_idx
+
 
 
 # Returns true if any of the following conditions are met.
@@ -108,6 +112,7 @@ func is_turn_over():
 	if cur_speed <= 0:
 		is_over = true
 	return is_over
+
 
 
 
@@ -134,6 +139,11 @@ func get_character_by_id(id):
 	return _character_data.get(id).get("character")
 
 
+# Retrieve the first character in the turn queue's id.
+func get_first_character_id():
+	return _turn_queue[0]
+	
+	
 # Retrieve the current character's id.
 func get_current_character_id():
 	return _turn_queue[_cur_character_idx]
@@ -166,12 +176,30 @@ func on_character_moved(char_id, path):
 
 # Handles a enemy's movement interactions.
 # This includes calculating the appropriate path, and setting up the movement animation.
-func move_current_enemy_along_path(coords, cur_speed):
+func move_current_enemy_along_path(dest_coords, cur_speed):
 	var character_id = get_current_character_id()
 	var character = get_character_by_id(character_id)
-	var path_info = _map_manager.calculate_path_to_character(coords, character_id, cur_speed) #[path, speed_cost]
+	var path_info = _map_manager.calculate_path_to_character(dest_coords, character_id, cur_speed) #[path, speed_cost]
 	character.on_move(path_info[0], path_info[1])
-	
+
+
+
+
+#=== Team Utils ===#
+
+# True if the character whose id is being passed is an ally of the current character.
+func is_ally_of_current_character(char_id):
+	var current_char_team = _character_data.get(get_current_character_id()).get("team_id")
+	var char_team = _character_data.get(char_id).get("team_id")
+	return char_team == current_char_team
+
+func is_character_ally(char_id):
+	var team = _character_data.get(char_id).get("team_id")
+	return team == _ally_team_id
+
+func is_current_character_ally():
+	var team = _character_data.get(get_current_character_id()).get("team_id")
+	return team == _ally_team_id
 
 
 
@@ -179,19 +207,14 @@ func move_current_enemy_along_path(coords, cur_speed):
 #=== Enemy Utils ===#
 
 # Calculates the player characters closest to the position of the current character.
-# Returns all of ones at the same distance. 
+# Returns a list of [(hero_id, coords)] of all the characters at the closest distance.
 func find_nearest_heroes_to_current_character():
 	var cur_char_id = _turn_queue[0]
 	var cur_char_coords = _map_manager._character_coords.get(cur_char_id)
-	return _map_manager.calculate_nearest_heroes(cur_char_coords, _ally_ids) # TODO add random if this list's size >1
+	return _map_manager.calculate_nearest_heroes(cur_char_coords, _ally_ids)
 
 
 
 
-#=== Utils ===#
 
-# True if the character whose id is being passed is an ally of the current character.
-func is_ally_of_current_character(char_id):
-	var cur_team = _character_data.get(get_current_character_id()).get("team_id")
-	return _character_data.get(char_id).get("team_id") == cur_team
 

@@ -104,8 +104,9 @@ func get_astar_enemy_info(coords, dest_coords, speed):
 	path_data.erase("estimate")
 	# tidy up the path, erase the tail if == destination, since there is a character there
 	var tile_path = path_data.get("path")
-#	if tile_path[0] == dest_coords:
-	tile_path.pop_front()
+	if tile_path[0] == dest_coords:
+		tile_path.pop_front()
+		path_data["cost"] -= 1
 	tile_path.reverse()
 	path_data["path"] = tile_path
 	return path_data
@@ -164,9 +165,12 @@ func get_distance_estimate(coords, dest_coords):
 # Sorts the paths by calculating the weight of the path, 
 # which is the cost of travelling + the distance estimate.
 func sort_astar_paths(path_a, path_b):
+	var is_smaller = false
 	var cost_a = path_a["cost"] + path_a["estimate"]
 	var cost_b = path_b["cost"] + path_b["estimate"]
-	return cost_a <= cost_b
+	if cost_a < cost_b:
+		is_smaller = true
+	return is_smaller
 
 
 

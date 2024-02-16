@@ -17,10 +17,11 @@ var _level = 1
 
 var _attributes
 var _stats
+var _modifiers
+var _skills
+
 #var _equipment
 
-#var _modifiers
-#var _skills
 
 
 
@@ -37,7 +38,9 @@ func initialize(hero_data):
 	_level = hero_data.level
 	_attributes = hero_data.attributes
 	_stats = hero_data.stats
-	#TODO add basic attack
+	_modifiers = hero_data.modifiers
+	_skills = hero_data.skills
+	#TODO add basic attack 
 
 
 
@@ -52,6 +55,21 @@ func on_turn_start():
 
 func on_move(path):
 	_animator.play_data_anim("move", path)
+
+func on_finished_moving():
+	SignalManager.emit_signal("_on_character_finished_moving")
+
+
+
+#=== Combat ===#
+
+func on_receive_attack(attack):
+	pass #TODO handle modifiers
+
+
+func on_apply_damage(physical_damage, magical_damage, modifiers):
+	_stats.apply_resistances_then_damage(physical_damage, magical_damage)
+	#TODO apply remaining modifiers
 
 
 

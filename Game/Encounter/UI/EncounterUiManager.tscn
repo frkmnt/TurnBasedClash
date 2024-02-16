@@ -25,7 +25,6 @@ grow_vertical = 2
 [node name="AnnouncementManager" parent="UiContainer" instance=ExtResource("3_5x0xc")]
 
 [node name="ButtonPanel" parent="UiContainer" instance=ExtResource("2_rcu16")]
-anchors_preset = 0
 offset_left = 550.0
 offset_top = 775.0
 offset_right = 1400.0

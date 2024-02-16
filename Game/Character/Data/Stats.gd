@@ -17,6 +17,8 @@ extends Node
 # Attack Damage -> Determined by the weapon's stats.
 # Luck -> Boosts Item Discovery and rare enemy spawn rates.
 
+#TODO remove mana
+
 
 #=== Variables ===#
 
@@ -41,14 +43,14 @@ var _crit_damage = 0
 var _cur_crit_damage = 0
 
 # intelligence
-var _mana = 0 
-var _cur_mana = 0 
 
 var _crit_chance = 0
 var _cur_crit_chance = 0
 
 var _magical_defense = 0
 var _cur_magical_defense = 0
+
+
 
 
 #=== Bootstrap ===#
@@ -62,11 +64,13 @@ func initialize(stat_map):
 	_evasion = stat_map.get("evasion")
 	_crit_damage = stat_map.get("crit_damage")
 
-	_mana = stat_map.get("mana") # intelligence
 	_crit_chance = stat_map.get("crit_chance")
 	_magical_defense = stat_map.get("magical_defense")
 
 	match_current_to_base_stats()
+
+
+
 
 #=== Calculate Stats ===#
 
@@ -77,8 +81,8 @@ func add_stats_based_on_attributes(attributes):
 	match_current_to_base_stats()
 
 func add_stats_based_on_strength(strength):
-	_health += 100 * strength
-	_physical_defense += 5 * strength
+	_health += 10 * strength
+	_physical_defense += 2 * strength
 	_max_equipment_weight += (1 * strength) + 10
 
 func add_stats_based_on_dexterity(dexterity):
@@ -87,7 +91,6 @@ func add_stats_based_on_dexterity(dexterity):
 	_crit_damage += dexterity * 2
 
 func add_stats_based_on_intelligence(intelligence):
-	_mana += 10 * intelligence
 	_crit_chance += 1 + int(intelligence/10)
 	_magical_defense += 5 * intelligence
 
@@ -100,10 +103,17 @@ func match_current_to_base_stats():
 	_cur_evasion = _evasion
 	_cur_crit_damage = _crit_damage
 	
-	_cur_mana = _mana
 	_cur_crit_chance = _crit_chance
 	_cur_magical_defense = _magical_defense
 
+
+func apply_resistances_then_damage(phyical_damage, magical_damage):
+	phyical_damage -= _physical_defense
+	if phyical_damage > 0:
+		sub_cur_health(phyical_damage)
+	magical_damage -= _magical_defense
+	if magical_damage > 0:
+		sub_cur_health(magical_damage)
 
 
 
@@ -115,6 +125,29 @@ func add_health(health_val):
 		pass
 		#kill_character() #TODO
 
+func sub_health(health_val):
+	_health = _health - health_val
+	if _health <= 0:
+		pass
+		#kill_character() #TODO
+
+
+
+
+#=== Current Stat Mutators ===#
+
+func add_cur_health(health_val):
+	_cur_health = _cur_health + health_val
+	if _cur_health <= 0:
+		pass
+		#kill_character() #TODO
+
+func sub_cur_health(health_val):
+	_cur_health = _cur_health - health_val
+	if _cur_health <= 0:
+		pass
+		#kill_character() #TODO
+
 func sub_cur_speed(speed_val):
 	_cur_speed -= speed_val
 	if _cur_speed <= 0:
@@ -122,11 +155,12 @@ func sub_cur_speed(speed_val):
 	return _cur_speed
 
 
+
+
 #=== Turn Management ===#
 
 func on_turn_start():
 	_cur_speed = _speed
-	pass
 
 
 
@@ -140,7 +174,6 @@ func print_attributes():
 		+ "\nSpeed: " + str(_speed) \
 		+ "\nEvasion: " + str(_evasion) \
 		+ "\nCrit Damage: " + str(100+_crit_damage) \
-		+ "\nMana: " + str(_mana) \
 		+ "\nCrit Chance: " + str(_crit_chance) \
 		+ "\nMagical Defense: " + str(_magical_defense) \
 		+ "\n"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cm3hi6issjxed"]
+[gd_scene load_steps=9 format=3 uid="uid://cm3hi6issjxed"]
 
 [ext_resource type="Script" path="res://Encounter/EncounterManager.gd" id="1_8s06h"]
 [ext_resource type="PackedScene" uid="uid://dc8325ievdrwf" path="res://Encounter/Map/MapManager.tscn" id="2_ddvnd"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://3slf1jfm0pkf" path="res://Encounter/Character/CharacterManager.tscn" id="3_rirl0"]
 [ext_resource type="PackedScene" path="res://Encounter/Input/EncounterInputParser.tscn" id="4_8l41m"]
 [ext_resource type="PackedScene" uid="uid://cpajlror2lui3" path="res://Encounter/UI/EncounterUiManager.tscn" id="5_6wren"]
+[ext_resource type="PackedScene" uid="uid://cpxg4ade06npt" path="res://Encounter/Modifier/ModifierGenerator.tscn" id="5_lw5jj"]
 
 [node name="EncounterManager" type="Node2D"]
 script = ExtResource("1_8s06h")
@@ -17,6 +18,8 @@ script = ExtResource("1_8s06h")
 
 [node name="CharacterManager" parent="." instance=ExtResource("3_rirl0")]
 z_index = 1
+
+[node name="ModifierGenerator" parent="." instance=ExtResource("5_lw5jj")]
 
 [node name="InputParser" parent="." instance=ExtResource("4_8l41m")]
 

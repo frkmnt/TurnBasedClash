@@ -64,17 +64,19 @@ func generate_test_enemies(intended_level):
 
 
 
+
 #=== Party ===#
 
+# Loads the party's data and generates the party structure.
 func generate_party(party):
 	var temp_party = [
 		{
 			"hero_class": "Wizard",
-			"level": 5
+			"level": 1
 		},
 		{
 			"hero_class": "Wizard",
-			"level": 5
+			"level": 1
 		}
 	]
 	
@@ -84,19 +86,22 @@ func generate_party(party):
 	return hero_list
 
 
-func generate_hero():
-	pass
+
+
+#=== Map Generation ===#
+
+# Generates a map with a random size between x_range and y_range.
+func generate_random_map_size(x_range, y_range):
+	var x_size = generate_values_in_range(x_range.x, x_range.y)
+	var y_size = generate_values_in_range(y_range.x, y_range.y)
+	return Vector2(x_size, y_size)
 
 
 
 
 #=== Utils ===#
 
-func generate_random_map_size(x_range, y_range):
-	var x_size = generate_values_in_range(x_range.x, x_range.y)
-	var y_size = generate_values_in_range(y_range.x, y_range.y)
-	return Vector2(x_size, y_size)
-
+# Generates a random value between min_val and max_val.
 func generate_values_in_range(min_val, max_val):
 	return randi_range(min_val, max_val)
 

@@ -100,7 +100,7 @@ func remove_highlight_from_selected_path():
 
 
 # Highlight the tile where the current character is.
-func highlight_current_character(char_id, is_ally):
+func highlight_character(char_id, is_ally):
 	var current_character_coords = _character_coords.get(char_id)
 	if is_ally:
 		create_highlight_at_coords(current_character_coords, "cur_ally")
@@ -173,19 +173,21 @@ func calculate_selected_path_for_character(coords, character_id, cur_speed):
 
 # Calculates the path to a character, optimizes it and then returns the path and speed cost.
 # This is generally used by enemies that want to pathfind to another character.
-func calculate_path_to_character(coords, character_id, cur_speed):
+func calculate_path_to_character(dest_coords, character_id, cur_speed):
 	var character_coords = _character_coords[character_id]
-	var path_info = _tilemap._tile_navigator.get_astar_enemy_info(character_coords, coords, cur_speed)
+	var path_info = _tilemap._tile_navigator.get_astar_enemy_info(character_coords, dest_coords, cur_speed)
 	var calculated_path = path_info.get("path")
 	var speed_cost = path_info.get("cost")
 	var path = simulate_character_movement(calculated_path)
+	_character_coords[character_id] = path[path.size()-1]
+	remove_highlight_at_coords(path[0])
 	var clamped_path = clamp_path(path)
 	_tilemap.unbind_character_from_coords(character_coords)
 	_tilemap.bind_character_to_coords(character_id, _character_coords[character_id])
 	return [clamped_path, speed_cost]
 
 
-# Validates the path to a tile, optimizes it and then returns the path.
+# Validates the path to a tile, optimizes it and then emits a signal with the path.
 # This is used by players when confirming a selected moveable tile.
 func move_character_along_path(dest_coords, character_id, cur_speed):
 	var character_coords = _character_coords[character_id]
@@ -244,9 +246,9 @@ func get_characters_in_range(coords, radius_range):
 
 
 # Calculates the player characters closest to the position a coords.
-# In case of a tie, returns all the tied heroes.
+# Returns a list of [(hero_id, coords)] of all the characters at the closest distance.
 func calculate_nearest_heroes(coords, character_ids):
-	var hero_coords_data = get_characters_coords(character_ids) # [hero_id, coords] 
+	var hero_coords_data = get_characters_coords(character_ids) # [(hero_id, coords)] 
 	var nearest_data = []
 	var nearest_distance = 9999
 	var cur_distance
