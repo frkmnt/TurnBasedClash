@@ -457,13 +457,18 @@ Reavers are frightening warriores that become stronger the longer the battle rag
   * Spiderling - Fast, runs at the closest player and inflicts poison.
   * Spider - Shoots webs that inflict Root.
   * Bat - Fast, has high evasion.
-  * Worm
-  * Glow Worm
-  * Ant
-  * Slime
+  * Worm - Can burrow underground and resurface on the next turn to attack.
+  * Glow Worm - Rare version of the worm that will disappear after burrowing below 30% HP. Drops rare loot. 
+  * Ant Worker - Attacks the closest player, with a low chance of inflicting poison.
+  * Ant Scout - Flying ant with high evasion, with a low chance of inflicting bleed.
+  * Ant Soldier - Slow but tanky ants that can resist magic damage. They stay close to the queen and inflict both bleed and poison.
+  * Ant Queen (Boss) - Spawns 1-2 eggs every turn. Empowers all other ants each time they are attacked.
+  * Ant Egg - Breaks and spawns an ant larva if attacked with physical damage. Magical damage will kill it without spawning anything. Spawns an ant larva automatically after 3 turns.
+  * Ant Larva - Weaker Ants that spawn from the eggs. They have no special properties.
+  * Slime - Resistant to physical damage, will bounce back if attacked with physical damage. Can spew acid. Chance to drop gear.
   * Mushroom - Shoots spores around it that inflict poison.
-  * Undead Miner
-  * Giant Mole
+  * Undead Miner - Focuses the player carrying the most gatherable items. High damage with a pickaxe that can inflict stun.
+  * Giant Mole - Can burrow to avoid damage. Throws mud that can inflict bleed.
  <br>
 
 
@@ -485,25 +490,26 @@ Reavers are frightening warriores that become stronger the longer the battle rag
   * Werewolf
   * Ent
   * Honeybadger
-  * Giant Mantis
+  * Giant Mantis - Can attack all adjacent heroes at the same time. High evasion.
+  * Forest Spirit (Boss) - a deer made of thorns. Avoids direct combat, running away from heroes and spawning plant versions of different  forest enemies.
 <br>
 
 
 
 * Desert:
-   * Scorpion
-   * Acid scorpion
-   * Wheel Spider
+   * Scorpion - Stings heroes, inflicting poison with a high crit chance. If poisoned, it will burrow and hide, reappearing at a different place.   
+   * Acid scorpion - Rarer version of the scorpion, will shoot acid thorns from afar that inflict poison with a high crit chance. It will burrow and hide if the target is poisoned, reappearing at a different place.
+   * Wheel Spider - rolls at high speed towards the nearest hero, stunning and knocking them back on hit.
    * Cobra
-   * Cactus Monster
+   * Cactus Monster - Shoots spikes around it that inflict bleed whenever it's attacked.
    * Bandits/ Sandbenders
-   * Mummy
-   * Sand Digger 
+   * Mummy - curses a hero and focuses only on them. Reverts any damage onto attackers that aren't the cursed hero.
+   * Sand Digger - 
    * Coyote
    * Sand Spirit
-   * Tarantula Hawk
+   * Tarantula Hawk - High evasion, inflicts poison and stun with its sting. It will follow up with an attack with a high crit chance.
    * Sandspitter
-   * Djinn
+   * Djinn - Inflicts random debuffs on attack. Shoots magical bolts.
    * Sphynx
    * Tomb Mimic
    * Lizard
@@ -512,19 +518,19 @@ Reavers are frightening warriores that become stronger the longer the battle rag
 
 
 * Volcanic:
-  * Volcanic Snail
+  * Volcanic Snail - hides in its shell if is unable to attack
   * Lava Monster
-  * Imps
-  * Exploder
-  * Magma Spitter
-  * Fire Hound
+  * Imps - shoot fireballs and create delayed explosions that go off after 1 turn
+  * Exploder - moves slowly, but explodes if killed or if it ends its turn adjacent to a hero.
+  * Magma Spitter - spits magma that lingers around a tile. Shoots some gas around it if surrounded.
+  * Fire Hound - Rushes the player and inflicts burning and bleeding.
   * Volcano Slime
-  * Lava Crab
-  * Wandering Volcano
-  * Effigy
-  * Ash Zombie
+  * Lava Crab - Can walk in the magma, and if so it can shoot magma balls. If outside, it will attempt to drags heroes into the magma.
+  * Wandering Volcano - Immobile, shoots magma  at random nearby tiles. Always surrounded by magma.
+  * Effigy - Empowers all enemies in a 3*3 radius around it. Small chance of igniting heroes in the same radius.
+  * Ash Zombie - spawns in groups of at least 3. Low defense and HP, but as long as one still stands it will spawn other zombies from it (up to the starting number of zombies). Inflicts slow.
   * Dragon
-  * Oni
+  * Oni (Boss) - Wields a spiky club thst inflicts bleed and stunned. Can smash the floor, creating cracks that spew lava. Can imbue the club with lava and empower its attacks.
   * Lava Strider - Spider than can run across lava pools.
 <br>
 
@@ -534,16 +540,14 @@ Reavers are frightening warriores that become stronger the longer the battle rag
   * Sea Leopard
   * Walrus
   * Polar Bear
-  * Snowman
+  * Snowman - shoots rapid fire snowballs with low damage but a high crit chance, vulnerable to damage.
   * Yuki-onna
-  * Reindeer
-  * Ice Elemental
   * Snow Harpy
-  * Ice Spider
+  * Ice Spider - Conceals itself in a blizzard (only visible if in an adjacent tile) and shoots frosty webs at the target.
   * Ice Devil
-  * Frost Walker - Walks slowly, but randomly sprints to the nearest playeand freezes them.
-  * Snow Jellyfish
-  * Crab
+  * Frost Walker - Walks slowly, but randomly sprints to the nearest player and freezes them.
+  * Snow Jellyfish - high evasion, inflicts frost and poison
+  * Snow Crab - Can protect itself with its claw and can immobilize heroes. 
 <br>
 
 
@@ -560,6 +564,7 @@ Reavers are frightening warriores that become stronger the longer the battle rag
   * Will o'Wisp
   * Corrupted Ent
   * Cultists
+  
 <br>
 
 
@@ -572,6 +577,7 @@ Reavers are frightening warriores that become stronger the longer the battle rag
   * Bone Snake
   * Giant Rat
   * Dungeon Slime - Large and fills enclosed spaces, moves slowly.
+  * Floating Skull - shoots projectiles. When killed, shoots itself at the nearest target, increasing the damage dealt for each tile travelled.
 <br>
 
 
