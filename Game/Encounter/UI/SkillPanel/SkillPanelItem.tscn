@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2a2h21ymsw1j"]
+
+[ext_resource type="Script" path="res://Encounter/UI/SkillPanel/SkillPanelItem.gd" id="1_au2oe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kiqr"]
+bg_color = Color(0.643137, 0.588235, 0.545098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdt54"]
+bg_color = Color(0.572549, 0.517647, 0.47451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dqgi"]
+bg_color = Color(0.4, 0.356863, 0.321569, 1)
+
+[node name="SkillPanelItem" type="Button"]
+self_modulate = Color(0.690196, 0.690196, 0.690196, 1)
+custom_minimum_size = Vector2(600, 100)
+offset_right = 600.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7kiqr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tdt54")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0dqgi")
+script = ExtResource("1_au2oe")
+
+[node name="SkillName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 244.0
+offset_right = 326.0
+offset_bottom = 26.0
+text = "Skill Name"
+
+[node name="SkillDescription" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 0
+offset_top = 23.0
+offset_right = 602.0
+offset_bottom = 74.0
+text = "This is a generic skill description. I made it really long to see if it fits. It does, so that's pretty cool."
+autowrap_mode = 3
+clip_text = true
+
+[node name="SkillCost" type="Label" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 216.0
+offset_bottom = 100.0
+text = "Cost: 3"
+
+[node name="SkillCooldown" type="Label" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 74.0
+offset_right = 580.0
+offset_bottom = 100.0
+text = "Cooldown: 1
+"
+
+[connection signal="button_up" from="." to="." method="on_button_released"]

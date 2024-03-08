@@ -11,10 +11,13 @@ const _modifiers_template = preload("res://Character/Data/Modifiers.gd")
 const _skills_template = preload("res://Character/Data/Skills.gd")
 const _stats_template = preload("res://Character/Data/Stats.gd")
 
+const _arcane_blast_template = preload("res://Character/Skills/SkillList/Wizard/ArcaneBlast.gd")
+
 
 #=== Variables ===#
 var _hero_data # originally just the class_id and level, but other info is then appended
-
+var _name_pool = ["Tim", "Mob", "Casul", "Boioioing"]
+var _drafted_names = []
 
 
 #=== Bootstrap ===#
@@ -26,6 +29,7 @@ func generate_hero(hero_data):
 		"Wizard":
 			generate_new_wizard(hero)
 	_hero_data = {}
+	restore_drafted_names()
 	return hero
 
 
@@ -34,11 +38,11 @@ func generate_hero(hero_data):
 
 # Generate a new wizard character.
 func generate_new_wizard(wizard):
-	_hero_data.name = "Tim"
+	_hero_data.name = draft_random_hero_name()
 	create_wizard_attributes()
 	create_wizard_stats()
 	create_modifiers(wizard)
-	create_skills_template()
+	create_wizard_skills()
 	wizard.initialize(_hero_data)
 	return wizard
 
@@ -72,8 +76,39 @@ func create_wizard_stats():
 	_hero_data.stats.add_stats_based_on_attributes(_hero_data.attributes)
 
 
+func create_wizard_skills():
+	var skill_list = []
+	var arcane_blast = _arcane_blast_template.new()
+	skill_list.append(arcane_blast)
+	create_skills_template(skill_list)
+
+
+
+
 func create_random_wizard_gear():
 	pass #TODO
+
+
+
+
+
+
+#=== Hero Names ===#
+
+# Drafts a random hero name from _name_pool. Drafted names pooped from the list and 
+# are added to _drafted_names, to avoid repetition. After the drafting is complete, the
+# selected names are restored to _name_pool.
+#TODO the names are temporarily added in order for debuggig purposes.
+func draft_random_hero_name():
+	var drafted_name = _name_pool.pop_front()
+	_drafted_names.append(drafted_name)
+	return drafted_name
+
+
+# Restores the drafted names in _drafted_names back into _name_pool.
+func restore_drafted_names():
+	_name_pool.append_array(_drafted_names)
+	_drafted_names = []
 
 
 
@@ -98,15 +133,17 @@ func create_base_stats(base_stats_map):
 	return stats
 
 
-
-
-
 func create_modifiers(hero):
 	var modifiers = _modifiers_template.new()
 	modifiers.initialize(hero)
 	_hero_data["modifiers"] = modifiers
 
 
-func create_skills_template():
+func create_skills_template(skill_list):
 	var skills = _skills_template.new()
+	skills.initialize_skills(skill_list)
 	_hero_data["skills"] = skills
+
+
+
+

@@ -3,6 +3,4 @@
 [ext_resource type="Script" path="res://Encounter/Camera/EncounterCamera.gd" id="1_py3mn"]
 
 [node name="EncounterCamera" type="Camera2D"]
-current = true
-smoothing_enabled = true
-script = ExtResource( "1_py3mn" )
+script = ExtResource("1_py3mn")

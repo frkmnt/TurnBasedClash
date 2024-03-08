@@ -48,3 +48,11 @@ func use_skill(skill_id, skill_selection_data):
 # Returns the selected skill.
 func get_skill(skill_id):
 	return _skill_map[skill_id]
+
+# Processes every skill in the _skill_map and returns them in a vector.
+func get_all_skills_list():
+	var all_skills = []
+	for skill in _skill_map.values():
+		all_skills.append(skill)
+	return all_skills
+

@@ -43,7 +43,6 @@ var _crit_damage = 0
 var _cur_crit_damage = 0
 
 # intelligence
-
 var _crit_chance = 0
 var _cur_crit_chance = 0
 
@@ -87,7 +86,7 @@ func add_stats_based_on_strength(strength):
 
 func add_stats_based_on_dexterity(dexterity):
 	_speed += (dexterity / 10)
-	_evasion += int(dexterity/10)
+	_evasion += int(dexterity/3)
 	_crit_damage += dexterity * 2
 
 func add_stats_based_on_intelligence(intelligence):
@@ -107,14 +106,26 @@ func match_current_to_base_stats():
 	_cur_magical_defense = _magical_defense
 
 
-func apply_resistances_then_damage(phyical_damage, magical_damage):
+
+# Attacks
+
+func apply_resistances_then_damage(phyical_damage, magical_damage, true_damage):
+	var total_damage = true_damage
+	sub_cur_health(true_damage)
 	phyical_damage -= _physical_defense
 	if phyical_damage > 0:
+		total_damage += phyical_damage
 		sub_cur_health(phyical_damage)
 	magical_damage -= _magical_defense
 	if magical_damage > 0:
+		total_damage += magical_damage
 		sub_cur_health(magical_damage)
+	return total_damage
 
+# Rolls against an attack roll. Returns true if the attack hits.
+func try_dodging_attack(attack_accuracy):
+	var evasion_roll = randi_range(0, _cur_evasion)
+	return evasion_roll <= attack_accuracy
 
 
 #=== Mutators ===#
@@ -138,15 +149,14 @@ func sub_health(health_val):
 
 func add_cur_health(health_val):
 	_cur_health = _cur_health + health_val
-	if _cur_health <= 0:
-		pass
+#	if _cur_health <= 0:
+#		pass
 		#kill_character() #TODO
 
 func sub_cur_health(health_val):
 	_cur_health = _cur_health - health_val
-	if _cur_health <= 0:
-		pass
-		#kill_character() #TODO
+#	if _cur_health <= 0:
+#		pass
 
 func sub_cur_speed(speed_val):
 	_cur_speed -= speed_val
@@ -166,7 +176,7 @@ func on_turn_start():
 
 #=== Utils ===#
 
-func print_attributes():
+func print_stats():
 	print( \
 		"Health Points: " + str(_health) \
 		+ "\nPhysical Defense: " + str(_physical_defense) \

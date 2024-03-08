@@ -1,12 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxxcom0moro5i"]
+[gd_scene load_steps=5 format=3 uid="uid://citqyl7r27ai0"]
 
 [ext_resource type="Script" path="res://Character/Animator/Animator.gd" id="1_fw520"]
 [ext_resource type="Texture2D" uid="uid://bve5bfe3s4v1a" path="res://Asset/Character/Mobs/Rat/Rat.png" id="2_jm4qc"]
+
+[sub_resource type="Animation" id="Animation_xasf6"]
+resource_name = "rat_bite"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 6.28319, 0.0, 6.28319, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hdgxh"]
+_data = {
+"rat_bite": SubResource("Animation_xasf6")
+}
 
 [node name="RatAnimator" type="Node2D"]
 script = ExtResource("1_fw520")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hdgxh")
+}
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

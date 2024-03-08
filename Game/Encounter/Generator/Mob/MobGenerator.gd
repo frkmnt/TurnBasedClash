@@ -43,7 +43,7 @@ func generate_mob(mob_data):
 
 #=== Rat ===#
 
-const rat_bite = preload("res://Character/Skills/MobSkillList/RatBite/RatBite.gd")
+const rat_bite = preload("res://Character/Skills/MobSkillList/Rat/RatBite.gd")
 
 func generate_new_rat():
 	var rat_instance = _rat_prefab.instantiate()

@@ -44,36 +44,81 @@ func initialize(hero_data):
 
 
 
-#=== Turn Management ===#
+#=== Trigger Logic ===#
 
 func on_turn_start():
+	var log = ""
 	_stats.on_turn_start()
+	log += _modifiers.on_turn_start()
+	if log != "":
+		_animator.queue_data_anim("log", log)
 
 
+# Calculates and applies the turn start behaviour.
+func apply_turn_start():
+	_animator.play_anim_queue("")
 
-#=== Action Management ===#
 
 func on_move(path):
-	_animator.play_data_anim("move", path)
+	_animator.queue_data_anim("move", path)
+	_animator.play_anim_queue("_on_player_character_finished_moving")
 
 func on_finished_moving():
-	SignalManager.emit_signal("_on_character_finished_moving")
+	if is_turn_over():
+		SignalManager.emit_signal("_on_pass_turn")
+
+
+# Handles the on turn end logic.
+func on_turn_end():
+	#TODO
+	pass
+
+
+#=== Hero Specific Triggers ===#
+
+func on_skill_select(skill):
+	pass
+
+
 
 
 
 #=== Combat ===#
 
-func on_receive_attack(attack):
-	pass #TODO handle modifiers
+# Receives the attack, then passes it to the modifiers.
+# Returns true if the attack connects.
+func on_receive_attack(attack, accuracy):
+	#TODO handle modifiers
+	var does_attack_hit = _stats.try_dodging_attack(accuracy)
+	return does_attack_hit
 
 
-func on_apply_damage(physical_damage, magical_damage, modifiers):
-	_stats.apply_resistances_then_damage(physical_damage, magical_damage)
+# Applies damage after passing it to the modifiers.
+func on_apply_damage(physical_damage, magical_damage, true_damage):
 	#TODO apply remaining modifiers
+	return _stats.apply_resistances_then_damage(physical_damage, magical_damage, true_damage)
+
+
+
+# Adds a modifiers to the existing modifier map.
+# Returns true if the modifier was successfully added.
+func on_receive_modifier(modifier):
+	return _modifiers.add_modifier(modifier)
+
 
 
 
 #=== Utils ===#
+
+#TODO handle modifiers
+func is_turn_over():
+	var is_over = false
+	if _stats._cur_speed <= 0:
+		is_over = true
+	return is_over
+
+
+
 
 func calculate_hero_value():
 	return 10000

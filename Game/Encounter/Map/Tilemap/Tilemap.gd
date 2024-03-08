@@ -235,16 +235,36 @@ func get_tiles_in_range(coords, radius_range):
 	return tiles
 
 
-# Return the characters in range at the center coordinates.
+# Return the characters in range of the center coordinates.
 func get_characters_in_range(coords, radius_range):
 	var characters = []
 	var character
+	var tile
 	for x in range(coords.x-radius_range, coords.x+radius_range):
 		for y in range(coords.y-radius_range, coords.y+radius_range):
-			character = _tiles.get(coords).get("character")
-			if character:
-				characters.append(character)
+			if x == coords.x and y == coords.y:
+				continue
+			tile = _tiles.get(Vector2(x, y))
+			if tile:
+				character = tile.get("character")
+				if character != null:
+					characters.append([character, Vector2(x,y)])
 	return characters
+
+
+# Return the characters in range at the center coordinates.
+# Only characters that have a line of sight to the source coords.
+#TODO
+func get_characters_in_range_with_los(coords, radius_range):
+	pass
+#	var characters = []
+#	var character
+#	for x in range(coords.x-radius_range, coords.x+radius_range):
+#		for y in range(coords.y-radius_range, coords.y+radius_range):
+#			character = _tiles.get(coords).get("character")
+#			if character:
+#				characters.append(character)
+#	return characters
 
 
 

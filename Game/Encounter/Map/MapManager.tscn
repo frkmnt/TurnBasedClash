@@ -3,4 +3,4 @@
 [ext_resource type="Script" path="res://Encounter/Map/MapManager.gd" id="1_e758p"]
 
 [node name="MapManager" type="Node2D"]
-script = ExtResource( "1_e758p" )
+script = ExtResource("1_e758p")

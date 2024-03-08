@@ -93,4 +93,4 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("2_mx07l")
+texture = ExtResource("6_kakhx")

@@ -29,10 +29,10 @@ func _physics_process(_delta):
 	process_all_inputs()
 
 
+# Processes all possible inputs and handles them accordingly.
 func process_all_inputs():
 	if not Input.is_anything_pressed():
 		return
-	
 	reset_actions()
 	assign_action_input()
 	if _action_input != "":
@@ -40,12 +40,14 @@ func process_all_inputs():
 		SignalManager.emit_signal("_on_action_input", _action_input)
 
 
+# Resets the action modes to "".
 func reset_actions():
 	_action_input = ""
 	_mouse_input = ""
 	_drag_vector = Vector2(0, 0)
 
 
+# Iterate all action inputs and handle each accordingly.
 func assign_action_input():
 	for action in _action_inputs:
 		if Input.is_action_just_pressed(action):
@@ -57,6 +59,7 @@ func assign_action_input():
 
 #=== Handle Touch UI Inputs ===#
 
+# Handles mouse/touchscreen inputs on the screen.
 func _input(event):
 	if event is InputEventMouseButton or event is InputEventScreenTouch:
 		match event.button_index:
@@ -80,19 +83,7 @@ func _input(event):
 					
 					SignalManager.emit_signal("_on_mouse_input", _mouse_input)
 		
-		
 	elif event is InputEventMouseMotion or event is InputEventScreenDrag: # mouse drag 
 		_drag_vector = event.relative
 		SignalManager.emit_signal("_on_mouse_motion")
-
-
-
-
-func handle_touch_input():
-	pass
-
-
-func handle_motion_input():
-	pass
-
 

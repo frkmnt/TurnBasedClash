@@ -15,8 +15,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("1_ftghw")
 theme_override_font_sizes/font_size = 75
-toggle_mode = true
 text = "Action"
 script = ExtResource("1_570l0")
 
-[connection signal="toggled" from="." to="." method="on_toggled"]
+[connection signal="button_up" from="." to="." method="on_button_up"]

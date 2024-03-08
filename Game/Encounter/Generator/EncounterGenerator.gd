@@ -56,7 +56,7 @@ func generate_test_map():
 
 
 func generate_test_enemies(intended_level):
-	var enemy_count = 1
+	var enemy_count = 2
 	var enemy_list = []
 	for i in range(enemy_count):
 		enemy_list.append(_mob_generator.generate_mob({"mob_id": "Rat", "level": intended_level}))
@@ -68,7 +68,7 @@ func generate_test_enemies(intended_level):
 #=== Party ===#
 
 # Loads the party's data and generates the party structure.
-func generate_party(party):
+func generate_party(_party):
 	var temp_party = [
 		{
 			"hero_class": "Wizard",

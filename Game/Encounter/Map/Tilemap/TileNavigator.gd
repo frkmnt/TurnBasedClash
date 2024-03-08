@@ -1,9 +1,11 @@
 extends Node
 
 #=== About ===#
-# This class generates an astar structure containing the tiles inside the map. It can be consulted for information regarding movement costs, etc.
-# TODO optimize not to use the built in astar, since the weight cannot be set in the edges but on the points. This results in being unable to set preference
-# between vertical/horizontal and diagonal movements. This causes janky pathfinding.
+# This class generates an astar structure containing the tiles inside the map. It can be consulted for 
+# information regarding movement costs, etc.
+# TODO optimize not to use the built in astar, since the weight cannot be set in the edges but on the points. 
+# This results in being unable to set preference between vertical/horizontal and diagonal movements. 
+# This causes janky pathfinding.
 
 
 #=== References ===#
@@ -60,33 +62,9 @@ var _speed
 
 
 # Standard Astar pathfinding for character > tile.
-# Makes the origin tile temporarily moveable to allow navigation.
-# Returns the shortest path or closest point in the case of insufficient speed.
-func get_astar_path_info(coords, dest_coords, speed):
-	var was_unmoveable = _parent._tiles.get(coords).erase("unmoveable")
-	_speed = speed
-	_dest_coords = Vector2(dest_coords.x, dest_coords.y)
-	# calculate the path
-	var cur_path = {"path":[coords], "cost":0, "estimate":get_distance_estimate(coords, dest_coords)}
-	_astar_path.append(cur_path)
-	var path_data = astar_path_recursive()
-	# reverse unmoveable setting for origin tile
-	if was_unmoveable:
-		_parent._tiles.get(coords)["unmoveable"] = true
-	_astar_path.clear()
-	path_data.erase("estimate")
-	# tidy up the path
-	var tile_path = path_data.get("path")
-	tile_path.reverse()
-	path_data["path"] = tile_path
-	return path_data
-
-
-# Astar pathfinding for character > character.
-# It is used to allow enemies to pathfind to other characters, since
-# both the origin and destination tiles need to be set to moveable to allow navigation.
-# Returns the shortest path to an adjacent tile or closest point in the case of insufficient speed.
-func get_astar_enemy_info(coords, dest_coords, speed): 
+# Makes the origin and destination tiles temporarily moveable to allow navigation.
+# Returns the shortest path or closest point in the case of insufficient speed, and the speed cost.
+func get_astar_path(coords, dest_coords, speed):
 	var was_unmoveable_origin = _parent._tiles.get(coords).erase("unmoveable")
 	var was_unmoveable_destination = _parent._tiles.get(dest_coords).erase("unmoveable")
 	_speed = speed
@@ -95,17 +73,16 @@ func get_astar_enemy_info(coords, dest_coords, speed):
 	var cur_path = {"path":[coords], "cost":0, "estimate":get_distance_estimate(coords, dest_coords)}
 	_astar_path.append(cur_path)
 	var path_data = astar_path_recursive()
-	# reverse unmoveable setting for origin tile
+	_astar_path.clear()
+	path_data.erase("estimate")
+	# tidy up the path, erase the head if == destination, since there is a character there
+	var tile_path = path_data.get("path")
 	if was_unmoveable_origin:
 		_parent._tiles.get(coords)["unmoveable"] = true
 	if was_unmoveable_destination:
-		_parent._tiles.get(coords)["unmoveable"] = true
-	_astar_path.clear()
-	path_data.erase("estimate")
-	# tidy up the path, erase the tail if == destination, since there is a character there
-	var tile_path = path_data.get("path")
-	if tile_path[0] == dest_coords:
-		tile_path.pop_front()
+		_parent._tiles.get(dest_coords)["unmoveable"] = true
+		if tile_path[0] == dest_coords:
+			tile_path.pop_front()
 		path_data["cost"] -= 1
 	tile_path.reverse()
 	path_data["path"] = tile_path

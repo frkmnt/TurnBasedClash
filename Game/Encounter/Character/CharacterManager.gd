@@ -87,31 +87,28 @@ func sort_by_speed(data_a, data_b):
 	return is_a_faster
 
 
-# Increments the cur char index and starts the turn.
-# Called by the EncounterManager. 
-func turn_start():
+# Increments the _cur_character_idx and restarts the queue once all characters have acted.
+# Retuns the current character's info. Called by the EncounterManager. 
+func increment_turn_queue():
 	_cur_character_idx += 1
 	if _cur_character_idx >= _turn_queue.size(): # increment rounds
 		_cur_character_idx = 0
 		sort_turn_queue()
-	return get_current_character_id()
+	var cur_character_id = get_current_character_id()
+	var cur_character = get_current_character()
+	return [cur_character_id, cur_character]
+
+# Applies the starts turn for the current character.
+func start_turn_current_character():
+	var cur_character = get_current_character()
+	cur_character.on_turn_start()
 
 
-func apply_turn_start_to_current_character():
-	var character = get_current_character()
-	character.on_turn_start()
+# Apllies the turn start behaviour to the current character. 
+# This can only be called if the current character is an enemy.
+func apply_turn_start():
+	get_current_character().apply_turn_start()
 
-
-
-# Returns true if any of the following conditions are met.
-# The current character has no remaining speed.
-# TODO check for any modifiers that pass the turn such as stun.
-func is_turn_over():
-	var is_over = false
-	var cur_speed = get_current_character_current_speed()
-	if cur_speed <= 0:
-		is_over = true
-	return is_over
 
 
 
@@ -123,6 +120,12 @@ func decrease_character_current_speed(char_id, speed_cost):
 	var character = get_character_by_id(char_id)
 	var new_speed = character._stats.sub_cur_speed(speed_cost)
 	return new_speed
+
+
+# Returns a list of the current_character's skills.
+func get_current_character_skills():
+	var character = get_current_character()
+	return character._skills.get_all_skills_list()
 
 
 
@@ -169,19 +172,26 @@ func get_current_character_had_turn(char_id):
 
 # Applies movement effects to characters.
 # Triggered by the EncounterManager when a player's character has moved.
-func on_character_moved(char_id, path):
+func on_player_character_moved(char_id, path, speed_cost):
 	var character = get_character_by_id(char_id)
 	character.on_move(path)
+	var new_speed = character._stats.sub_cur_speed(speed_cost)
+	return new_speed
 
 
-# Handles a enemy's movement interactions.
+# Moves the current enemy to the desired coordinates.
 # This includes calculating the appropriate path, and setting up the movement animation.
-func move_current_enemy_along_path(dest_coords, cur_speed):
+func get_current_enemy_path_to_coords(dest_coords, cur_speed):
 	var character_id = get_current_character_id()
-	var character = get_character_by_id(character_id)
-	var path_info = _map_manager.calculate_path_to_character(dest_coords, character_id, cur_speed) #[path, speed_cost]
-	character.on_move(path_info[0], path_info[1])
+	return _map_manager.calculate_path_to_character(dest_coords, character_id, cur_speed) #[character_coords, clamped_path, speed_cost]
 
+
+# Returns true if any of the following conditions are met.
+# The current character has no remaining speed.
+# TODO check for any modifiers that pass the turn such as stun.
+func on_player_character_finished_moving(char_id):
+	var character = get_character_by_id(char_id)
+	character.on_finished_moving()
 
 
 
@@ -207,13 +217,26 @@ func is_current_character_ally():
 #=== Enemy Utils ===#
 
 # Calculates the player characters closest to the position of the current character.
-# Returns a list of [(hero_id, coords)] of all the characters at the closest distance.
-func find_nearest_heroes_to_current_character():
-	var cur_char_id = _turn_queue[0]
+# Returns a list of [(hero_id, coords, move_dist)] of all the characters at the closest distance.
+func find_nearest_heroes_to_current_enemy():
+	var cur_char_id = get_current_character_id()
 	var cur_char_coords = _map_manager._character_coords.get(cur_char_id)
-	return _map_manager.calculate_nearest_heroes(cur_char_coords, _ally_ids)
+	return _map_manager.calculate_nearest_heroes(cur_char_coords, _ally_ids) # [(hero_id, coords, move_dist)]
 
 
+func is_character_in_range_of_current_character(target_id, cur_range):
+	var cur_char_id = get_current_character_id()
+	var cur_char_coords = _map_manager._character_coords.get(cur_char_id)
+	var target_char_coords = _map_manager._character_coords.get(target_id)
+	var range_distance = _map_manager.calculate_move_distance_between_coords(cur_char_coords, target_char_coords)
+	return range_distance <= cur_range
+
+
+func is_target_in_range(char_id, target_id, cur_range):
+	var cur_char_coords = _map_manager._character_coords.get(char_id)
+	var target_char_coords = _map_manager._character_coords.get(target_id)
+	var range_distance = _map_manager.calculate_move_distance_between_coords(cur_char_coords, target_char_coords)
+	return range_distance <= cur_range
 
 
 

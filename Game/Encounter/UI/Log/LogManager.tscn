@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://hsw75xyguwlw"]
+
+[ext_resource type="FontFile" uid="uid://0b0bvmlwkhtc" path="res://Asset/Fonts/Encounter/Announcement/Announcement.ttf" id="1_8o14c"]
+[ext_resource type="Script" path="res://Encounter/UI/Log/LogManager.gd" id="1_e08gm"]
+
+[sub_resource type="FontVariation" id="FontVariation_hx718"]
+base_font = ExtResource("1_8o14c")
+spacing_top = -5
+
+[node name="LogManager" type="RichTextLabel"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -183.0
+offset_right = 436.0
+offset_bottom = -5.0
+grow_vertical = 0
+theme_override_fonts/normal_font = SubResource("FontVariation_hx718")
+theme_override_font_sizes/normal_font_size = 50
+scroll_active = false
+scroll_following = true
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+script = ExtResource("1_e08gm")

@@ -8,7 +8,17 @@ extends Node2D
 var _encounter_manager # this node's intended parent
 
 #=== Variables ===#
-var _can_input = false
+
+# Locks that control the different inputs.
+var _can_move_camera = false
+#var _can_zoom = false
+
+var _can_attack = false
+var _can_skill = false
+var _can_move = false
+var _can_bag = false
+var _can_pass = false
+var _can_inspect = false
 
 
 
@@ -22,8 +32,6 @@ func initialize():
 #=== Signal ===#
 
 func parse_action_input(action_input):
-	if not _can_input:
-		return
 	match action_input:
 		"attack":
 			on_attack()
@@ -37,15 +45,9 @@ func parse_action_input(action_input):
 			on_pass()
 		"inspect":
 			on_inspect()
-		"zoom_in":
-			on_zoom_in()
-		"zoom_out":
-			on_zoom_out()
 
 
 func parse_mouse_input(mouse_input):
-	if not _can_input:
-		return
 	match mouse_input:
 		"1":
 			on_left_click()
@@ -56,56 +58,97 @@ func parse_mouse_input(mouse_input):
 
 
 func parse_mouse_motion():
-	if not _can_input:
-		return
-	if InputManager._is_dragging:
-		on_mouse_drag()
+	if _can_move_camera:
+		if InputManager._is_dragging:
+			on_mouse_drag()
 
 
 
-#=== Parsing ===#
+
+
+#=== Parsing Inputs ===#
 
 func on_left_click():
 	_encounter_manager.handle_left_click()
 
 func on_mouse_drag():
-	if _encounter_manager._mode != "camera":
-		return
-	_encounter_manager._camera.set_new_position(InputManager._drag_vector)
-
-
-func on_move():
-	_encounter_manager.set_mode("move")
-	
-func on_attack():
-	_encounter_manager.set_mode("attack")
-
-func on_skill():
-	_encounter_manager.set_mode("skill")
-
-func on_bag():
-	_encounter_manager.set_mode("bag")
-
-func on_pass():
-	_encounter_manager.set_mode("pass")
-
-func on_inspect():
-	_encounter_manager.set_mode("inspect")
+	if _encounter_manager._mode == "camera":
+		_encounter_manager._camera.set_new_position(InputManager._drag_vector)
 
 func on_zoom_in():
-	_encounter_manager._camera.on_zoom_in()
+	if _can_move_camera:
+		_encounter_manager._camera.on_zoom_in()
 
 func on_zoom_out():
-	_encounter_manager._camera.on_zoom_out()
+	if _can_move_camera:
+		_encounter_manager._camera.on_zoom_out()
+
+
+
+
+
+#=== Parsing Buttons ===#
+
+func on_move():
+	if _can_move:
+		_encounter_manager.set_mode_button("move")
+	
+func on_attack():
+	if _can_attack:
+		_encounter_manager.set_mode_button("attack")
+
+func on_skill():
+	if _can_skill:
+		_encounter_manager.set_mode_button("skill")
+
+func on_bag():
+	if _can_bag:
+		_encounter_manager.set_mode_button("bag")
+
+func on_pass():
+	if _can_pass:
+		_encounter_manager.set_mode_button("pass")
+
+func on_inspect():
+	if _can_inspect:
+		_encounter_manager.set_mode_button("inspect")
+
 
 
 
 
 #=== Utils ===#
 
-func set_can_input(can_input):
-	_can_input = can_input
+# Updates the camera move lock status based on can_move.
+func set_can_move_camera(can_move):
+	_can_move_camera = can_move
 
 
+# Updates multiple button lock settings at once. 
+# Receives an array with all otptions that need to be altered, 
+# with elements of type [button_id, can_use]
+func update_button_locks(button_lock_list):
+	for button_data in button_lock_list:
+		match button_data[0]:
+			"can_attack":
+				_can_attack = button_data[1]
+			"can_skill":
+				_can_skill = button_data[1]
+			"can_move":
+				_can_move = button_data[1]
+			"can_bag":
+				_can_bag = button_data[1]
+			"can_pass":
+				_can_pass = button_data[1]
+			"can_inspect":
+				_can_inspect = button_data[1]
 
 
+# Updates all the button types to the desired lock.
+func update_all_button_locks(can_use):
+	_can_attack = can_use
+	_can_skill = can_use
+	_can_move = can_use
+	_can_bag = can_use
+	_can_pass = can_use
+	_can_inspect = can_use

@@ -16,8 +16,10 @@ const _current_ally = Color(4, 108, 0)
 const _current_enemy = Color(110, 29, 36)
 const _team_color = Color(0, 255, 0)
 const _enemy_color = Color(255, 0, 0)
-const _moveable_tiles_color = Color(0, 20, 255)
-const _selected_path_color = Color(255, 0, 255)
+const _moveable_tiles = Color(0, 20, 255)
+const _selected_path = Color(255, 0, 255)
+const _select_tile = Color(255, 68, 20)
+const _confirm_tile = Color(0, 255, 45)
 
 #=== Variables ===#
 var _highlight_coords = {} # maps tile coordinates to the corresponding highlights.
@@ -61,6 +63,14 @@ func remove_all_highlights():
 	for child in get_children():
 		child.queue_free()
 	reset_timer()
+
+
+func update_highlight_on_tile(coords, new_color_id):
+	if not _highlight_coords.has(coords):
+		return
+	var new_color = match_id_to_color(new_color_id)
+	var highlight = _highlight_coords.get(coords)
+	highlight.update_color(new_color)
 
 
 
@@ -110,8 +120,12 @@ func match_id_to_color(color_id):
 		"enemy":
 			color = _enemy_color
 		"moveable_tiles":
-			color = _moveable_tiles_color
+			color = _moveable_tiles
 		"selected_path":
-			color = _selected_path_color
+			color = _selected_path
+		"select_tile":
+			color = _select_tile
+		"confirm_tile":
+			color = _confirm_tile
 	return color
 

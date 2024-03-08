@@ -1,10 +1,29 @@
 extends Node
 
+#==== Modifier IDs ====#
+# poison                 
+
+
+
+#==== Modifier Triggers ====#
+# passive
+# turn_start
+# turn_end
+# round_start
+# round_end
+# move
+# receive_hit
+# receive_modifier
+# deal_hit
+# deal_modifier
+# modifier_activation
+# receive_heal
+
 
 var _parent_hero
 
-# dictionary of identifier : modifiers[]
-# identifiers: turn_start, turn_end, attack, skill, receive_attack, move
+# dictionary of modifier_trigger : modifiers{}
+# identifiers: turn_start, turn_end, attack, skill, receive_attack, move, finish_moving
 var _modifier_map = {}
 
 
@@ -20,127 +39,63 @@ var _modifier_map = {}
 
 func initialize(parent_class):
 	_parent_hero = parent_class
-	initialize_modifier_map()
 
 
-func initialize_modifier_map():
-	_modifier_map["turn_start"] = []
-	_modifier_map["turn_end"] = []
-	_modifier_map["attack"] = []
-	_modifier_map["skill"] = []
-	_modifier_map["receive_attack"] = []
-	_modifier_map["receive_skill"] = []
-	_modifier_map["move"] = []
+
+
+#=== Modifier Interface ===#
 
 func add_modifier(modifier):
+	var was_added = true #TODO check if any modifiers prevent the new one from being added
 	modifier.initialize(_parent_hero)
-	
-	for modifier_type in modifier._types:
-		match modifier_type:
-			"turn_start":
-				_modifier_map.get("turn_start").append(modifier)
-			
-			"turn_end":
-				_modifier_map.get("turn_end").append(modifier)
-			
-			"attack":
-				_modifier_map.get("attack").append(modifier)
-			
-			"skill":
-				_modifier_map.get("skill").append(modifier)
-			
-			"receive_attack":
-				_modifier_map.get("receive_attack").append(modifier)
-			
-			"move":
-				_modifier_map.get("move").append(modifier)
-
-
-
+	for modifier_trigger in modifier._triggers:
+		if _modifier_map.has(modifier_trigger):
+			var modifiers = _modifier_map.get(modifier_trigger)
+			if modifiers.has(modifier._id):
+				modifiers[modifier._id].on_stack(modifier)
+			else: # the modifier doesn't exist
+				modifiers[modifier._id] = modifier
+		else: # no entries for the trigger exist
+			var new_map = {}
+			new_map[modifier._id] = modifier
+			_modifier_map[modifier_trigger] = new_map
+	return was_added
 
 
 
 #=== Event Management ===#
 
+# Called when a character's turn starts. Returns the generated log.
 func on_turn_start():
+	return apply_event_modifiers("turn_start")
+
+
+
+
+
+#=== Utils ===#
+
+# Dynamically applies an event's modifiers (ie on_turn_start) based on the modifier
+# trigger. Returns the generated logs. This reduces overall function redundancy.
+func apply_event_modifiers(modifier_trigger):
+	var log = ""
 	var modifiers_to_remove = []
-	for modifier in _modifier_map.get("turn_start"):
-		modifier.on_turn_start()
-		if modifier.needs_to_be_removed:
-			modifiers_to_remove.append(modifier)
+	var call_func = "on_" + modifier_trigger
+	if _modifier_map.has(modifier_trigger):
+		for modifier in _modifier_map.get(modifier_trigger).values():
+			log += modifier.call(call_func)
+			if modifier._needs_to_be_removed:
+				modifiers_to_remove.append(modifier)
 	remove_modifiers(modifiers_to_remove)
+	return log 
 
-func on_turn_end():
-	var modifiers_to_remove = []
-	for modifier in _modifier_map.get("turn_end"):
-		modifier.on_turn_end()
-		if modifier.needs_to_be_removed:
-			modifiers_to_remove.append(modifier)
-	remove_modifiers(modifiers_to_remove)
-
-func on_attack():
-	var modifiers_to_remove = []
-	for modifier in _modifier_map.get("attack"):
-		modifier.on_attack()
-		if modifier.needs_to_be_removed:
-			modifiers_to_remove.append(modifier)
-	remove_modifiers(modifiers_to_remove)
-
-func on_skill():
-	var modifiers_to_remove = []
-	for modifier in _modifier_map.get("skill"):
-		modifier.on_skill()
-		if modifier.needs_to_be_removed:
-			modifiers_to_remove.append(modifier)
-	remove_modifiers(modifiers_to_remove)
-
-func on_receive_attack():
-	var modifiers_to_remove = []
-	for modifier in _modifier_map.get("receive_attack"):
-		modifier.on_receive_attack()
-		if modifier.needs_to_be_removed:
-			modifiers_to_remove.append(modifier)
-	remove_modifiers(modifiers_to_remove)
-
-
-func on_receive_skill(skill):
-	var modifiers_to_remove = []
-	for modifier in _modifier_map.get("receive_skill"):
-		modifier.on_receive_skill()
-		if modifier.needs_to_be_removed:
-			modifiers_to_remove.append(modifier)
-	remove_modifiers(modifiers_to_remove)
-
-
-func on_move():
-	var modifiers_to_remove = []
-	for modifier in _modifier_map.get("move"):
-		modifier.on_move()
-		if modifier.needs_to_be_removed:
-			modifiers_to_remove.append(modifier)
-	remove_modifiers(modifiers_to_remove)
-
-
-
-
-#=== Utility ===#
-
-func remove_modifiers(modifier_list):
-	var type_list
+# Removes the modifiers after iterating the list, so as to not cause conflicts.
+func remove_modifiers(modifiers_to_remove):
+	var modifier_list
 	var modifier_index
-	if modifier_list.size() > 0:
-		for modifier in modifier_list:
-			for type in modifier._types:
-				type_list = _modifier_map.get(type)
-				modifier_index = type_list.find(modifier)
-				type_list.remove(modifier_index)
-
-
-
-
-
-
-
-
-
+	if modifiers_to_remove.size() > 0:
+		for modifier in modifiers_to_remove:
+			for trigger in modifier._triggers:
+				modifier_list = _modifier_map.get(trigger)
+				modifier_list.erase(modifier._id)
 

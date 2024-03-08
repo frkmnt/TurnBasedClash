@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpajlror2lui3"]
+[gd_scene load_steps=7 format=3 uid="uid://cpajlror2lui3"]
 
 [ext_resource type="Script" path="res://Encounter/UI/EncounterUiManager.gd" id="1_emeqw"]
 [ext_resource type="PackedScene" uid="uid://ckbvto3udn430" path="res://Encounter/UI/Button/ButtonPanel.tscn" id="2_rcu16"]
 [ext_resource type="PackedScene" uid="uid://pqe1j0jsisie" path="res://Encounter/UI/Announcement/AnnouncementManager.tscn" id="3_5x0xc"]
 [ext_resource type="PackedScene" uid="uid://b8i63bigv2uat" path="res://Encounter/UI/Label/SpeedLabel.tscn" id="5_w1fmn"]
+[ext_resource type="PackedScene" uid="uid://hsw75xyguwlw" path="res://Encounter/UI/Log/LogManager.tscn" id="5_w5nf7"]
+[ext_resource type="PackedScene" uid="uid://b0o0hpsi6dn53" path="res://Encounter/UI/SkillPanel/SkillPanel.tscn" id="6_5dq8d"]
 
 [node name="UiManager" type="CanvasLayer"]
 script = ExtResource("1_emeqw")
 
 [node name="UiContainer" type="Control" parent="."]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,10 +28,19 @@ grow_vertical = 2
 [node name="AnnouncementManager" parent="UiContainer" instance=ExtResource("3_5x0xc")]
 
 [node name="ButtonPanel" parent="UiContainer" instance=ExtResource("2_rcu16")]
-offset_left = 550.0
-offset_top = 775.0
-offset_right = 1400.0
-offset_bottom = 1050.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -275.0
+offset_right = 425.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
 metadata/_edit_layout_mode = 1
 
 [node name="SpeedLabel" parent="UiContainer" instance=ExtResource("5_w1fmn")]
@@ -38,3 +50,12 @@ offset_top = 25.0
 offset_right = 150.0
 offset_bottom = 150.0
 metadata/_edit_layout_mode = 1
+
+[node name="LogManager" parent="UiContainer" instance=ExtResource("5_w5nf7")]
+layout_mode = 1
+offset_left = 14.0
+offset_top = -256.0
+offset_right = 530.0
+
+[node name="SkillPanel" parent="UiContainer" instance=ExtResource("6_5dq8d")]
+layout_mode = 1

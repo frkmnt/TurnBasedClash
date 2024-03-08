@@ -1,9 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7hvy1upd6otf"]
+[gd_scene load_steps=6 format=3 uid="uid://b7hvy1upd6otf"]
 
 [ext_resource type="Script" path="res://Character/Mob/Rat/Rat.gd" id="1_iey3h"]
-[ext_resource type="PackedScene" uid="uid://dxxcom0moro5i" path="res://Character/Mob/Rat/RatAnimator.tscn" id="2_ucey1"]
+[ext_resource type="Script" path="res://Character/Animator/Animator.gd" id="2_q512v"]
+[ext_resource type="Texture2D" uid="uid://bve5bfe3s4v1a" path="res://Asset/Character/Mobs/Rat/Rat.png" id="3_ep8vd"]
+
+[sub_resource type="Animation" id="Animation_xasf6"]
+resource_name = "rat_bite"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 6.28319, 0.0, 6.28319, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hdgxh"]
+_data = {
+"rat_bite": SubResource("Animation_xasf6")
+}
 
 [node name="Rat" type="Node2D"]
+self_modulate = Color(0.105882, 0.894118, 0.176471, 1)
+scale = Vector2(2, 2)
 script = ExtResource("1_iey3h")
 
-[node name="Animator" parent="." instance=ExtResource("2_ucey1")]
+[node name="Animator" type="Node2D" parent="."]
+script = ExtResource("2_q512v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animator"]
+libraries = {
+"": SubResource("AnimationLibrary_hdgxh")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="Animator"]
+texture_filter = 1
+texture = ExtResource("3_ep8vd")
+
+[connection signal="animation_finished" from="Animator/AnimationPlayer" to="Animator" method="on_animation_finished"]
