@@ -17,7 +17,7 @@ A turn-based RPG based around town-building and dungeon exploration. Manage char
 
 * Ending B: Defeat the evil king and break the cycle.
 
-* Ending C: The dank ending. ***Use a specific item during the fight to trigger this event***.
+* Ending C: The secret ending. ***Use a specific item during the fight to trigger this event***.
 
 
 ***
