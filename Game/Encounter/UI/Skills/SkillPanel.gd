@@ -4,7 +4,7 @@ extends Panel
 # All the skills are added to the menu at the start of the turn.
 
 #=== Constants ===#
-const _skill_panel_item = preload("res://Encounter/UI/SkillPanel/SkillPanelItem.tscn")
+const _skill_panel_item = preload("res://Encounter/UI/Skills/SkillPanelItem.tscn")
 
 
 #==== Components ====#

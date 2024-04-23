@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-03-30T02:43:21.465Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="p7nlGgQenNIHpiejcSp7" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-03-30T04:12:14.383Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="czrQNjIw8OubrYePZ5Xu" version="24.0.4" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3088" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2579" dy="537" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -153,7 +153,7 @@
           <mxGeometry y="162" width="303" height="26" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-75" value="&lt;ul&gt;&lt;li&gt;Great Aim: Increase the range of all ranged attacks. (P; POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Twin Shot: Attack 2 times, selecting up to 2 targets. (MT; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Track: Decrease the target&#39;s defenses. It cannot become invisible. (ST; WEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Bear Trap: Drops a bear trap that gives 1-2x stack of Rooted to any character that enters its tile.&amp;nbsp;(ET; SUM, WEA, ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;glass=0;shadow=0;textShadow=0;labelBackgroundColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-68" vertex="1">
-          <mxGeometry y="188" width="303" height="166" as="geometry" />
+          <mxGeometry y="188" width="303" height="172" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-86" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-42" target="u42fgVE65Rf_uUiQ0a6k-68" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -184,7 +184,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-95" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-89" vertex="1">
           <mxGeometry y="181" width="311" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-96" value="&lt;ul&gt;&lt;li&gt;Perform: Until the start of your next turn, buff allies/debuff enemies &lt;br&gt;in a 3x3 radius around you. (N, AOE; WEA, HEA)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Pep in your Step: Heal a target for each tile it moves during its next turn. (ST, HEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Retrace Steps: Choose a character and register its position. At the beginning of your next turn, return the character to the registered position. (ST; POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Moshpit: Pulls enemies in the AoE towards the center. (AOE; ATK, POS)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-89" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-96" value="&lt;ul&gt;&lt;li&gt;Perform: Until the start of your next turn, buff allies/debuff enemies &lt;br&gt;in a 3x3 radius around you. (N, AOE; WEA, HEA)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Pep in your Step: Heal a target for each tile it moves during its next turn. (ST, HEA)&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;Gather Round: Pulls enemies in the AoE towards the center. (AOE; ATK, POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Inspire: The target&#39;s next attack does extra damage. (ST; HEA)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-89" vertex="1">
           <mxGeometry y="207" width="311" height="226" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-97" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-50" target="u42fgVE65Rf_uUiQ0a6k-89" edge="1">
@@ -225,31 +225,31 @@
             <mxPoint x="1090" y="770" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-107" value="Bounty Hunter (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-1603" y="1482" width="238" height="370" as="geometry">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-107" value="Bounty Hunter (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;fontColor=#33FF33;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-1617" y="1409" width="276" height="426.5" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-108" value="Bounty hunters double down on locking down enemies with powerful moves. " style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
-          <mxGeometry y="26" width="238" height="45" as="geometry" />
+          <mxGeometry y="26" width="276" height="45" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-109" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
-          <mxGeometry y="71" width="238" height="8" as="geometry" />
+          <mxGeometry y="71" width="276" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-110" value="Stats (STR/DEX/INT):&#xa;" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
-          <mxGeometry y="79" width="238" height="26" as="geometry" />
+          <mxGeometry y="79" width="276" height="26" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-111" value="&lt;ul&gt;&lt;li&gt;Level 1: 10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 2:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 3:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 4:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
-          <mxGeometry y="105" width="238" height="60" as="geometry" />
+          <mxGeometry y="105" width="276" height="60" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-112" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
-          <mxGeometry y="165" width="238" height="8" as="geometry" />
+          <mxGeometry y="165" width="276" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-113" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
-          <mxGeometry y="173" width="238" height="28" as="geometry" />
+          <mxGeometry y="173" width="276" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-114" value="&lt;ul&gt;&lt;li&gt;Cash In: Defeating an enemy targetted with Challange restores 10% HP and grants a little gold. (P; HEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Landmine: Drops a land mine that explodes when any character enters its tile.&amp;nbsp;(ET; ATK, SUM)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Reel &#39;em In: Throw a hook and pull the target enemy to the closest position to you.&amp;nbsp;(ST; ATK, POS)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
-          <mxGeometry y="201" width="238" height="169" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-114" value="&lt;ul&gt;&lt;li&gt;Cash In: Defeating an enemy targetted with Challange restores 10% HP and grants a little gold. (P; HEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Landmine: Drops a land mine that explodes when any character enters its tile.&amp;nbsp;(ET; ATK, SUM)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Reel &#39;em In: Throw a hook and pull the target enemy to the closest position to you.&amp;nbsp;(ST; ATK, POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Reset: Killing an enemy reduces all skills cooldown by 1. (P; HEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-107" vertex="1">
+          <mxGeometry y="201" width="276" height="224" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-115" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-59" target="u42fgVE65Rf_uUiQ0a6k-107" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -257,7 +257,7 @@
             <mxPoint x="-1100" y="1120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-125" value="Vigilante (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;fontColor=#ffffff;fillColor=#1D1D1D;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-125" value="Vigilante (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;fontColor=#33FF33;fillColor=#1D1D1D;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-1185" y="1438" width="282" height="399" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -280,7 +280,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-131" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
           <mxGeometry y="166" width="282" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-132" value="&lt;ul&gt;&lt;li&gt;Underwhelming Odds: When a target is Challanged, they lose armor for&lt;br&gt; each adjacent enemy. (P; WEA)&lt;/li&gt;&lt;ul&gt;&lt;br&gt;&lt;/ul&gt;&lt;li&gt;Challenge II: Can challenge up to 2 enemies. (MT; WEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Peekaboo: Gain 1x stacks of Parry. Until your next turn, if you are&lt;br&gt;attacked, gain the 1x stacks of Invisibility. (N, P; DEF)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-132" value="&lt;ul&gt;&lt;li&gt;Underwhelming Odds: When a target is Challanged, they lose armor for&lt;br&gt; each adjacent enemy. (P; WEA)&lt;/li&gt;&lt;ul&gt;&lt;br&gt;&lt;/ul&gt;&lt;li&gt;Challenge II: Can challenge up to 2 enemies. (MT; WEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Peekaboo: If you are attacked by a challenged enemy evade the attack and gain 1x stacks of Invisibility. (N, P; DEF)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Group Rend: Deal extra damage for each target inside the area (AOE; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
           <mxGeometry y="192" width="282" height="207" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-133" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-59" target="u42fgVE65Rf_uUiQ0a6k-125" edge="1">
@@ -315,31 +315,31 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-141" value="&lt;ul&gt;&lt;li&gt;Point Blank Blast: Push an enemy 3 tiles back in a straight line. If it collides with an object, it receives 2x stacks of stunned. If it collides with a character, both characters receives 1x stack of stunned.&lt;br&gt;(ST; POS, ATK, WEA)&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;Opressive Fire: Each consecutive attack on the same enemy deals 10% increased damage, up to a max of 50%. (P; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Double Down: If the previous attack missed, the next attack will have extra accuracy. (P; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Drill Shot: Shoot an enemy. The hit goes through and hits the next target, up to 2 times. (ST; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-134" vertex="1">
           <mxGeometry y="193" width="306" height="231" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-142" value="Gunner (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-306" y="1452" width="240" height="324" as="geometry">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-142" value="Gunner (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;fontColor=#33FF33;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-327" y="1452" width="281" height="392" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-143" value="Gunners are great at crowd control and area denial. " style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
-          <mxGeometry y="26" width="240" height="41" as="geometry" />
+          <mxGeometry y="26" width="281" height="41" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-144" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
-          <mxGeometry y="67" width="240" height="8" as="geometry" />
+          <mxGeometry y="67" width="281" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-145" value="Stats (STR/DEX/INT):&#xa;" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
-          <mxGeometry y="75" width="240" height="26" as="geometry" />
+          <mxGeometry y="75" width="281" height="26" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-146" value="&lt;ul&gt;&lt;li&gt;Level 1: 10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 2:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 3:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 4:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
-          <mxGeometry y="101" width="240" height="60" as="geometry" />
+          <mxGeometry y="101" width="281" height="60" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-147" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
-          <mxGeometry y="161" width="240" height="8" as="geometry" />
+          <mxGeometry y="161" width="281" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-148" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
-          <mxGeometry y="169" width="240" height="26" as="geometry" />
+          <mxGeometry y="169" width="281" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-149" value="&lt;ul&gt;&lt;li&gt;Volley Shot: Deal sustained damage to enemies in an area. Lasts for 2&lt;br&gt; Rounds. (AOE; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Bolas: Deal 2x stacks of Stunned to 2 adjacent targets. (MT; WEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
-          <mxGeometry y="195" width="240" height="129" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-149" value="&lt;ul&gt;&lt;li&gt;Volley Shot: Deal sustained damage to enemies in an area. Lasts for 2&lt;br&gt; Rounds. (AOE; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Bolas: Deal 2x stacks of Stunned to 2 adjacent targets. (MT; WEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Leash: Roots the target. (ST; WEA, ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Quickshot: Grants a chance to attack the nearest target after using a skill. (P; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
+          <mxGeometry y="195" width="281" height="195" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-151" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-68" target="u42fgVE65Rf_uUiQ0a6k-134" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -353,57 +353,57 @@
             <mxPoint x="-60" y="1210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-153" value="Trickster (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="94" y="1452" width="226" height="384" as="geometry">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-153" value="Trickster (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;fontColor=#33FF33;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="56" y="1452" width="289" height="413" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-154" value="Tricksters use visual magic to disrupt the enemy line. " style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="26" width="226" height="39" as="geometry" />
+          <mxGeometry y="26" width="289" height="39" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-155" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="65" width="226" height="8" as="geometry" />
+          <mxGeometry y="65" width="289" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-156" value="Stats (STR/DEX/INT):&#xa;" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="73" width="226" height="26" as="geometry" />
+          <mxGeometry y="73" width="289" height="26" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-157" value="&lt;ul&gt;&lt;li&gt;Level 1: 10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 2:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 3:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 4:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="99" width="226" height="60" as="geometry" />
+          <mxGeometry y="99" width="289" height="60" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-158" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="159" width="226" height="8" as="geometry" />
+          <mxGeometry y="159" width="289" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-159" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="167" width="226" height="26" as="geometry" />
+          <mxGeometry y="167" width="289" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-160" value="&lt;ul&gt;&lt;li&gt;Decoy: Gain 1x Invisibility. Create a decoy that lasts one turn and &lt;br&gt;deals damage if attacked. (ET; SUM, ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Annoyance: Attacks that you evade automatically trigger a riposte. (P; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Swap In: Changes positions with an ally. If swapping with a decoy, both you and the decoy attack upon swapping. (ST; POS; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="193" width="226" height="190" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-160" value="&lt;ul&gt;&lt;li&gt;Decoy: Create a decoy that lasts one turn and deals damage if it swaps positions. (ET; SUM, ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Annoyance: Attacks that you evade automatically trigger a riposte. (P; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Swap In: Changes positions with the target. If swapping with an enemy, deals damage. If with an ally, heal them. (ST; POS, ATK, HEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Retrace Steps: Choose a character and register its position. At the beginning of your next turn, return the character to the registered position. If occupied, swap positions. (ST; POS)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
+          <mxGeometry y="193" width="289" height="219" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-161" value="Virtuoso (INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="513" y="1434.5" width="258" height="419" as="geometry">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-161" value="Virtuoso (INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;fontColor=#33FF33;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="481" y="1434.5" width="303" height="445" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-162" value="Virtuosos&#39; performances disable enemy forces. " style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
-          <mxGeometry y="26" width="258" height="44" as="geometry" />
+          <mxGeometry y="26" width="303" height="44" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-163" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
-          <mxGeometry y="70" width="258" height="8" as="geometry" />
+          <mxGeometry y="70" width="303" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-164" value="Stats (STR/DEX/INT):&#xa;" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
-          <mxGeometry y="78" width="258" height="26" as="geometry" />
+          <mxGeometry y="78" width="303" height="26" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-165" value="&lt;ul&gt;&lt;li&gt;Level 1: 10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 2:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 3:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 4:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
-          <mxGeometry y="104" width="258" height="60" as="geometry" />
+          <mxGeometry y="104" width="303" height="60" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-166" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
-          <mxGeometry y="164" width="258" height="8" as="geometry" />
+          <mxGeometry y="164" width="303" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-167" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
-          <mxGeometry y="172" width="258" height="26" as="geometry" />
+          <mxGeometry y="172" width="303" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-168" value="&lt;ul&gt;&lt;li&gt;Charm: Target enemy focuses other enemies during their next turn. (ST; WEA, ATK)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Stage Presence: While inside the area where perform was cast, you can move to any tile without movement cost, once per turn. (ET. P; POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Spotlight: Place a spotlight at the target tile. Massively increase the stat of any ally on the tile.&amp;nbsp; (ET; SUM, HEA)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
-          <mxGeometry y="198" width="258" height="221" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-168" value="&lt;ul&gt;&lt;li&gt;Mosh Pit: Target enemies in the area focus other adjacent enemies during their next turn. (AOE; WEA)&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Stage Presence: While inside the area where perform was cast, you can move to any tile without movement cost, once per turn. (ET, P; POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Spotlight: Place a spotlight at the target tile. Massively increase the stat of any ally on the tile. Reveals invisible enemies. (ET; SUM, HEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Groupies: Attack 2 enemies. They deal less damage overall and you do extra damage to them. (MT; ATK, WEA)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-161" vertex="1">
+          <mxGeometry y="198" width="303" height="247" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-173" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-89" target="u42fgVE65Rf_uUiQ0a6k-153" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -504,7 +504,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-207" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-201" vertex="1">
           <mxGeometry y="169" width="333" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-208" value="&lt;ul&gt;&lt;li&gt;Intimidating Gaze: In addition to the effects of Challenge, the target receives 2x stacks of Stupefied and 2x stacks of Vulnerable. (P; WEA)&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;Reset Knife: Throw a knife at an enemy. If this kills the enemy, reduce all skills cooldown by 1. (ST; ATK, HEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-201" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-208" value="&lt;ul&gt;&lt;li&gt;Intimidating Gaze: In addition to the effects of Challenge, the target receives 2x stacks of Stupefied and 2x stacks of Vulnerable. (P; WEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;You&#39;re Next: Defeating a challenged enemy transfers their debuffs to the nearest adjacent enemy. (P; WEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-201" vertex="1">
           <mxGeometry y="195" width="333" height="124" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-210" value="Sniper (DEX/INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -530,11 +530,11 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-216" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-210" vertex="1">
           <mxGeometry y="172" width="260" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-217" value="&lt;ul&gt;&lt;li&gt;One with the Hunt: While invisible, ranged skills don&#39;t cancel invisibility. (P; DEF)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Sweet Spot: Each attack applies 1x Vulnerable to the target.&amp;nbsp;(P; WEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-210" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-217" value="&lt;ul&gt;&lt;li&gt;One with the Hunt: While invisible, the first ranged skill doesn&#39;t cancel invisibility. (P; DEF)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Sweet Spot: Each attack applies 1x Vulnerable to the target.&amp;nbsp;(P; WEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-210" vertex="1">
           <mxGeometry y="198" width="260" height="102" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-218" value="Grand Performer (DEX/INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="275" y="1997" width="296" height="272" as="geometry">
+          <mxGeometry x="275" y="1940" width="296" height="373" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -556,8 +556,8 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-224" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-218" vertex="1">
           <mxGeometry y="170" width="296" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-225" value="&lt;ul&gt;&lt;li&gt;Grand Delusion: All enemies under the effects of Perform will receive 1x Vulnerable and 1x Stunned.&amp;nbsp;(P, AOE; WEA)&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-218" vertex="1">
-          <mxGeometry y="196" width="296" height="74" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-225" value="&lt;ul&gt;&lt;li&gt;Grand Delusion: All enemies under the effects of Perform will receive 1x Vulnerable and 1x Stunned.&amp;nbsp;(P, AOE; WEA)&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;On Beat: Has the same cost and number of the targets as the cost of the previously used skill. Deals extra damage for each target.&amp;nbsp; &amp;nbsp;(MT; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Great Confusion: The target hits itself with its next attack. (ST; WEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-218" vertex="1">
+          <mxGeometry y="196" width="296" height="177" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-226" value="Ninja (DEX/STR)" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1164" y="1898" width="260" height="423" as="geometry">
@@ -582,7 +582,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-232" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-226" vertex="1">
           <mxGeometry y="155" width="260" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-233" value="&lt;ul&gt;&lt;li&gt;Deadly Shade: While invisible, walking into a tile adjacent to an enemy &lt;br&gt;automatically triggers an attack. This doesn&#39;t cancel invisibility. &lt;br&gt;(P; ATK, DEF)&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;Shadow Clone: Create a shadow clone that attacks a random nearby enemy each time you use a skill. It cannot be targetted. Reactivate to swap places with the clone.&amp;nbsp;(ET; SUM, ATK, POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Eye for an Eye: Gain a free tile movement for each enemy blinded. (P; POS)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-226" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-233" value="&lt;ul&gt;&lt;li&gt;Deadly Shade: While invisible, walking into a tile adjacent to an enemy &lt;br&gt;automatically triggers an attack. This doesn&#39;t cancel invisibility. &lt;br&gt;(P; ATK, DEF)&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;Shadow Clone: Create a shadow clone that attacks a random nearby enemy each time you use a skill. It cannot be targetted. Reactivate to swap places with the clone.&amp;nbsp;(ET; SUM, ATK, POS)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Eye for an Eye: Gain a free tile movement for each enemy debuffed during your previous turn. (P; POS)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-226" vertex="1">
           <mxGeometry y="181" width="260" height="240" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-237" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-107" target="u42fgVE65Rf_uUiQ0a6k-201" edge="1">
@@ -677,7 +677,7 @@
         <mxCell id="D8Z4q9Ua3bYP-U88E2pE-58" value="Targetting:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="26" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-55" value="&lt;ul&gt;&lt;li&gt;Area of Effect (AoE): 6&lt;/li&gt;&lt;li&gt;Single Target (ST): 19&lt;/li&gt;&lt;li&gt;Multi Target (MT): 6&lt;/li&gt;&lt;li&gt;Empty Tile (ET): 10&lt;br&gt;&lt;/li&gt;&lt;li&gt;Neutral (N): 11&lt;/li&gt;&lt;li&gt;Passive (P): 20&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
+        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-55" value="&lt;ul&gt;&lt;li&gt;Area of Effect (AoE): 8&lt;/li&gt;&lt;li&gt;Single Target (ST): 20&lt;/li&gt;&lt;li&gt;Multi Target (MT): 8&lt;/li&gt;&lt;li&gt;Empty Tile (ET): 10&lt;br&gt;&lt;/li&gt;&lt;li&gt;Neutral (N): 11&lt;/li&gt;&lt;li&gt;Passive (P): 23&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="52" width="200" height="91" as="geometry" />
         </mxCell>
         <mxCell id="D8Z4q9Ua3bYP-U88E2pE-54" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
@@ -686,7 +686,7 @@
         <mxCell id="D8Z4q9Ua3bYP-U88E2pE-57" value="Types" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="151" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-49" value="&lt;ul&gt;&lt;li&gt;Attack (ATK): 33&lt;/li&gt;&lt;li&gt;Defend (DEF): 8&lt;/li&gt;&lt;li&gt;Healing (HEA): 8&lt;/li&gt;&lt;li&gt;Weakening (WEA): 20&lt;/li&gt;&lt;li&gt;Position (POS): 13&lt;/li&gt;&lt;li&gt;Summon (SUM): 6&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
+        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-49" value="&lt;ul&gt;&lt;li&gt;Attack (ATK): 36&lt;/li&gt;&lt;li&gt;Defend (DEF): 8&lt;/li&gt;&lt;li&gt;Healing (HEA): 10&lt;/li&gt;&lt;li&gt;Weakening (WEA): 24&lt;/li&gt;&lt;li&gt;Position (POS): 13&lt;/li&gt;&lt;li&gt;Summon (SUM): 6&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="177" width="200" height="111" as="geometry" />
         </mxCell>
       </root>

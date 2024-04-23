@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://pqe1j0jsisie" path="res://Encounter/UI/Announcement/AnnouncementManager.tscn" id="3_5x0xc"]
 [ext_resource type="PackedScene" uid="uid://b8i63bigv2uat" path="res://Encounter/UI/Label/SpeedLabel.tscn" id="5_w1fmn"]
 [ext_resource type="PackedScene" uid="uid://hsw75xyguwlw" path="res://Encounter/UI/Log/LogManager.tscn" id="5_w5nf7"]
-[ext_resource type="PackedScene" uid="uid://b0o0hpsi6dn53" path="res://Encounter/UI/SkillPanel/SkillPanel.tscn" id="6_5dq8d"]
+[ext_resource type="PackedScene" uid="uid://b0o0hpsi6dn53" path="res://Encounter/UI/Skills/SkillPanel.tscn" id="6_5dq8d"]
 
 [node name="UiManager" type="CanvasLayer"]
 script = ExtResource("1_emeqw")

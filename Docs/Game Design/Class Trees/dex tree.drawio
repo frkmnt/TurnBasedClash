@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-03-30T04:12:14.383Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="czrQNjIw8OubrYePZ5Xu" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-04-13T02:04:27.397Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="roGzLZjzcOq3an8claXR" version="24.0.4" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2579" dy="537" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3088" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -280,7 +280,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-131" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
           <mxGeometry y="166" width="282" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-132" value="&lt;ul&gt;&lt;li&gt;Underwhelming Odds: When a target is Challanged, they lose armor for&lt;br&gt; each adjacent enemy. (P; WEA)&lt;/li&gt;&lt;ul&gt;&lt;br&gt;&lt;/ul&gt;&lt;li&gt;Challenge II: Can challenge up to 2 enemies. (MT; WEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Peekaboo: If you are attacked by a challenged enemy evade the attack and gain 1x stacks of Invisibility. (N, P; DEF)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Group Rend: Deal extra damage for each target inside the area (AOE; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-132" value="&lt;ul&gt;&lt;li&gt;Underwhelming Odds: When a target is Challanged, they lose armor for&lt;br&gt; each adjacent enemy. (P; WEA)&lt;/li&gt;&lt;ul&gt;&lt;br&gt;&lt;/ul&gt;&lt;li&gt;Challenge II: Can challenge up to 2 enemies. (MT; WEA)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Peekaboo: If you are attacked by a challenged enemy evade the attack and gain 1x stacks of Speed. (P; DEF)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Group Rend: Deal extra damage for each target inside the area (AOE; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
           <mxGeometry y="192" width="282" height="207" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-133" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-59" target="u42fgVE65Rf_uUiQ0a6k-125" edge="1">

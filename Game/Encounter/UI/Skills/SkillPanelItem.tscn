@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2a2h21ymsw1j"]
 
-[ext_resource type="Script" path="res://Encounter/UI/SkillPanel/SkillPanelItem.gd" id="1_au2oe"]
+[ext_resource type="Script" path="res://Encounter/UI/Skills/SkillPanelItem.gd" id="1_bhv3o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kiqr"]
 bg_color = Color(0.643137, 0.588235, 0.545098, 1)
@@ -19,7 +19,7 @@ offset_bottom = 100.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_7kiqr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tdt54")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0dqgi")
-script = ExtResource("1_au2oe")
+script = ExtResource("1_bhv3o")
 
 [node name="SkillName" type="Label" parent="."]
 layout_mode = 0
