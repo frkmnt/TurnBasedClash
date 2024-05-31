@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-03-14T02:34:36.198Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="xhiyWtZQBH9GolPCvM0H" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-05-23T23:20:41.661Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="sd22iigYCqc5Xxv-CE97" version="24.2.5" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3083" dy="743" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2062" dy="476" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -27,7 +27,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-29" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="176" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-30" value="&lt;ul&gt;&lt;li&gt;Magic Shot (ST): Shoot a magic bolt at a target.&lt;/li&gt;&lt;br&gt;&lt;li&gt;Teleport: Instantly move a few tiles away. (Type: ST; Range: 3; Cost: 2; CD: 1; Prev. Skill: -)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-30" value="&lt;ul&gt;&lt;li&gt;Magic Shot: Shoot a bolt at a target.&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="202" width="200" height="122" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-38" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" target="u42fgVE65Rf_uUiQ0a6k-42" edge="1">
@@ -315,12 +315,12 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-141" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-134" vertex="1">
           <mxGeometry y="193" width="290" height="208" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-142" value="Summoner (INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-142" value="Astronomer (INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-306" y="1452" width="240" height="324" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-143" value="Summoners invoke various creatures to reinforce their ally&#39;s numbers. " style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-143" value="Astronomers call forth power from beyond the sky." style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
           <mxGeometry y="26" width="240" height="41" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-144" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-142" vertex="1">
@@ -353,7 +353,7 @@
             <mxPoint x="-60" y="1210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-153" value="Battlemage (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-153" value="Blaster (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="94" y="1452" width="226" height="348" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -379,7 +379,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-160" value="&lt;ul&gt;&lt;li&gt;Scorching Mana: Deals extra damage to nearby enemies when using skills.&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
           <mxGeometry y="193" width="226" height="155" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-161" value="Blaster (INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-161" value="Chronomancer (INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="524" y="1466.5" width="226" height="301" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -442,6 +442,9 @@
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-182" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-175" vertex="1">
           <mxGeometry y="205" width="295" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="Z0QKN-dhwf2RUQjnSp62-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="u42fgVE65Rf_uUiQ0a6k-175" source="u42fgVE65Rf_uUiQ0a6k-182" target="u42fgVE65Rf_uUiQ0a6k-182" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-183" value="Mesmerizer (INT)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1380" y="1427.5" width="226" height="371" as="geometry">
