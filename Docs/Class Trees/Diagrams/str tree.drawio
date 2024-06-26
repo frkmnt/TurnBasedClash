@@ -1,34 +1,34 @@
-<mxfile host="Electron" modified="2024-03-29T02:05:35.590Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="ibT-ZMkHXoyEYdGaUO8Q" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-04-24T02:03:24.335Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="77VNrCneldF-HOWJ2z-V" version="24.0.4" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3088" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3447" dy="1041" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" value="Fighter (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-100" y="84" width="200" height="330" as="geometry">
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" value="Fighter (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-99" y="49" width="209" height="417" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-40" value="Fighters are durable melee combatants. " style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
-          <mxGeometry y="26" width="200" height="44" as="geometry" />
+          <mxGeometry y="26" width="209" height="44" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-41" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
-          <mxGeometry y="70" width="200" height="8" as="geometry" />
+          <mxGeometry y="70" width="209" height="8" as="geometry" />
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--1" value="Stats (STR/DEX/INT):&#xa;" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
-          <mxGeometry y="78" width="200" height="26" as="geometry" />
+          <mxGeometry y="78" width="209" height="26" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-28" value="&lt;ul&gt;&lt;li&gt;Level 1: 10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 2:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 3:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 4:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
-          <mxGeometry y="104" width="200" height="60" as="geometry" />
+          <mxGeometry y="104" width="209" height="60" as="geometry" />
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--4" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
-          <mxGeometry y="164" width="200" height="8" as="geometry" />
+          <mxGeometry y="164" width="209" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-29" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
-          <mxGeometry y="172" width="200" height="26" as="geometry" />
+          <mxGeometry y="172" width="209" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-30" value="&lt;ul&gt;&lt;li&gt;Brace: Gain defense until the start of your next turn. Ends your turn. (Type: N; Range: 0; Cost: 0; CD: 0; Prev. Skill: -)&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
-          <mxGeometry y="198" width="200" height="122" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-30" value="&lt;ul&gt;&lt;li&gt;Brace: Gain defense until the start of your next turn. Ends your turn. (N; DEF)&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Slash: Attack an enemy with a high base damage. (ST; ATK)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Mighty Roar: Shout, debuffing enemies around you and increasing your chance of being targeted. (N; WEA)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;War Step: Attack a character, then move to an adjacent tile. (ST; ATK, POS)&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+          <mxGeometry y="198" width="209" height="219" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-38" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" target="u42fgVE65Rf_uUiQ0a6k-42" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -62,7 +62,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-48" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-42" vertex="1">
           <mxGeometry y="180" width="217" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-49" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-42" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-49" value="&lt;ul&gt;&lt;li&gt;Deadly Slash: (Upgrade from Slash) Once per turn, if the target dies, gain one free use of Deadly Slash. (ST; ATK)&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Capitalize: Inflict 1x stacks of stun if an enemy attacked an ally other than you on the previous turn. (ST; WEA, ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-42" vertex="1">
           <mxGeometry y="206" width="217" height="142" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-50" value="Barbarian (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -88,7 +88,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-56" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-50" vertex="1">
           <mxGeometry y="171" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-57" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-50" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-57" value="&lt;ul&gt;&lt;li&gt;Collateral Damage: Single Target skills that deal damage may also deal extra damage to characters adjacent to the target. (P; ATK)&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Outrage: Deal extra damage on your next attack based on the damage taek nduring your previous round. (P; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-50" vertex="1">
           <mxGeometry y="197" width="200" height="132" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-58" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" target="u42fgVE65Rf_uUiQ0a6k-50" edge="1">
@@ -120,7 +120,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-65" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-59" vertex="1">
           <mxGeometry y="196" width="244" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-66" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-59" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-66" value="&lt;ul&gt;&lt;li&gt;Stance Breaker: An attack that ignores most of the target&#39;s armor. (ST; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-59" vertex="1">
           <mxGeometry y="222" width="244" height="143" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-67" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-42" target="u42fgVE65Rf_uUiQ0a6k-59" edge="1">
@@ -152,7 +152,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-74" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-68" vertex="1">
           <mxGeometry y="162" width="303" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-75" value="&lt;ul&gt;&lt;li&gt;Shield Bash: Inflict 1x stacks of stun.&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;glass=0;shadow=0;textShadow=0;labelBackgroundColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-68" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-75" value="&lt;ul&gt;&lt;li&gt;Charge!: Choose a target with a clear path in a straight line. Run at him, dealing extra damage based on the tiles travelled. (ST; POS, ATK)&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Mobile Fortress: Gain shield for each tile travelled. (P; DEF)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;glass=0;shadow=0;textShadow=0;labelBackgroundColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-68" vertex="1">
           <mxGeometry y="188" width="303" height="166" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-86" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-42" target="u42fgVE65Rf_uUiQ0a6k-68" edge="1">
@@ -162,7 +162,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-89" value="Berserker (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="327" y="910" width="226" height="280" as="geometry">
+          <mxGeometry x="327" y="910" width="226" height="318" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -184,8 +184,8 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-95" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-89" vertex="1">
           <mxGeometry y="170" width="226" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-96" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-89" vertex="1">
-          <mxGeometry y="196" width="226" height="72" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-96" value="&lt;ul&gt;&lt;li&gt;Rage: Deal extra damage based on your missing HP. (P; ATK)&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Second Wind: Activate when below 0% HP. Gain your missing HP as a shield and deal extra damage during the next turn based on the shield gained. (N; HEA, ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-89" vertex="1">
+          <mxGeometry y="196" width="226" height="122" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-97" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-50" target="u42fgVE65Rf_uUiQ0a6k-89" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -216,7 +216,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-104" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-98" vertex="1">
           <mxGeometry y="174" width="230" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-105" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-19;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-98" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-105" value="&lt;ul&gt;&lt;li&gt;Reabsorb: Deal damage and heal. Attacking a target that dealt damage to you on its previous turn heals extra HP and deals a crit. (ST; HEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-19;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-98" vertex="1">
           <mxGeometry y="200" width="230" height="131" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-106" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-50" target="u42fgVE65Rf_uUiQ0a6k-98" edge="1">
@@ -280,7 +280,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-131" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
           <mxGeometry y="166" width="260" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-132" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-132" value="&lt;ul&gt;&lt;li&gt;Sturdy Log: Upgrade for Brace. Any attack dealt to the character will deal low damage and reflect some damage if the attack was melee.&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-125" vertex="1">
           <mxGeometry y="192" width="260" height="207" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-133" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u42fgVE65Rf_uUiQ0a6k-59" target="u42fgVE65Rf_uUiQ0a6k-125" edge="1">
@@ -312,7 +312,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-140" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-134" vertex="1">
           <mxGeometry y="167" width="290" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-141" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-134" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-141" value="&lt;ul&gt;&lt;li&gt;Impenetrable Wall: Summon phantoms to each unnocupied tile to your side in a 2 tile range. Each phantom attacks all adjacent enemies. (SUM; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-134" vertex="1">
           <mxGeometry y="193" width="290" height="208" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-142" value="Vanguard (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -354,30 +354,30 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-153" value="Executioner (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="94" y="1452" width="226" height="348" as="geometry">
+          <mxGeometry x="94" y="1452" width="239" height="348" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-154" value="Executioners specialize in taking down large threats. " style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=0;whiteSpace=wrap;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="26" width="226" height="39" as="geometry" />
+          <mxGeometry y="26" width="239" height="39" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-155" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="65" width="226" height="8" as="geometry" />
+          <mxGeometry y="65" width="239" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-156" value="Stats (STR/DEX/INT):&#xa;" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="73" width="226" height="26" as="geometry" />
+          <mxGeometry y="73" width="239" height="26" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-157" value="&lt;ul&gt;&lt;li&gt;Level 1: 10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 2:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 3:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;li&gt;Level 4:&amp;nbsp;10 - 10 - 10&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="99" width="226" height="60" as="geometry" />
+          <mxGeometry y="99" width="239" height="60" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-158" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="159" width="226" height="8" as="geometry" />
+          <mxGeometry y="159" width="239" height="8" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-159" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="167" width="226" height="26" as="geometry" />
+          <mxGeometry y="167" width="239" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-160" value="&lt;ul&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
-          <mxGeometry y="193" width="226" height="155" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-160" value="&lt;ul&gt;&lt;li&gt;Finisher: Attacking a non-boss enemy below 25% HP instantly kills it. (N; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-153" vertex="1">
+          <mxGeometry y="193" width="239" height="155" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-161" value="Battle Dancer (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="524" y="1466.5" width="226" height="280" as="geometry">
@@ -530,7 +530,7 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-216" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-210" vertex="1">
           <mxGeometry y="172" width="260" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-217" value="&lt;ul&gt;&lt;li&gt;Lay On Hands: Restore a character&#39;s HP and remove all their debuffs. (Type: ST; Range: 1; Cost: 2; CD: 2; Prev. Skill: -)&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-210" vertex="1">
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-217" value="&lt;ul&gt;&lt;li&gt;Lay On Hands: Restore a character&#39;s HP and remove all their debuffs. (ST; HEA)&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="u42fgVE65Rf_uUiQ0a6k-210" vertex="1">
           <mxGeometry y="198" width="260" height="102" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-218" value="Scourge (STR/DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -668,6 +668,26 @@
             <mxPoint x="1315.3700000000001" y="741" as="sourcePoint" />
             <mxPoint x="1315.3700000000001" y="817" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="aOJyi6h6zEOo6nqobhhD-0" value="Total Skill Count" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-596" y="52" width="200" height="288" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aOJyi6h6zEOo6nqobhhD-1" value="Targetting:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="aOJyi6h6zEOo6nqobhhD-0" vertex="1">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aOJyi6h6zEOo6nqobhhD-2" value="&lt;ul&gt;&lt;li&gt;Area of Effect (AoE): 0&lt;/li&gt;&lt;li&gt;Single Target (ST): 0&lt;/li&gt;&lt;li&gt;Multi Target (MT): 0&lt;/li&gt;&lt;li&gt;Empty Tile (ET): 0&lt;br&gt;&lt;/li&gt;&lt;li&gt;Neutral (N): 0&lt;/li&gt;&lt;li&gt;Passive (P): 0&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="aOJyi6h6zEOo6nqobhhD-0" vertex="1">
+          <mxGeometry y="52" width="200" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="aOJyi6h6zEOo6nqobhhD-3" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="aOJyi6h6zEOo6nqobhhD-0" vertex="1">
+          <mxGeometry y="143" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="aOJyi6h6zEOo6nqobhhD-4" value="Types" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="aOJyi6h6zEOo6nqobhhD-0" vertex="1">
+          <mxGeometry y="151" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aOJyi6h6zEOo6nqobhhD-5" value="&lt;ul&gt;&lt;li&gt;Attack (ATK): 0&lt;/li&gt;&lt;li&gt;Defend (DEF): 0&lt;/li&gt;&lt;li&gt;Healing (HEA): 0&lt;/li&gt;&lt;li&gt;Weakening (WEA): 0&lt;/li&gt;&lt;li&gt;Position (POS): 0&lt;/li&gt;&lt;li&gt;Summon (SUM): 0&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="aOJyi6h6zEOo6nqobhhD-0" vertex="1">
+          <mxGeometry y="177" width="200" height="111" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

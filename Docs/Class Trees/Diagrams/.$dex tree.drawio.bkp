@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-04-13T02:04:27.397Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="roGzLZjzcOq3an8claXR" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-04-24T00:31:28.082Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="2P0yc9uIkHutGMVkoqqQ" version="24.0.4" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3088" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2757" dy="641" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -418,7 +418,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-175" value="Slasher (STR)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="916" y="1441.5" width="295" height="364" as="geometry">
+          <mxGeometry x="910" y="1417" width="295" height="411" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -440,8 +440,8 @@
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-181" value="Skills:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="u42fgVE65Rf_uUiQ0a6k-175" vertex="1">
           <mxGeometry y="179" width="295" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="u42fgVE65Rf_uUiQ0a6k-182" value="&lt;ul&gt;&lt;li&gt;Shadow Step: Move one tile for free if invisible. Deal 2 extra damage on your next attack for each tile moved while invisible. (P; POS, ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Death Dash: Dash forward, becoming invisible and attacking all adjacent enemies in your path. The dash is 2 tiles long. (ET; POS, ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Buzzsaw: Slices all enemies around the wearer. Deals extra damage if invisble. (N, MT;&amp;nbsp; ATK)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-175" vertex="1">
-          <mxGeometry y="205" width="295" height="159" as="geometry" />
+        <mxCell id="u42fgVE65Rf_uUiQ0a6k-182" value="&lt;ul&gt;&lt;li&gt;Shadow Step: Move one tile for free if invisible. Deal 2 extra damage on your next attack for each tile moved while invisible. (P; POS, ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Death Dash: Dash forward, becoming invisible and attacking all adjacent enemies in your path. The dash is 2 tiles long. (ET; POS, ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Buzzsaw: Slices all enemies around the wearer. Deals extra damage if invisble. (N, MT;&amp;nbsp; ATK)&lt;/li&gt;&lt;br&gt;&lt;li&gt;Macabre Dance: When attacking an adjacent enemy, spawn a tile nearby. Walking into that tile grants buffs.. (P; HEA)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-24;spacing=0;horizontal=1;labelBackgroundColor=none;labelBorderColor=none;" parent="u42fgVE65Rf_uUiQ0a6k-175" vertex="1">
+          <mxGeometry y="205" width="295" height="206" as="geometry" />
         </mxCell>
         <mxCell id="u42fgVE65Rf_uUiQ0a6k-183" value="Assassin (DEX)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=14;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1380" y="1427.5" width="226" height="358" as="geometry">
@@ -677,7 +677,7 @@
         <mxCell id="D8Z4q9Ua3bYP-U88E2pE-58" value="Targetting:" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="26" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-55" value="&lt;ul&gt;&lt;li&gt;Area of Effect (AoE): 8&lt;/li&gt;&lt;li&gt;Single Target (ST): 20&lt;/li&gt;&lt;li&gt;Multi Target (MT): 8&lt;/li&gt;&lt;li&gt;Empty Tile (ET): 10&lt;br&gt;&lt;/li&gt;&lt;li&gt;Neutral (N): 11&lt;/li&gt;&lt;li&gt;Passive (P): 23&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
+        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-55" value="&lt;ul&gt;&lt;li&gt;Area of Effect (AoE): 8&lt;/li&gt;&lt;li&gt;Single Target (ST): 20&lt;/li&gt;&lt;li&gt;Multi Target (MT): 8&lt;/li&gt;&lt;li&gt;Empty Tile (ET): 10&lt;br&gt;&lt;/li&gt;&lt;li&gt;Neutral (N): 11&lt;/li&gt;&lt;li&gt;Passive (P): 24&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="52" width="200" height="91" as="geometry" />
         </mxCell>
         <mxCell id="D8Z4q9Ua3bYP-U88E2pE-54" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
@@ -686,7 +686,7 @@
         <mxCell id="D8Z4q9Ua3bYP-U88E2pE-57" value="Types" style="text;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fillColor=none;fontStyle=4" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="151" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-49" value="&lt;ul&gt;&lt;li&gt;Attack (ATK): 36&lt;/li&gt;&lt;li&gt;Defend (DEF): 8&lt;/li&gt;&lt;li&gt;Healing (HEA): 10&lt;/li&gt;&lt;li&gt;Weakening (WEA): 24&lt;/li&gt;&lt;li&gt;Position (POS): 13&lt;/li&gt;&lt;li&gt;Summon (SUM): 6&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
+        <mxCell id="D8Z4q9Ua3bYP-U88E2pE-49" value="&lt;ul&gt;&lt;li&gt;Attack (ATK): 36&lt;/li&gt;&lt;li&gt;Defend (DEF): 8&lt;/li&gt;&lt;li&gt;Healing (HEA): 11&lt;/li&gt;&lt;li&gt;Weakening (WEA): 24&lt;/li&gt;&lt;li&gt;Position (POS): 13&lt;/li&gt;&lt;li&gt;Summon (SUM): 6&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;spacingTop=-13;spacingLeft=-22;spacing=0;" parent="D8Z4q9Ua3bYP-U88E2pE-42" vertex="1">
           <mxGeometry y="177" width="200" height="111" as="geometry" />
         </mxCell>
       </root>
