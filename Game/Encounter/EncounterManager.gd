@@ -274,8 +274,18 @@ func on_button_pressed(button_id):
 func on_skill_selected(skill):
 	var character_id = _character_manager.get_current_character_id()
 	_ui_manager.disable_skill_panel()
+	_ui_manager.disable_main_button_panel()
+	_ui_manager.enable_skill_button_panel()
 	_map_manager.on_skill_selected(character_id, skill)
-	
+
+
+func on_skill_confirmed():
+	pass
+
+func on_skill_canceled():
+	_map_manager.remove_highlight_from_targeted_tiles()
+	_map_manager.remove_highlight_from_selected_tiles()
+	disable_skill_mode()
 
 
 
@@ -382,7 +392,9 @@ func disable_attack_mode():
 # Disable the skill mode.
 func disable_skill_mode():
 	_ui_manager.disable_button("skill")
+	_ui_manager.disable_skill_button_panel()
 	_ui_manager.disable_skill_panel()
+	_ui_manager.enable_main_button_panel()
 
 # Disable the move mode.
 func disable_move_mode():

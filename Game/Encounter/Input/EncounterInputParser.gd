@@ -19,6 +19,8 @@ var _can_move = false
 var _can_bag = false
 var _can_pass = false
 var _can_inspect = false
+var _can_confirm_skill = false
+var _can_cancel_skill = false
 
 
 
@@ -33,7 +35,7 @@ func initialize():
 
 func parse_action_input(action_input):
 	match action_input:
-		"attack":
+		"attack": # encounter buttons
 			on_attack()
 		"skill":
 			on_skill()
@@ -45,6 +47,10 @@ func parse_action_input(action_input):
 			on_pass()
 		"inspect":
 			on_inspect()
+		"confirm_skill": # skill buttons
+			on_confirm_skill()
+		"cancel_skill":
+			on_cancel_skill()
 
 
 func parse_mouse_input(mouse_input):
@@ -114,6 +120,13 @@ func on_inspect():
 		_encounter_manager.set_mode_button("inspect")
 
 
+func on_confirm_skill():
+	if _can_confirm_skill:
+		_encounter_manager.on_skill_confirmed()
+
+func on_cancel_skill():
+	if _can_cancel_skill:
+		_encounter_manager.on_skill_canceled()
 
 
 
@@ -142,6 +155,10 @@ func update_button_locks(button_lock_list):
 				_can_pass = button_data[1]
 			"can_inspect":
 				_can_inspect = button_data[1]
+			"can_confirm_skill":
+				_can_confirm_skill = button_data[1]
+			"can_cancel_skill":
+				_can_cancel_skill = button_data[1]
 
 
 # Updates all the button types to the desired lock.
@@ -152,3 +169,19 @@ func update_all_button_locks(can_use):
 	_can_bag = can_use
 	_can_pass = can_use
 	_can_inspect = can_use
+	_can_confirm_skill = can_use
+	_can_cancel_skill = can_use
+
+# Updates all the main button types to the desired lock.
+func update_all_main_button_locks(can_use):
+	_can_attack = can_use
+	_can_skill = can_use
+	_can_move = can_use
+	_can_bag = can_use
+	_can_pass = can_use
+	_can_inspect = can_use
+
+# Updates all the skill button types to the desired lock.
+func update_all_skill_button_locks(can_use):
+	_can_confirm_skill = can_use
+	_can_cancel_skill = can_use

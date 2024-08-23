@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cb7dky3vt0yt6" path="res://Encounter/UI/Button/EncounterButton.tscn" id="1_4jo3n"]
 
-[node name="ButtonPanel" type="Control"]
+[node name="MainButtonPanel" type="Control"]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0

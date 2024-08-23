@@ -13,12 +13,18 @@ signal on_action_input
 var _encounter_manager
 
 #=== Components ===#
-var _attack_button
+var _main_button_panel # Main Buttons
+var _attack_button 
 var _skill_button
 var _move_button
 var _bag_button
 var _pass_button
 var _inspect_button
+
+var _skill_button_panel # Skill Buttons
+var _confirm_skill_button
+var _cancel_skill_button
+
 #var _options_button
 var _speed_label
 var _announcement_manager
@@ -30,18 +36,25 @@ var _skill_panel
 
 func _ready():
 	_encounter_manager = get_parent()
-	_attack_button = $UiContainer/ButtonPanel/AttackButton
-	_skill_button = $UiContainer/ButtonPanel/SkillButton
-	_move_button = $UiContainer/ButtonPanel/MoveButton
-	_bag_button = $UiContainer/ButtonPanel/BagButton
-	_pass_button = $UiContainer/ButtonPanel/PassButton
-	_inspect_button = $UiContainer/ButtonPanel/InspectButton
+	_main_button_panel = $UiContainer/MainButtonPanel
+	_attack_button = $UiContainer/MainButtonPanel/AttackButton
+	_skill_button = $UiContainer/MainButtonPanel/SkillButton
+	_move_button = $UiContainer/MainButtonPanel1320/MoveButton
+	_bag_button = $UiContainer/MainButtonPanel/BagButton
+	_pass_button = $UiContainer/MainButtonPanel/PassButton
+	_inspect_button = $UiContainer/MainButtonPanel/InspectButton
+	
+	_skill_button_panel = $UiContainer/SkillButtonPanel
+	_confirm_skill_button = $UiContainer/SkillButtonPanel/ConfirmSkillButton
+	_cancel_skill_button = $UiContainer/SkillButtonPanel/CancelSkillButton
+	
 	
 	_speed_label = $UiContainer/SpeedLabel
 	_announcement_manager = $UiContainer/AnnouncementManager
 	_log_manager = $UiContainer/LogManager
 	_skill_panel = $UiContainer/SkillPanel
 	
+	disable_skill_button_panel()
 	disable_skill_panel()
 
 
@@ -131,11 +144,35 @@ func register_log(log_data):
 
 
 
+
+#=== Main Button Panel ===#
+
+func enable_main_button_panel():
+	_main_button_panel.set_process_input(true)
+	_main_button_panel.visible = true
+	
+func disable_main_button_panel():
+	_main_button_panel.set_process_input(false)
+	_main_button_panel.visible = false
+
+
+#=== Skill Button Panel ===#
+
+func enable_skill_button_panel():
+	_skill_button_panel.set_process_input(true)
+	_skill_button_panel.visible = true
+	
+func disable_skill_button_panel():
+	_skill_button_panel.set_process_input(false)
+	_skill_button_panel.visible = false
+
+
+
+
 #=== Skill Panel ===#
 
 func enable_skill_panel():
 	_skill_panel.on_open_panel()
-
 
 func disable_skill_panel():
 	_skill_panel.on_close_panel()
@@ -143,7 +180,6 @@ func disable_skill_panel():
 
 func set_skills_on_panel(skill_list):
 	_skill_panel.add_skills(skill_list)
-
 
 func clear_skills_from_panel():
 	_skill_panel.clear_skills()

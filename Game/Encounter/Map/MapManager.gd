@@ -111,6 +111,16 @@ func remove_highlight_from_selected_path():
 	for coords in path: # ignore character position
 		remove_highlight_at_coords(coords)
 
+# Remove the highlights all the tiles present in _moveable_tiles.
+func remove_highlight_from_targeted_tiles():
+	for tile_coords in _targeted_tiles:
+		remove_highlight_at_coords(tile_coords)
+
+# Remove the highlights all the tiles present in _moveable_tiles.
+func remove_highlight_from_selected_tiles():
+	for tile_coords in _selected_tiles:
+		remove_highlight_at_coords(tile_coords)
+
 
 # Highlight the tile where the character is.
 func highlight_character(char_id, is_ally):
@@ -214,10 +224,10 @@ func clicked_in_skill_mode(coords, character_id):
 	if _character_coords.get(character_id) == coords:
 		return
 	if _targeted_tiles.has(coords): # valid target
-		if _selected_tiles.has(coords): # clicked on a selected target
+		if _selected_tiles.has(coords): # clicked on a selected target, unselect it
 			_selected_tiles.erase(coords)
 			update_highlight_at_coords(coords, "select_tile")
-		else: # clicked on an unselected target
+		else: # clicked on an unselected target, select it
 			_selected_tiles.append(coords)
 			update_highlight_at_coords(coords, "confirm_tile")
 

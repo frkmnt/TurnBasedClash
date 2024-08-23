@@ -17,6 +17,7 @@ const _description = "A nasty bite with a small chance of infection."
 var _cost = 2
 var _cooldown = 0
 var _range = 1
+var _targets = 1
 var _accuracy = 80 # out of 100
 var _physical_damage = [30, 60]
 var _magical_damage = [0, 0]

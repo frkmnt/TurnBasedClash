@@ -14,6 +14,7 @@ const _description = "Rains arcane magic down on the target. This attack always 
 var _cost = 2
 var _cooldown = 1
 var _range = 3
+var _targets = 1
 var _accuracy = 90 # out of 100
 var _physical_damage = [0, 0]
 var _magical_damage = [30, 35]
@@ -31,6 +32,8 @@ func on_turn_start():
 	_cur_cooldown -= 1
 
 
+func on_target_selected(character_coords, tile_coords, target_data):
+	pass
 
 
 #=== Skill Effects ===#

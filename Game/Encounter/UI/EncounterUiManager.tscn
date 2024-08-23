@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpajlror2lui3"]
+[gd_scene load_steps=8 format=3 uid="uid://houd2eckaqbq"]
 
 [ext_resource type="Script" path="res://Encounter/UI/EncounterUiManager.gd" id="1_emeqw"]
-[ext_resource type="PackedScene" uid="uid://ckbvto3udn430" path="res://Encounter/UI/Button/ButtonPanel.tscn" id="2_rcu16"]
+[ext_resource type="PackedScene" uid="uid://ckbvto3udn430" path="res://Encounter/UI/Button/MainButtonPanel.tscn" id="2_rcu16"]
 [ext_resource type="PackedScene" uid="uid://pqe1j0jsisie" path="res://Encounter/UI/Announcement/AnnouncementManager.tscn" id="3_5x0xc"]
+[ext_resource type="PackedScene" uid="uid://b0cd37e5velsf" path="res://Encounter/UI/Button/SkillButtonPanel.tscn" id="4_fg0e0"]
 [ext_resource type="PackedScene" uid="uid://b8i63bigv2uat" path="res://Encounter/UI/Label/SpeedLabel.tscn" id="5_w1fmn"]
 [ext_resource type="PackedScene" uid="uid://hsw75xyguwlw" path="res://Encounter/UI/Log/LogManager.tscn" id="5_w5nf7"]
 [ext_resource type="PackedScene" uid="uid://b0o0hpsi6dn53" path="res://Encounter/UI/Skills/SkillPanel.tscn" id="6_5dq8d"]
@@ -27,7 +28,7 @@ grow_vertical = 2
 
 [node name="AnnouncementManager" parent="UiContainer" instance=ExtResource("3_5x0xc")]
 
-[node name="ButtonPanel" parent="UiContainer" instance=ExtResource("2_rcu16")]
+[node name="MainButtonPanel" parent="UiContainer" instance=ExtResource("2_rcu16")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -42,6 +43,14 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
 metadata/_edit_layout_mode = 1
+
+[node name="SkillButtonPanel" parent="UiContainer" instance=ExtResource("4_fg0e0")]
+visible = false
+layout_mode = 1
+offset_left = 660.0
+offset_top = 1000.0
+offset_right = 1260.0
+offset_bottom = 1000.0
 
 [node name="SpeedLabel" parent="UiContainer" instance=ExtResource("5_w1fmn")]
 layout_mode = 0
