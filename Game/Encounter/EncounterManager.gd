@@ -363,9 +363,9 @@ func enable_move_mode():
 
 # Enable the bag/inventory mode. 
 func enable_bag_mode():
-	if _encounter_data._is_player_round:
-		_ui_manager.enable_button("bag")
-		_ui_manager.enable_bag_panel()
+	#if _encounter_data._is_player_round:
+	_ui_manager.enable_button("bag")
+	_ui_manager.enable_bag_panel()
 
 # Enable the pass mode. Only possible during the player's turn.
 func enable_pass_mode():

@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://c80wopo53iiyw"]
+
+[resource]
+default_base_scale = 40.0
+default_font_size = 40
+HBoxContainer/constants/separation = 4

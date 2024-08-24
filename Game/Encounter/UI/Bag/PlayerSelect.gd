@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends HBoxContainer
 
 
 var list_players = [
@@ -8,12 +8,13 @@ var list_players = [
 
 func _ready():
 	for player in list_players:
-		var player_row = HBoxContainer.new()
-
+		var player_row = Button.new()
+		player_row.size_flags_horizontal = Control.SIZE_EXPAND
+		player_row.alignment = BoxContainer.ALIGNMENT_CENTER
+		
 		var player_name = Label.new()
 		player_name.text = str(player.name)
 		player_row.add_child(player_name)
-
 		add_child(player_row)
 
 	show()
