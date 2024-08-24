@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://btcohmgm0memg"]
+
+[ext_resource type="PackedScene" uid="uid://cg741l8b6m0ty" path="res://Encounter/UI/Bag/ItemPanel.tscn" id="1_vggi1"]
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Menu" type="Panel" parent="."]
+custom_minimum_size = Vector2(1870, 1030)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ItemCurrent" parent="Menu" instance=ExtResource("1_vggi1")]
+layout_mode = 0
+offset_left = 500.0
+offset_right = 1215.0
+offset_bottom = 1030.0
+
+[node name="ItemSelected" parent="Menu" instance=ExtResource("1_vggi1")]
+layout_mode = 0
+offset_left = 1155.0
+offset_right = 1870.0
+offset_bottom = 1030.0
+
+[node name="ItemList" type="ScrollContainer" parent="Menu"]
+custom_minimum_size = Vector2(500, 1030)
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 1030.0
+mouse_filter = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainerItemList" type="VBoxContainer" parent="Menu/ItemList"]
+custom_minimum_size = Vector2(500, 1030)
+layout_mode = 2
+
+[node name="SwitchGear" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 96.0
+offset_right = 1288.0
+offset_bottom = 146.0
+
+[node name="PlayerSelect" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(50, 1080)
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 1080.0
+
+[node name="VboxContainerPlayerSelect" type="VBoxContainer" parent="PlayerSelect"]
+custom_minimum_size = Vector2(50, 1080)
+layout_mode = 2
+
+[node name="TypeEquipment" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(1870, 50)
+layout_mode = 2
+offset_left = 50.0
+offset_right = 1920.0
+offset_bottom = 50.0
+
+[node name="HBoxContainerTypeEquipment" type="HBoxContainer" parent="TypeEquipment"]
+custom_minimum_size = Vector2(1870, 50)
+layout_mode = 2

@@ -161,3 +161,7 @@ func generate_weapon_label(weapon):
 
 
 
+
+
+func on_switch_gear_button_down():
+	pass # Replace with function body.
