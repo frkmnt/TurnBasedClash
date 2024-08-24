@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://btcohmgm0memg"]
+[gd_scene load_steps=3 format=3 uid="uid://btcohmgm0memg"]
 
+[ext_resource type="Script" path="res://Encounter/UI/Bag/BagPanel.gd" id="1_rxsmj"]
 [ext_resource type="PackedScene" uid="uid://cg741l8b6m0ty" path="res://Encounter/UI/Bag/ItemPanel.tscn" id="1_vggi1"]
 
 [node name="Panel" type="Panel"]
 custom_minimum_size = Vector2(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_rxsmj")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -71,3 +74,5 @@ offset_bottom = 50.0
 [node name="HBoxContainerTypeEquipment" type="HBoxContainer" parent="TypeEquipment"]
 custom_minimum_size = Vector2(1870, 50)
 layout_mode = 2
+
+[connection signal="button_down" from="Menu/SwitchGear" to="." method="on_switch_gear_button_down"]

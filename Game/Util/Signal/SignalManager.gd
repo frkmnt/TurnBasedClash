@@ -30,6 +30,9 @@ signal _remove_highlight_from_tiles
 #=== Skill Management ===#
 signal _on_skill_selected
 
+#=== Bag Management ===#
+signal _on_bag_selected
+
 
 #=== Character Management ===#
 signal _on_player_character_moved

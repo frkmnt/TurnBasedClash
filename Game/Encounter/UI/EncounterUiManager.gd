@@ -25,11 +25,16 @@ var _skill_button_panel # Skill Buttons
 var _confirm_skill_button
 var _cancel_skill_button
 
+var _bag_button_panel # Bag Buttons
+var _confirm_bag_button
+var _cancel_bag_button
+
 #var _options_button
 var _speed_label
 var _announcement_manager
 var _log_manager
 var _skill_panel
+var _bag_panel
 
 
 #=== Bootstrap ===#
@@ -48,14 +53,20 @@ func _ready():
 	_confirm_skill_button = $UiContainer/SkillButtonPanel/ConfirmSkillButton
 	_cancel_skill_button = $UiContainer/SkillButtonPanel/CancelSkillButton
 	
+	_bag_button_panel = $UiContainer/BagButtonPanel
+	_confirm_bag_button = $UiContainer/BagButtonPanel/ConfirmBagButton
+	_cancel_bag_button = $UiContainer/BagButtonPanel/CancelBagButton
 	
 	_speed_label = $UiContainer/SpeedLabel
 	_announcement_manager = $UiContainer/AnnouncementManager
 	_log_manager = $UiContainer/LogManager
 	_skill_panel = $UiContainer/SkillPanel
+	_bag_panel = $UiContainer/BagPanel
 	
 	disable_skill_button_panel()
 	disable_skill_panel()
+	disable_bag_button_panel()
+	disable_bag_panel()
 
 
 
@@ -185,7 +196,23 @@ func clear_skills_from_panel():
 	_skill_panel.clear_skills()
 
 
+#=== Bag Button Panel ===#
 
+func enable_bag_button_panel():
+	_bag_button_panel.set_process_input(true)
+	_bag_button_panel.visible = true
+	
+func disable_bag_button_panel():
+	_bag_button_panel.set_process_input(false)
+	_bag_button_panel.visible = false
+	
+#=== Bag Panel ===#
+
+func enable_bag_panel():
+	_bag_panel.on_open_panel()
+
+func disable_bag_panel():
+	_bag_panel.on_close_panel()
 
 #=== Update Values ===#
 
