@@ -17,7 +17,12 @@ var _type_equipment
 #==== Variables ====#
 var _currently_selected_slot
 var _currently_selected_gear
-var _list_players
+var _list_players = [ #DYNAMIC
+		{ "name": "Player1"},
+		{ "name": "Player2"},
+		{ "name": "Player3"},
+		{ "name": "Player4"}
+	]
 var _currently_selected_player
 
 #==== Buttons ====#
@@ -35,7 +40,6 @@ func initialize(parent_menu):
 	_type_equipment = $TypeEquipment
 	_close_bag_button = $CloseBagButton
 	
-	_list_players = ["Player1","Player2"]; #DYNAMIC
 	_currently_selected_player = 0
 	_currently_selected_slot = -1
 	
