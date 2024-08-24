@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://btcohmgm0memg"]
+[gd_scene load_steps=5 format=3 uid="uid://btcohmgm0memg"]
 
 [ext_resource type="Script" path="res://Encounter/UI/Bag/BagPanel.gd" id="1_rxsmj"]
 [ext_resource type="PackedScene" uid="uid://cg741l8b6m0ty" path="res://Encounter/UI/Bag/ItemPanel.tscn" id="1_vggi1"]
+[ext_resource type="Script" path="res://Encounter/UI/Bag/PlayerSelect.gd" id="3_j0ygg"]
 [ext_resource type="Script" path="res://Encounter/UI/Button/EncounterButton.gd" id="3_kd84q"]
 
 [node name="Panel" type="Panel"]
@@ -60,10 +61,13 @@ custom_minimum_size = Vector2(50, 1080)
 layout_mode = 2
 offset_right = 50.0
 offset_bottom = 1080.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
 
 [node name="VboxContainerPlayerSelect" type="VBoxContainer" parent="PlayerSelect"]
 custom_minimum_size = Vector2(50, 1080)
 layout_mode = 2
+script = ExtResource("3_j0ygg")
 
 [node name="TypeEquipment" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(1770, 50)
@@ -84,6 +88,7 @@ layout_mode = 0
 offset_left = 1820.0
 offset_right = 1920.0
 offset_bottom = 50.0
+text = "CLOSE"
 script = ExtResource("3_kd84q")
 
 [connection signal="button_down" from="Menu/SwitchGear" to="." method="on_switch_gear_button_down"]
