@@ -19,7 +19,8 @@ var _currently_selected_slot
 var _currently_selected_gear
 var _currently_selected_player
 
-
+#==== Buttons ====#
+var _close_bag_button
 
 #==== Bootstrap ====#
 
@@ -31,6 +32,7 @@ func initialize(parent_menu):
 	_switch_gear_button = $Menu/SwitchGear
 	_player_select = $PlayerSelect
 	_type_equipment = $TypeEquipment
+	_close_bag_button = $CloseBagButton
 	
 	_currently_selected_slot = -1
 	
@@ -179,3 +181,7 @@ func on_open_panel():
 
 #func on_switch_gear_button_down():
 	#pass # Replace with function body.
+
+
+func _on_close_bag_button_button_up():
+	visible = !visible
