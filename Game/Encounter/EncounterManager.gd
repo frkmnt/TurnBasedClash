@@ -89,6 +89,7 @@ func initialize_signals():
 	SignalManager._highlight_tiles.connect(highlight_tiles)
 	SignalManager._remove_highlight_from_tiles.connect(remove_highlight_from_tiles)
 	SignalManager._on_skill_selected.connect(on_skill_selected)
+	SignalManager._on_bag_selected.connect(on_bag_selected)
 	SignalManager._on_player_character_moved.connect(on_player_character_moved)
 	SignalManager._on_player_character_finished_moving.connect(on_player_character_finished_moving)
 	SignalManager._on_pass_turn.connect(on_turn_end)
@@ -145,9 +146,10 @@ func turn_start_ally(cur_char_data):
 	var cur_speed = cur_char_data[1]._stats._cur_speed
 	_ui_manager.set_speed_label(cur_speed)
 	_ui_manager.set_skills_on_panel(_character_manager.get_current_character_skills())
+	#_ui_manager.set_bag_on_panel(_character_manager.get_current_character_bag())
 	_map_manager.calculate_moveable_tiles(cur_char_coords, cur_speed)
 
-# Logic that applies when an enemy character's turn starts.
+# Logic that applies whenski an enemy character's turn starts.
 func turn_start_enemy():
 	_ui_manager.hide_speed_label()
 
@@ -287,8 +289,23 @@ func on_skill_canceled():
 	_map_manager.remove_highlight_from_selected_tiles()
 	disable_skill_mode()
 
+#=== Bags ===#
+
+func on_bag_selected(skill):
+	var character_id = _character_manager.get_current_character_id()
+	_ui_manager.disable_skill_panel()
+	_ui_manager.disable_main_button_panel()
+	_ui_manager.enable_skill_button_panel()
+	_map_manager.on_bag_selected(character_id, skill)
 
 
+func on_bag_confirmed():
+	pass
+
+func on_bag_canceled():
+	_map_manager.remove_highlight_from_targeted_tiles()
+	_map_manager.remove_highlight_from_selected_tiles()
+	disable_bag_mode()
 
 
 #=== Enable Mode ===#
@@ -344,9 +361,11 @@ func enable_move_mode():
 		_ui_manager.enable_button("move")
 		_map_manager.highlight_moveable_tiles()
 
-# Enable the bad/inventory mode. 
+# Enable the bag/inventory mode. 
 func enable_bag_mode():
+	#if _encounter_data._is_player_round:
 	_ui_manager.enable_button("bag")
+	_ui_manager.enable_bag_panel()
 
 # Enable the pass mode. Only possible during the player's turn.
 func enable_pass_mode():

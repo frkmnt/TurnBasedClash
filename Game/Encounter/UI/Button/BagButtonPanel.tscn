@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://bky8tcmd40f6w"]
+
+[ext_resource type="PackedScene" uid="uid://cb7dky3vt0yt6" path="res://Encounter/UI/Button/EncounterButton.tscn" id="1_luado"]
+
+[node name="BagButtonPanel" type="Control"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ConfirmBagButton" parent="." instance=ExtResource("1_luado")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -62.5
+offset_bottom = 62.5
+grow_vertical = 2
+toggle_mode = true
+text = "Confirm"
+_id = "confirm_skill"
+metadata/_edit_layout_mode = 1
+
+[node name="CancelBagButton" parent="." instance=ExtResource("1_luado")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -62.5
+offset_right = 0.0
+offset_bottom = 62.5
+grow_horizontal = 0
+grow_vertical = 2
+toggle_mode = true
+text = "Cancel"
+_id = "cancel_skill"
+metadata/_edit_layout_mode = 1
