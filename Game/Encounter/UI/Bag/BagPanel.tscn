@@ -13,7 +13,7 @@
 default_base_scale = 50.0
 default_font_size = 50
 
-[node name="Panel" type="Panel"]
+[node name="Panel2" type="Panel"]
 custom_minimum_size = Vector2(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0

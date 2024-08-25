@@ -1,23 +1,29 @@
+value.target
+value.multi_target
 
-Pathing (vectoral):
+Targeting (vectoral):
+-[[Stick]]
+-[[Sword]]
+-[[Bow]]
+//Later
 -[[Axe]]
 -[[Boomerang]]
 
 
 Damage:
--[[Piercing]]
--[[Bonk]]
--[[Create]]
--[[Fire]]
--[[Ice]]
--[[Slash]]
+-[[Magic]]
+-[[Physical]]
+-[[TrueDamage]]
 -[[Medic]]
-
-Size:
--[[Normal]]
 
 Rarity:
 -[[Wood]]
+-[[Iron]]
+
+Modifiers:
+-[[Poison]]
 
 Extra:
 -[[Push]]
+//Later
+-[[Pull]]
