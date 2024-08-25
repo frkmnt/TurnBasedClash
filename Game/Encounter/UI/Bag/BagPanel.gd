@@ -19,10 +19,10 @@ var _currently_selected_slot = 0 #headset, weapon, etc
 var _currently_selected_gear #type of headset
 var _currently_equiped_gear #type of headset equipped
 var _list_type_slots = [ #TODO DYNAMIC
-		{ "name": "Headset"},
-		{ "name": "Armor"},
-		{ "name": "Weapon"},
-		{ "name": "Ring"},
+		{ "name": "Headset", "items": [] },
+		{ "name": "Armor", "items": [] },
+		{ "name": "Weapon", "items": [] },
+		{ "name": "Ring", "items": [] },
 	]
 var _list_players = [ #TODO DYNAMIC
 		{ "name": "Player1"},

@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://btcohmgm0memg"]
+[gd_scene load_steps=9 format=3 uid="uid://btcohmgm0memg"]
 
 [ext_resource type="Script" path="res://Encounter/UI/Bag/BagPanel.gd" id="1_rxsmj"]
 [ext_resource type="PackedScene" uid="uid://cg741l8b6m0ty" path="res://Encounter/UI/Bag/ItemPanel.tscn" id="1_vggi1"]
 [ext_resource type="Script" path="res://Encounter/UI/Bag/PlayerSelect.gd" id="3_j0ygg"]
 [ext_resource type="Script" path="res://Encounter/UI/Button/EncounterButton.gd" id="3_kd84q"]
 [ext_resource type="Theme" uid="uid://c80wopo53iiyw" path="res://Asset/Themes/PlayerSelectTheme.tres" id="3_nc02w"]
+[ext_resource type="Script" path="res://Encounter/UI/Bag/ItemList.gd" id="3_ujrg5"]
+[ext_resource type="Script" path="res://Encounter/UI/Equipment/GearGenerator.gd" id="5_8p4no"]
 [ext_resource type="Script" path="res://Encounter/UI/Bag/TypeEquipment.gd" id="5_nhgj2"]
 
 [node name="Panel" type="Panel"]
@@ -46,6 +48,7 @@ offset_right = 508.0
 offset_bottom = 1030.0
 mouse_filter = 2
 horizontal_scroll_mode = 0
+script = ExtResource("3_ujrg5")
 
 [node name="VBoxContainerItemList" type="VBoxContainer" parent="Menu/ItemList"]
 custom_minimum_size = Vector2(500, 1030)
@@ -85,6 +88,7 @@ offset_right = 1820.0
 offset_bottom = 50.0
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 0
+script = ExtResource("5_8p4no")
 
 [node name="HBoxContainerTypeEquipment" type="HBoxContainer" parent="TypeEquipment"]
 custom_minimum_size = Vector2(1870, 50)

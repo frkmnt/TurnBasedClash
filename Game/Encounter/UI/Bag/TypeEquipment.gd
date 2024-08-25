@@ -4,8 +4,10 @@ var _list_type_slots
 var _index_selected
 var _style_box_highlight #TODO DYNAMIC
 var _style_box_not_highlight #TODO DYNAMIC
+var _item_list
 
 func _ready():
+	_item_list = get_node("../../Menu/ItemList")
 	#Setting color
 	_style_box_highlight = StyleBoxFlat.new()
 	_style_box_highlight.bg_color = Color(0.2, 0.6, 0.8) 
@@ -34,3 +36,5 @@ func _change_equipment(new_index): # Set the background color
 	get_children()[_index_selected].add_theme_stylebox_override("normal", _style_box_not_highlight)
 	_index_selected = new_index
 	get_children()[_index_selected].add_theme_stylebox_override("normal", _style_box_highlight)
+	get_parent().get_parent()._currently_selected_slot = new_index
+	_item_list.change_index(new_index)

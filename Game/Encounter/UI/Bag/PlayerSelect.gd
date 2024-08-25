@@ -34,3 +34,4 @@ func _change_player(new_index): # Set the background color
 	get_children()[_index_selected].add_theme_stylebox_override("normal", _style_box_not_highlight)
 	_index_selected = new_index
 	get_children()[_index_selected].add_theme_stylebox_override("normal", _style_box_highlight)
+	get_parent().get_parent()._currently_selected_player = new_index
