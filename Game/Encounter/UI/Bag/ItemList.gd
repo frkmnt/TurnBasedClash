@@ -5,8 +5,9 @@ var _index_selected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_list_type_slots = get_parent().get_parent()._list_type_slots
-	_index_selected = get_parent().get_parent()._currently_selected_slot 
+	_list_type_slots = get_parent().get_parent().get_parent()._list_type_slots
+	_index_selected = get_parent().get_parent().get_parent()._currently_selected_slot 
+	change_index(_index_selected)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,6 +18,5 @@ func change_index(new_index):
 		equipment_row.size_flags_horizontal = Control.SIZE_EXPAND
 		equipment_row.alignment = BoxContainer.ALIGNMENT_CENTER
 		#equipment_row.pressed.connect(_change_equipment.bind(i))
-		var gear_name = gear.name
 		equipment_row.set_text(gear.name)
 		add_child(equipment_row)

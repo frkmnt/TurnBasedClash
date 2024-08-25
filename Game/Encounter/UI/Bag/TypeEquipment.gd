@@ -7,7 +7,7 @@ var _style_box_not_highlight #TODO DYNAMIC
 var _item_list
 
 func _ready():
-	_item_list = get_node("../../Menu/ItemList")
+	_item_list = get_node("../../Menu/ItemList/VBoxContainerItemList")
 	#Setting color
 	_style_box_highlight = StyleBoxFlat.new()
 	_style_box_highlight.bg_color = Color(0.2, 0.6, 0.8) 
