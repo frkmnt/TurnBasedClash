@@ -1,0 +1,10 @@
+
+[[Destructible]]
+[[Floor]]
+[[Lava]]
+[[Movable]]
+[[Object]]
+[[Pit]]
+[[Wall]]
+[[Water]]
+[[Web]]

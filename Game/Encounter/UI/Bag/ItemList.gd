@@ -4,7 +4,7 @@ var _list_type_slots
 var _index_selected
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready(): #TODO innitialize
 	_list_type_slots = get_parent().get_parent().get_parent()._list_type_slots
 	_index_selected = get_parent().get_parent().get_parent()._currently_selected_slot 
 

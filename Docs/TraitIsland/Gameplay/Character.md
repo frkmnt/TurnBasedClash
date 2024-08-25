@@ -1,0 +1,2 @@
+The concept I want is your character is only based on your current gear like Terraria. And when the equipment, weapon, armor etc breaks you can change to another one with different stats and you can change your style immediately.
+Your character has base stats that can be increased but the most buffs and debufs are from your current gear.
