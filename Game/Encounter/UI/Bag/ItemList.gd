@@ -7,8 +7,10 @@ var _index_selected
 func _ready():
 	_list_type_slots = get_parent().get_parent().get_parent()._list_type_slots
 	_index_selected = get_parent().get_parent().get_parent()._currently_selected_slot 
-	change_index(_index_selected)
 
+
+func update():
+	change_index(_index_selected)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func change_index(new_index):

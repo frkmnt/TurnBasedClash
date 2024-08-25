@@ -71,6 +71,7 @@ func on_close_panel():
 # Make the panel invisible
 func on_open_panel():
 	visible = true
+	get_node("Menu/ItemList").get_child(0).update()
 
 #func on_switch_gear_button_down():
 	#pass # Replace with function body.
