@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://btcohmgm0memg"]
+[gd_scene load_steps=10 format=3 uid="uid://btcohmgm0memg"]
 
 [ext_resource type="Script" path="res://Encounter/UI/Bag/BagPanel.gd" id="1_rxsmj"]
 [ext_resource type="PackedScene" uid="uid://cg741l8b6m0ty" path="res://Encounter/UI/Bag/ItemPanel.tscn" id="1_vggi1"]
@@ -8,6 +8,10 @@
 [ext_resource type="Script" path="res://Encounter/UI/Bag/ItemList.gd" id="3_ujrg5"]
 [ext_resource type="Script" path="res://Encounter/UI/Equipment/GearGenerator.gd" id="5_8p4no"]
 [ext_resource type="Script" path="res://Encounter/UI/Bag/TypeEquipment.gd" id="5_nhgj2"]
+
+[sub_resource type="Theme" id="Theme_tsg21"]
+default_base_scale = 50.0
+default_font_size = 50
 
 [node name="Panel" type="Panel"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -47,6 +51,7 @@ layout_mode = 0
 offset_right = 508.0
 offset_bottom = 1030.0
 mouse_filter = 2
+theme = SubResource("Theme_tsg21")
 horizontal_scroll_mode = 0
 
 [node name="VBoxContainerItemList" type="VBoxContainer" parent="Menu/ItemList"]

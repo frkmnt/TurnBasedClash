@@ -14,6 +14,7 @@ func update():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func change_index(new_index):
+	clear_children()
 	var _index_selected = new_index
 	for gear in _list_type_slots[new_index].items:
 		var equipment_row = Button.new()
@@ -22,3 +23,7 @@ func change_index(new_index):
 		#equipment_row.pressed.connect(_change_equipment.bind(i))
 		equipment_row.set_text(gear.name)
 		add_child(equipment_row)
+
+func clear_children():
+	for child in get_children():
+		child.queue_free()
