@@ -1,2 +1,0 @@
-You can go further into the island to find new areas and loot and mobs.
-At the end of each adventure the player can choose between different paths based on traits (can be true or not) and also gets to choose between different gears with traits (some can be obscured and not seen or be a lie)
