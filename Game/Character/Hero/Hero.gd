@@ -19,6 +19,7 @@ var _attributes
 var _stats
 var _modifiers
 var _skills
+var _bag # equipment & items
 
 #var _equipment
 

@@ -44,7 +44,7 @@ func _ready():
 	_main_button_panel = $UiContainer/MainButtonPanel
 	_attack_button = $UiContainer/MainButtonPanel/AttackButton
 	_skill_button = $UiContainer/MainButtonPanel/SkillButton
-	_move_button = $UiContainer/MainButtonPanel1320/MoveButton
+	_move_button = $UiContainer/MainButtonPanel/MoveButton
 	_bag_button = $UiContainer/MainButtonPanel/BagButton
 	_pass_button = $UiContainer/MainButtonPanel/PassButton
 	_inspect_button = $UiContainer/MainButtonPanel/InspectButton

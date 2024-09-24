@@ -11,6 +11,8 @@ const _modifiers_template = preload("res://Character/Data/Modifiers.gd")
 const _skills_template = preload("res://Character/Data/Skills.gd")
 const _stats_template = preload("res://Character/Data/Stats.gd")
 
+const _weapon_generator_template = preload("res://Character/Data/Stats.gd")
+
 const _arcane_blast_template = preload("res://Character/Skills/SkillList/Wizard/ArcaneBlast.gd")
 
 
@@ -98,7 +100,7 @@ func create_random_wizard_gear():
 # Drafts a random hero name from _name_pool. Drafted names pooped from the list and 
 # are added to _drafted_names, to avoid repetition. After the drafting is complete, the
 # selected names are restored to _name_pool.
-#TODO the names are temporarily added in order for debuggig purposes.
+#TODO the names are temporarily added in order for debugging purposes.
 func draft_random_hero_name():
 	var drafted_name = _name_pool.pop_front()
 	_drafted_names.append(drafted_name)
@@ -109,6 +111,16 @@ func draft_random_hero_name():
 func restore_drafted_names():
 	_name_pool.append_array(_drafted_names)
 	_drafted_names = []
+
+
+
+#=== Weapons ===#
+
+
+
+
+
+
 
 
 
