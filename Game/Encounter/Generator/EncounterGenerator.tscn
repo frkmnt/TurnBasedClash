@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciqqittxst8qp"]
+[gd_scene load_steps=6 format=3 uid="uid://ciqqittxst8qp"]
 
 [ext_resource type="Script" path="res://Encounter/Generator/EncounterGenerator.gd" id="1_5d3gb"]
 [ext_resource type="PackedScene" uid="uid://dsoga7cvexvvc" path="res://Encounter/Generator/Map/MapGenerator.tscn" id="2_v08c1"]
 [ext_resource type="PackedScene" uid="uid://d14xo3wd4vuk" path="res://Encounter/Generator/Mob/MobGenerator.tscn" id="3_bc2q0"]
 [ext_resource type="PackedScene" path="res://Encounter/Generator/Hero/HeroGenerator.tscn" id="4_5c8mt"]
+[ext_resource type="PackedScene" uid="uid://bdvft62u47ejl" path="res://Encounter/Generator/Gear/GearGenerator.tscn" id="5_tak0h"]
 
 [node name="EncounterGenerator" type="Node2D"]
 script = ExtResource("1_5d3gb")
@@ -13,3 +14,5 @@ script = ExtResource("1_5d3gb")
 [node name="MobGenerator" parent="." instance=ExtResource("3_bc2q0")]
 
 [node name="HeroGenerator" parent="." instance=ExtResource("4_5c8mt")]
+
+[node name="GearGenerator" parent="." instance=ExtResource("5_tak0h")]

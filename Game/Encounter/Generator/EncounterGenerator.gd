@@ -6,11 +6,11 @@ extends Node
 
 
 
-
 #=== Components ===#
 var _map_generator
 var _mob_generator
 var _hero_generator
+var _gear_generator
 
 
 
@@ -18,9 +18,11 @@ var _hero_generator
 #=== Bootstrap ===#
 
 func _ready():
+	randomize()
 	_map_generator = $MapGenerator
 	_mob_generator = $MobGenerator
 	_hero_generator = $HeroGenerator
+	_gear_generator = $GearGenerator
 
 
 
